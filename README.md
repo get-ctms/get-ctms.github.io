@@ -1,2 +1,2 @@
 # assets
-public repo to host legal documents, logos
+public repo to host ctms legal documents, logos
