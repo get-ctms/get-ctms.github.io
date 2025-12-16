@@ -2,7 +2,7 @@
 
 **Last Updated:** [16.Dec.2025]
 
-Container Tracker ("we," "us," or "our") has created this Privacy Policy to explain how we collect, use, and share information when you use the Container Tracker Google Workspace Add-on.
+Container Tracker has created this Privacy Policy to explain how we collect, use, and share information when you use the Container Tracker Google Workspace Add-on.
 
 By using this Add-on, you agree to the collection and use of information in accordance with this policy.
 
