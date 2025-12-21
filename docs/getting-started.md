@@ -196,5 +196,7 @@ All exported data is formatted and ready for analysis, reporting, or integration
 - **Profile Setup**: Make sure your customer profile is active before tracking containers
 - **Carrier Support**: Check which carriers support automatic tracking
 - **Credits**: Screenshot imports and AI summaries may consume LLM credits depending on your subscription
+- **Contact Us**: For support or questions, email us at [ctms.developer@gmail.com](mailto:ctms.developer@gmail.com)
 
 Start tracking your first container today and experience automated ocean freight visibility!
+
