@@ -10,7 +10,7 @@ Container Tracker is a Google Sheets add-on that automatically tracks ocean cont
 
 ### Automatic Tracking
 
-For supported carriers (MSC, Maersk, CMA-CGM), Container Tracker automatically scrapes carrier websites to gather tracking information:
+For supported carriers (MSC, Maersk, CMA-CGM, Hapag-Lloyd), Container Tracker automatically scrapes carrier websites to gather tracking information:
 
 1. **Submit a Container**: Enter the container number and select the carrier
 2. **Automatic Updates**: The system periodically checks the carrier's website for updates
@@ -199,4 +199,5 @@ All exported data is formatted and ready for analysis, reporting, or integration
 - **Contact Us**: For support or questions, email us at [ctms.developer@gmail.com](mailto:ctms.developer@gmail.com)
 
 Start tracking your first container today and experience automated ocean freight visibility!
+
 
