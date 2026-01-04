@@ -51,7 +51,7 @@ We are committed to managing your data responsibly.
 *   **Google User Data (Transient):** Our application does not retrieve, read, or collect any data from Google Workspace APIs (such as spreadsheet cell content, emails, or Drive files). The application’s interaction with Google Workspace is strictly limited to a one-way export: data fetched from our secure external database (Azure) or provided directly by the user is written into the active spreadsheet only upon the user's explicit request.
 *   **Container History:** Container tracking events are stored in our secure database (Azure) for as long as your account is active to provide the tracking history service.
 *   **AI Processing Data:** Data sent to our AI service (summaries or screenshots) is not retained by the AI provider for model training and is not stored by us after the session is complete.
-*   **Account Deletion:** You have the right to request the deletion of your account and all associated data at any time. To do so, please contact us at **ctms.developer@gmail.com**. We will process data deletion requests within 30 days.
+*   **Account Deletion:** You have the right to request the deletion of your account and all associated data at any time. To do so, please contact us at **ctms.developer@gmail.com**. We will process data deletion requests within 3 days.
 
 ## 7. Changes to This Privacy Policy
 
