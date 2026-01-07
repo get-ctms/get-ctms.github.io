@@ -2,6 +2,12 @@
 
 Welcome to Container Tracker! This guide will help you quickly understand how to track containers, view their history, and manage your tracking data effectively.
 
+## 🚀 Installation
+
+Before you begin, make sure to install the **Container Tracker** Google Sheets add-on from the Google Workspace Marketplace:
+
+**[👉 Install Container Tracker from Google Workspace Marketplace](https://workspace.google.com/marketplace/app/container_tracker/410438104534)**
+
 ## What is Container Tracker?
 
 Container Tracker is a Google Sheets add-on that automatically tracks ocean containers across multiple carriers including MSC, Maersk, CMA-CGM, Hapag-Lloyd. It provides real-time updates on container location, status, and key milestones throughout the shipping journey.
@@ -199,7 +205,3 @@ All exported data is formatted and ready for analysis, reporting, or integration
 - **Contact Us**: For support or questions, email us at [ctms.developer@gmail.com](mailto:ctms.developer@gmail.com)
 
 Start tracking your first container today and experience automated ocean freight visibility!
-
-
-
-
