@@ -366,21 +366,23 @@
             document.getElementById('confirmBtn').disabled = true;
             document.getElementById('cancelBtn').disabled = true;
 
-            const azureUrl = 'https://ctms-api-endpoints-bge2gdcgcebufpdk.northeurope-01.azurewebsites.net/api/containers/track/screenshot';
+            // Call through HTML Page Gateway (no function key needed!)
+            const gatewayUrl = 'https://ctms-api-endpoints-bge2gdcgcebufpdk.northeurope-01.azurewebsites.net/api/HtmlPageGateway';
 
-            const functionKey = 'xmLnR_89_tfwqOHaLRbTRozxvp3anWUvk4Mqa5bjiMAsAzFuXNFnhg=='; 
-
-            fetch(azureUrl, {
+            fetch(gatewayUrl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'x-functions-key': functionKey  // Auth header like Google add-on
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    customerId: params.customerId,
-                    containerNumber: params.containerNumber,
-                    carrier: params.carrier,
-                    base64Image: imageData
+                    path: '/api/containers/track/screenshot',
+                    method: 'POST',
+                    payload: {
+                        customerId: params.customerId,
+                        containerNumber: params.containerNumber,
+                        carrier: params.carrier,
+                        base64Image: imageData
+                    }
                 })
             })
                 .then(response => {
