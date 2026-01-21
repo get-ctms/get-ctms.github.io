@@ -246,10 +246,7 @@
         </div>
 
         <div class="buttons">
-            <button class="btn btn-secondary" id="cancelBtn" onclick="handleCancel()">
-                Close
-            </button>
-            <button class="btn btn-primary" id="confirmBtn" onclick="handleConfirm()" disabled>
+            <button class="btn btn-primary" id="confirmBtn" onclick="handleConfirm()" disabled style="width: 100%;">
                 Import Events
             </button>
         </div>
@@ -351,20 +348,15 @@
 
             showStatus('success', `✅ Sending screenshot for processing... (${Math.round(imageData.length / 1024)}KB)`);
 
-            // Auto-close after sending
+            // Close the HubSpot iframe modal using the DONE action
             setTimeout(() => {
-                handleCancel();
-            }, 1500);
+                window.top.postMessage(JSON.stringify({ action: 'DONE' }), '*');
+            }, 1000);
         }
 
         function handleCancel() {
-            // Send close request to parent window
-            window.parent.postMessage(
-                {
-                    type: 'CLOSE_MODAL'
-                },
-                '*' // TODO: Replace with specific origin in production
-            );
+            // Close the HubSpot iframe modal using the CANCEL action
+            window.top.postMessage(JSON.stringify({ action: 'CANCEL' }), '*');
         }
 
         function showStatus(type, message) {
