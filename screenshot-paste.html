@@ -207,6 +207,28 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
+
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #1a73e8;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -246,7 +268,7 @@
         </div>
 
         <div class="buttons">
-            <button class="btn btn-secondary" onclick="handleCancel()">
+            <button class="btn btn-secondary" id="cancelBtn" onclick="handleCancel()">
                 Close
             </button>
             <button class="btn btn-primary" id="confirmBtn" onclick="handleConfirm()" disabled>
@@ -349,13 +371,10 @@
                 '*' // TODO: Replace with specific origin in production
             );
 
-
-            showStatus('success', `✅ Screenshot sent for processing! (${Math.round(imageData.length / 1024)}KB)`);
-
-            // Close the modal using HubSpot's DONE action
-            setTimeout(() => {
-                window.top.postMessage(JSON.stringify({ action: "DONE" }), "*");
-            }, 1000);
+            // Show loading status
+            showStatus('info', '<span class="loader"></span>Analyzing screenshot and extracting events... This may take up to 60 seconds.');
+            document.getElementById('confirmBtn').disabled = true;
+            document.getElementById('cancelBtn').disabled = true;
         }
 
 
