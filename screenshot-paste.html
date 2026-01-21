@@ -335,18 +335,36 @@
                 return;
             }
 
-            // Confirm screenshot was captured
-            showStatus('success', `✅ Screenshot preview successful! (${Math.round(imageData.length / 1024)}KB)\n\nPreview confirmed - the screenshot has been captured correctly.`);
+            // Send image data to parent window (HubSpot UI extension)
+            window.parent.postMessage(
+                {
+                    type: 'OCR_IMAGE',
+                    payload: {
+                        imageData: imageData,
+                        customerId: params.customerId,
+                        containerNumber: params.containerNumber,
+                        carrier: params.carrier
+                    }
+                },
+                '*' // TODO: Replace with specific origin in production
+            );
 
-            // Auto-close after showing message
+            showStatus('success', `✅ Sending screenshot for processing... (${Math.round(imageData.length / 1024)}KB)`);
+
+            // Auto-close after sending
             setTimeout(() => {
                 handleCancel();
-            }, 3000);
+            }, 1500);
         }
 
         function handleCancel() {
-            // Just close the window/tab
-            window.close();
+            // Send close request to parent window
+            window.parent.postMessage(
+                {
+                    type: 'CLOSE_MODAL'
+                },
+                '*' // TODO: Replace with specific origin in production
+            );
         }
 
         function showStatus(type, message) {
