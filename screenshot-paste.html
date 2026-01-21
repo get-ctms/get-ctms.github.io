@@ -366,13 +366,15 @@
             document.getElementById('confirmBtn').disabled = true;
             document.getElementById('cancelBtn').disabled = true;
 
-            // Call Azure Function directly (Web Worker extension can't receive postMessage)
             const azureUrl = 'https://ctms-api-endpoints-bge2gdcgcebufpdk.northeurope-01.azurewebsites.net/api/containers/track/screenshot';
+
+            const functionKey = 'xmLnR_89_tfwqOHaLRbTRozxvp3anWUvk4Mqa5bjiMAsAzFuXNFnhg=='; 
 
             fetch(azureUrl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'x-functions-key': functionKey  // Auth header like Google add-on
                 },
                 body: JSON.stringify({
                     customerId: params.customerId,
