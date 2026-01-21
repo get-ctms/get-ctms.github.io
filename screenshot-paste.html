@@ -218,14 +218,13 @@
         </div>
 
         <div class="instructions">
-            <p class="instructions-title">📸 Stage 1: Screenshot Preview (UI Testing)</p>
+            <p class="instructions-title">📸 How to Import</p>
             <ol class="instructions-list">
                 <li>Take a screenshot of the carrier's tracking page. Make sure the <strong>container number and
                         complete events list are visible</strong>. Full page screenshots work best.</li>
                 <li><strong>Click inside the box below and press Ctrl+V (or Cmd+V on Mac)</strong> to paste your
                     screenshot</li>
-                <li>Review the preview - this confirms the paste functionality works correctly</li>
-                <li><strong>Note:</strong> OCR processing and event extraction will be added in Stage 2</li>
+                <li>Click "Import Events" to process</li>
             </ol>
         </div>
 
@@ -239,7 +238,7 @@
                         to paste your screenshot
                     </div>
                     <div class="paste-placeholder-hint">
-                        Stage 1: UI testing only - OCR processing coming in Stage 2
+                        Your screenshot will be displayed here
                     </div>
                 </div>
                 <img id="previewImage" class="preview-image" alt="Screenshot preview">
@@ -251,7 +250,7 @@
                 Close
             </button>
             <button class="btn btn-primary" id="confirmBtn" onclick="handleConfirm()" disabled>
-                Preview OK ✓
+                Import Events
             </button>
         </div>
 
@@ -320,7 +319,7 @@
                 document.getElementById('pasteArea').classList.add('has-image');
                 document.getElementById('confirmBtn').disabled = false;
 
-                showStatus('success', 'Screenshot loaded! Click "Confirm" to send to HubSpot.');
+                showStatus('success', 'Screenshot loaded! Click "Import Events" to process.');
             };
 
             reader.onerror = function () {
@@ -336,16 +335,8 @@
                 return;
             }
 
-            // Stage 1: Just confirm UI works
-            showStatus('success', `✅ Screenshot preview successful! (${Math.round(imageData.length / 1024)}KB)\n\nStage 1 complete - UI is working correctly.\nStage 2 will add OCR processing and event extraction.`);
-
-            // Log for debugging
-            console.log('Stage 1: Screenshot captured successfully', {
-                customerId: params.customerId,
-                containerNumber: params.containerNumber,
-                carrier: params.carrier,
-                imageSize: imageData.length
-            });
+            // Confirm screenshot was captured
+            showStatus('success', `✅ Screenshot preview successful! (${Math.round(imageData.length / 1024)}KB)\n\nPreview confirmed - the screenshot has been captured correctly.`);
 
             // Auto-close after showing message
             setTimeout(() => {
