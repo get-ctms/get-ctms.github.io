@@ -357,29 +357,58 @@
                 return;
             }
 
-            console.log('[ScreenshotPaste] Preparing to send OCR_IMAGE message');
+            console.log('[ScreenshotPaste] Calling Azure Function directly');
             console.log('[ScreenshotPaste] Params:', params);
             console.log('[ScreenshotPaste] Image size:', imageData.length);
-
-            // Send image data to parent window (HubSpot UI extension)
-            const message = {
-                type: 'OCR_IMAGE',
-                payload: {
-                    imageData: imageData,
-                    customerId: params.customerId,
-                    containerNumber: params.containerNumber,
-                    carrier: params.carrier
-                }
-            };
-
-            console.log('[ScreenshotPaste] Sending message to parent:', message);
-            window.parent.postMessage(message, '*');
-            console.log('[ScreenshotPaste] Message sent successfully');
 
             // Show loading status
             showStatus('info', '<span class="loader"></span>Analyzing screenshot and extracting events... This may take up to 60 seconds.');
             document.getElementById('confirmBtn').disabled = true;
             document.getElementById('cancelBtn').disabled = true;
+
+            // Call Azure Function directly (Web Worker extension can't receive postMessage)
+            const azureUrl = 'https://ctms-api-endpoints-bge2gdcgcebufpdk.northeurope-01.azurewebsites.net/api/containers/track/screenshot';
+
+            fetch(azureUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    customerId: params.customerId,
+                    containerNumber: params.containerNumber,
+                    carrier: params.carrier,
+                    base64Image: imageData
+                })
+            })
+                .then(response => {
+                    console.log('[ScreenshotPaste] Response status:', response.status);
+                    if (!response.ok) {
+                        return response.json().then(err => {
+                            throw new Error(err.message || err.error || 'Failed to process screenshot');
+                        }).catch(() => {
+                            throw new Error(`Request failed with status ${response.status}`);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(result => {
+                    console.log('[ScreenshotPaste] Success:', result);
+
+                    // Show success message
+                    showStatus('success', `✅ Detected and processed ${result.eventCount} event${result.eventCount === 1 ? '' : 's'} successfully!\n\nYou can close this window now.`);
+
+                    // Re-enable close button
+                    document.getElementById('cancelBtn').disabled = false;
+                })
+                .catch(error => {
+                    console.error('[ScreenshotPaste] Error:', error);
+                    showStatus('error', 'Failed to process screenshot: ' + (error.message || 'Unknown error'));
+
+                    // Re-enable buttons on error
+                    document.getElementById('confirmBtn').disabled = false;
+                    document.getElementById('cancelBtn').disabled = false;
+                });
         }
 
 
