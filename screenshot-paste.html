@@ -357,19 +357,24 @@
                 return;
             }
 
+            console.log('[ScreenshotPaste] Preparing to send OCR_IMAGE message');
+            console.log('[ScreenshotPaste] Params:', params);
+            console.log('[ScreenshotPaste] Image size:', imageData.length);
+
             // Send image data to parent window (HubSpot UI extension)
-            window.parent.postMessage(
-                {
-                    type: 'OCR_IMAGE',
-                    payload: {
-                        imageData: imageData,
-                        customerId: params.customerId,
-                        containerNumber: params.containerNumber,
-                        carrier: params.carrier
-                    }
-                },
-                '*' // TODO: Replace with specific origin in production
-            );
+            const message = {
+                type: 'OCR_IMAGE',
+                payload: {
+                    imageData: imageData,
+                    customerId: params.customerId,
+                    containerNumber: params.containerNumber,
+                    carrier: params.carrier
+                }
+            };
+
+            console.log('[ScreenshotPaste] Sending message to parent:', message);
+            window.parent.postMessage(message, '*');
+            console.log('[ScreenshotPaste] Message sent successfully');
 
             // Show loading status
             showStatus('info', '<span class="loader"></span>Analyzing screenshot and extracting events... This may take up to 60 seconds.');
