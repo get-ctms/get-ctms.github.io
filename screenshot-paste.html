@@ -288,11 +288,17 @@
             params = {
                 customerId: urlParams.get('customerId') || '',
                 containerNumber: urlParams.get('containerNumber') || '',
-                carrier: urlParams.get('carrier') || ''
+                carrier: urlParams.get('carrier') || '',
+                remainingCredits: urlParams.get('remainingCredits') || null,
+                totalCredits: urlParams.get('totalCredits') || null
             };
 
-            document.getElementById('subtitle').textContent =
-                `${params.containerNumber} • ${params.carrier}`;
+            // Build subtitle with container info and AI credits (like Google add-on)
+            let subtitleText = `${params.containerNumber} • ${params.carrier}`;
+            if (params.remainingCredits !== null && params.totalCredits !== null) {
+                subtitleText += `\n🤖 AI credits remaining: ${params.remainingCredits} / ${params.totalCredits}`;
+            }
+            document.getElementById('subtitle').innerHTML = subtitleText.replace('\n', '<br>');
 
             // Focus the paste area
             document.getElementById('pasteArea').focus();
