@@ -362,10 +362,6 @@
                 return;
             }
 
-            console.log('[ScreenshotPaste] Calling Azure Function directly');
-            console.log('[ScreenshotPaste] Params:', params);
-            console.log('[ScreenshotPaste] Image size:', imageData.length);
-
             // Show loading status
             showStatus('info', '<span class="loader"></span>Analyzing screenshot and extracting events... This may take up to 60 seconds.');
             document.getElementById('confirmBtn').disabled = true;
@@ -391,7 +387,6 @@
                 })
             })
                 .then(response => {
-                    console.log('[ScreenshotPaste] Response status:', response.status);
                     if (!response.ok) {
                         return response.json().then(err => {
                             throw new Error(err.message || err.error || 'Failed to process screenshot');
@@ -402,7 +397,6 @@
                     return response.json();
                 })
                 .then(result => {
-                    console.log('[ScreenshotPaste] Success:', result);
 
                     // Show success message
                     showStatus('success', `✅ Detected and processed ${result.eventCount} event${result.eventCount === 1 ? '' : 's'} successfully!\n\nYou can close this window now.`);
