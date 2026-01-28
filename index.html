@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="logo/ctms-logo.png" sizes="16x16">
     <link rel="shortcut icon" href="logo/favicon.ico">
     <link rel="apple-touch-icon" href="logo/ctms-logo.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="white">
 
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
@@ -29,6 +29,7 @@
         .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0; }
         .feature-card { background: #f8f9fa; border-radius: 8px; border: 1px solid #eee; padding: 20px; }
         .cta-button { display: inline-block; background-color: #007bff; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+        .cta-container { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; }
         footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9rem; color: #666; }
         footer a { color: #666; margin-right: 15px; }
     </style>
@@ -50,9 +51,12 @@
 
     <main>
         <h1>Container Tracking for Global Trade</h1>
-        <p class="subtitle">A SaaS platform to track international shipping containers across multiple carriers. Accessible via Google Workspace.</p>
+        <p class="subtitle">A SaaS platform to track international shipping containers across multiple carriers. Accessible via Google Workspace and HubSpot.</p>
         
-        <a href="getting-started.html" class="cta-button">Get Started</a>
+        <div class="cta-container">
+            <a href="getting-started.html" class="cta-button">Get Started with Google Workspace</a>
+            <a href="#" class="cta-button" style="background-color: #ff7a59;">Get Started with HubSpot</a>
+        </div>
 
         <!-- If you have a screenshot of your add-on, put it in your repo and uncomment this line: -->
         <!-- <img src="screenshot.png" alt="App Screenshot" style="width:100%; border-radius:8px; border:1px solid #ddd; margin-bottom:30px;"> -->
@@ -65,7 +69,7 @@
             </div>
             <div class="feature-card">
                 <h3>Workflow Integration</h3>
-                <p>Track shipments in your Google Sheets using our Google Workspace Add-on.</p>
+                <p>Track shipments in Google Sheets and HubSpot using our Google Workspace Add-on and HubSpot Extension.</p>
             </div>
             <div class="feature-card">
                 <h3>Centralized Data</h3>
