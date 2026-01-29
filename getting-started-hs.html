@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubSpot Beta - Container Tracker</title>
+
+    <!-- This small script converts Markdown to HTML automatically -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Reusing the Header Style */
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        /* The Container for the Markdown Text */
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Footer Style */
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #666;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Container Tracker</a>
+        <a href="index.html" style="text-decoration:none; color:#007bff;">&larr; Back to Home</a>
+    </header>
+
+    <main>
+        <!-- 
+           Points to your markdown file in the docs folder 
+        -->
+        <zero-md src="docs/getting-started-hs.md">
+            <template>
+                <!-- This styles the Markdown content specifically -->
+                <style>
+                    h1,
+                    h2,
+                    h3 {
+                        color: #2c3e50;
+                        margin-top: 1.5em;
+                        border-bottom: 1px solid #eee;
+                        padding-bottom: 0.3em;
+                    }
+
+                    a {
+                        color: #007bff;
+                    }
+
+                    code {
+                        background: #f4f4f4;
+                        padding: 2px 5px;
+                        border-radius: 3px;
+                        font-family: monospace;
+                    }
+
+                    pre {
+                        background: #f4f4f4;
+                        padding: 15px;
+                        border-radius: 5px;
+                        overflow-x: auto;
+                    }
+
+                    p {
+                        margin-bottom: 1em;
+                    }
+
+                    li {
+                        margin-bottom: 0.5em;
+                    }
+                </style>
+            </template>
+        </zero-md>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Container Tracker. All rights reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
