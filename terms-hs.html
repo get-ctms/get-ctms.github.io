@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HubSpot Extension - Container Tracker</title>
-    <link rel="canonical" href="https://get-ctms.com/getting-started-hs.html">
+    <title>Terms of Service (HubSpot) - Container Tracker</title>
 
-    <!-- This small script converts Markdown to HTML automatically -->
+    <!-- Script to convert Markdown to HTML -->
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
 
     <style>
@@ -21,7 +20,7 @@
             min-height: 100vh;
         }
 
-        /* Reusing the Header Style */
+        /* Header Style */
         header {
             border-bottom: 1px solid #eee;
             padding: 20px;
@@ -41,7 +40,7 @@
             color: #2c3e50;
         }
 
-        /* The Container for the Markdown Text */
+        /* Main Content Container */
         main {
             max-width: 800px;
             margin: 40px auto;
@@ -77,19 +76,16 @@
 
     <main>
         <!-- 
-           Points to your markdown file in the docs folder 
+           Points to HubSpot-specific Terms
         -->
-        <zero-md src="docs/getting-started-hs.md">
+        <zero-md src="docs/legal/terms_of_service-hs.md">
             <template>
-                <!-- This styles the Markdown content specifically -->
                 <style>
                     h1,
                     h2,
                     h3 {
                         color: #2c3e50;
                         margin-top: 1.5em;
-                        border-bottom: 1px solid #eee;
-                        padding-bottom: 0.3em;
                     }
 
                     a {
@@ -100,22 +96,14 @@
                         background: #f4f4f4;
                         padding: 2px 5px;
                         border-radius: 3px;
-                        font-family: monospace;
-                    }
-
-                    pre {
-                        background: #f4f4f4;
-                        padding: 15px;
-                        border-radius: 5px;
-                        overflow-x: auto;
                     }
 
                     p {
                         margin-bottom: 1em;
                     }
 
-                    li {
-                        margin-bottom: 0.5em;
+                    ul {
+                        margin-bottom: 1em;
                     }
                 </style>
             </template>
