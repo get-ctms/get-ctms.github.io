@@ -282,20 +282,47 @@
         let imageData = null;
         let params = {};
 
+        function decodeJwt(token) {
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+                return JSON.parse(jsonPayload);
+            } catch (e) {
+                console.error("Failed to decode token", e);
+                return null;
+            }
+        }
+
         // Parse URL parameters
         window.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
-            params = {
-                customerId: urlParams.get('customerId') || '',
-                containerNumber: urlParams.get('containerNumber') || '',
-                carrier: urlParams.get('carrier') || '',
-                remainingCredits: urlParams.get('remainingCredits') || null,
-                totalCredits: urlParams.get('totalCredits') || null
-            };
+            const token = urlParams.get('token');
+
+            if (token) {
+                params.token = token;
+                const decoded = decodeJwt(token);
+                if (decoded) {
+                    params.containerNumber = decoded.containerNumber || 'Unknown Container';
+                    params.carrier = decoded.carrier || 'Unknown Carrier';
+                    params.remainingCredits = decoded.remainingCredits;
+                    params.totalCredits = decoded.totalCredits;
+                }
+            } else {
+                // Fallback for direct testing if ever needed without token
+                params = {
+                    containerNumber: urlParams.get('containerNumber') || '',
+                    carrier: urlParams.get('carrier') || '',
+                    remainingCredits: urlParams.get('remainingCredits') || null,
+                    totalCredits: urlParams.get('totalCredits') || null
+                };
+            }
 
             // Build subtitle with container info and AI credits (like Google add-on)
             let subtitleText = `${params.containerNumber} • ${params.carrier}`;
-            if (params.remainingCredits !== null && params.totalCredits !== null) {
+            if (params.remainingCredits !== null && params.totalCredits !== null && params.remainingCredits !== undefined) {
                 subtitleText += `\n🤖 AI credits remaining: ${params.remainingCredits} / ${params.totalCredits}`;
             }
             document.getElementById('subtitle').innerHTML = subtitleText.replace('\n', '<br>');
@@ -362,6 +389,11 @@
                 return;
             }
 
+            if (!params.token && !params.customerId) {
+                showStatus('error', 'Missing session information. Please close and try again.');
+                return;
+            }
+
             // Show loading status
             showStatus('info', '<span class="loader"></span>Analyzing screenshot and extracting events... This may take up to 60 seconds.');
             document.getElementById('confirmBtn').disabled = true;
@@ -369,6 +401,18 @@
 
             // Call through HTML Page Gateway (no function key needed!)
             const gatewayUrl = 'https://ctms-api-endpoints-bge2gdcgcebufpdk.northeurope-01.azurewebsites.net/api/HtmlPageGateway';
+
+            // Base payload
+            const trackingPayload = { base64Image: imageData };
+
+            // Send token if we have it, otherwise fallback to explicit PII (for local debugging HTML page)
+            if (params.token) {
+                trackingPayload.token = params.token;
+            } else {
+                trackingPayload.customerId = params.customerId;
+                trackingPayload.containerNumber = params.containerNumber;
+                trackingPayload.carrier = params.carrier;
+            }
 
             fetch(gatewayUrl, {
                 method: 'POST',
@@ -378,12 +422,7 @@
                 body: JSON.stringify({
                     path: '/api/containers/track/screenshot',
                     method: 'POST',
-                    payload: {
-                        customerId: params.customerId,
-                        containerNumber: params.containerNumber,
-                        carrier: params.carrier,
-                        base64Image: imageData
-                    }
+                    payload: trackingPayload
                 })
             })
                 .then(response => {
