@@ -11,18 +11,16 @@ To install the app in your HubSpot account:
 ### 1. Check Permissions
 Make sure you have the right permissions. You must be a Super Admin or have **App Marketplace access permissions** in HubSpot to install apps.
 
-### 2. Open HubSpot Marketplace
-In your HubSpot account, click the **Marketplace icon** in the top navigation bar and select **App Marketplace**.
+### 2. Install from the App Marketplace
+Go to the Container Tracker listing on the HubSpot App Marketplace:
+[Container Tracker App](https://ecosystem.hubspot.com/marketplace/listing/containertracker)
 
-### 3. Find the App
-In the Marketplace search bar, type **"Container Tracker"** and select it from the results.
-
-### 4. Install & Authorize
+### 3. Install & Authorize
 1. Click **Install**.
 2. Follow the prompts to authorize the app. 
 3. Review the access scopes requested, then confirm to complete the installation.
 
-### 5. Finish Setup
+### 4. Finish Setup
 
 In HubSpot, go to **Settings** (gear icon in the top right).
 
@@ -35,7 +33,7 @@ In HubSpot, go to **Settings** (gear icon in the top right).
 6. In the **Tickets** tab, check the box for the ticket view(s) where you want the card to appear (e.g. **Default**).
 7. Click **Save**.
 
-### 6. Verify on a ticket
+### 5. Verify on a ticket
 
 1. Go to **Tickets** and open any ticket record.
 2. In the right sidebar, you should now see the **Container Tracking** card.
