@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HubSpot Extension - Container Tracker</title>
+    <title>Container Tracker for HubSpot - Getting Started</title>
+    <meta name="description" content="How to install the Container Tracker HubSpot app and track shipping containers on HubSpot Tickets: automatic tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen, milestones and AI summaries.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Container Tracker">
+    <meta property="og:title" content="Container Tracker for HubSpot - Getting Started">
+    <meta property="og:description" content="How to install the Container Tracker HubSpot app and track shipping containers on HubSpot Tickets: automatic tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen, milestones and AI summaries.">
+    <meta property="og:url" content="https://get-ctms.com/getting-started-hs.html">
+    <meta property="og:image" content="https://get-ctms.com/logo/ctms-logo.png">
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
     <link rel="canonical" href="https://get-ctms.com/getting-started-hs.html">
 
-    <!-- This small script converts Markdown to HTML automatically -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
 
     <style>
         body {
@@ -65,6 +71,50 @@
             color: #666;
             margin: 0 10px;
         }
+
+        /* Guide content */
+        main h1,
+        main h2,
+        main h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        main a {
+            color: #007bff;
+        }
+
+        main code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        main pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        main blockquote {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            border-left: 4px solid #cfe2ff;
+            background: #f8f9fa;
+            color: #555;
+        }
     </style>
 </head>
 
@@ -76,54 +126,135 @@
     </header>
 
     <main>
-        <!-- 
-           Points to your markdown file in the docs folder 
-        -->
-        <zero-md src="docs/getting-started-hs.md">
-            <template>
-                <!-- This styles the Markdown content specifically -->
-                <style>
-                    h1,
-                    h2,
-                    h3 {
-                        color: #2c3e50;
-                        margin-top: 1.5em;
-                        border-bottom: 1px solid #eee;
-                        padding-bottom: 0.3em;
-                    }
-
-                    a {
-                        color: #007bff;
-                    }
-
-                    code {
-                        background: #f4f4f4;
-                        padding: 2px 5px;
-                        border-radius: 3px;
-                        font-family: monospace;
-                    }
-
-                    pre {
-                        background: #f4f4f4;
-                        padding: 15px;
-                        border-radius: 5px;
-                        overflow-x: auto;
-                    }
-
-                    p {
-                        margin-bottom: 1em;
-                    }
-
-                    li {
-                        margin-bottom: 0.5em;
-                    }
-                </style>
-            </template>
-        </zero-md>
+        <article>
+            <h1 id="getting-started-with-hubspot-extension">Getting Started with HubSpot Extension</h1>
+            <p><strong>Welcome to the Container Tracker for HubSpot!</strong></p>
+            <p>The HubSpot Extension brings powerful container tracking functionality directly into your HubSpot CRM. Track ocean containers, view their history, and manage your shipments seamlessly from your Tickets.</p>
+            <h2 id="installation">🚀 Installation</h2>
+            <p>To install the app in your HubSpot account:</p>
+            <h3 id="1-check-permissions">1. Check Permissions</h3>
+            <p>Make sure you have the right permissions. You must be a Super Admin or have <strong>App Marketplace access permissions</strong> in HubSpot to install apps.</p>
+            <h3 id="2-install-from-the-app-marketplace">2. Install from the App Marketplace</h3>
+            <p>Go to the Container Tracker listing on the HubSpot App Marketplace:
+            <a href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">Container Tracker App</a></p>
+            <h3 id="3-install-authorize">3. Install &amp; Authorize</h3>
+            <ol>
+            <li>Click <strong>Install</strong>.</li>
+            <li>Follow the prompts to authorize the app. </li>
+            <li>Review the access scopes requested, then confirm to complete the installation.</li>
+            </ol>
+            <h3 id="4-finish-setup">4. Finish Setup</h3>
+            <p>In HubSpot, go to <strong>Settings</strong> (gear icon in the top right).</p>
+            <h4 id="enable-the-app-card-on-ticket-records">Enable the app card on ticket records</h4>
+            <ol>
+            <li>In the left sidebar, navigate to <strong>Integrations</strong> → <strong>Connected Apps</strong>.</li>
+            <li>Find and click the installed app (<strong>Container Tracking</strong>).</li>
+            <li>In the app settings, open the <strong>App cards</strong> tab.</li>
+            <li>Find the <strong>Container Tracking</strong> card (type: sidebar / tickets).</li>
+            <li>Click <strong>Manage locations</strong>.</li>
+            <li>In the <strong>Tickets</strong> tab, check the box for the ticket view(s) where you want the card to appear (e.g. <strong>Default</strong>).</li>
+            <li>Click <strong>Save</strong>.</li>
+            </ol>
+            <h3 id="5-verify-on-a-ticket">5. Verify on a ticket</h3>
+            <ol>
+            <li>Go to <strong>Tickets</strong> and open any ticket record.</li>
+            <li>In the right sidebar, you should now see the <strong>Container Tracking</strong> card.</li>
+            <li>If you don’t see it, refresh the page and check that:<ul>
+            <li>You’re viewing a ticket in a layout where the card was enabled.</li>
+            <li>You have permission to customize or view that layout.</li>
+            </ul>
+            </li>
+            </ol>
+            <p>If anything doesn’t work or you don’t see the card after following these steps, please contact us at <a href="mailto:ctms.developer@gmail.com">ctms.developer@gmail.com</a>.</p>
+            <h2 id="what-is-container-tracker">What is Container Tracker?</h2>
+            <p>Container Tracker is an extension that automatically tracks ocean containers across multiple carriers including MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. It provides real-time updates on container location, status, and key milestones throughout the shipping journey directly within your CRM records.</p>
+            <h2 id="how-container-tracking-works">How Container Tracking Works</h2>
+            <h3 id="automatic-tracking">Automatic Tracking</h3>
+            <p>For supported carriers (MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen), Container Tracker automatically checks the carrier's tracking data for you.</p>
+            <ol>
+            <li><strong>Submit a Container</strong>: Enter the container number and select the carrier in the Container Tracker card.</li>
+            <li><strong>Automatic Updates</strong>: The system periodically checks for updates.</li>
+            <li><strong>Real-time Events</strong>: New tracking events are automatically added to the container history.</li>
+            </ol>
+            <h3 id="manual-tracking">Manual Tracking</h3>
+            <p>For any other carrier, or as a backup method, you can track containers manually:</p>
+            <ol>
+            <li><strong>Manual Entry</strong>: Add any container number.</li>
+            <li><strong>Flexible Updates</strong>: Add individual events as they occur using the <strong>"Add Event"</strong> button.</li>
+            <li><strong>Control</strong>: You have full control over the event date, location, and description.</li>
+            </ol>
+            <h3 id="importing-from-screenshots-ocr">Importing from Screenshots (OCR)</h3>
+            <p>For manually tracked containers, you can quickly import events using carrier tracking page screenshots instead of typing them out:</p>
+            <ol>
+            <li>Open a manually tracked container's details in the HubSpot card.</li>
+            <li>Click <strong>"📷 Import from screenshot"</strong>.</li>
+            <li>Take a screenshot of the carrier's tracking page on their website.</li>
+            <li>Paste the screenshot into the import window (Ctrl+V or Cmd+V).</li>
+            <li>Click <strong>"Import Events"</strong>.</li>
+            <li>AI analyzes the image and extracts all tracking events automatically.</li>
+            </ol>
+            <p><strong>What Gets Extracted</strong>:</p>
+            <ul>
+            <li>Event descriptions</li>
+            <li>Dates and times</li>
+            <li>Locations</li>
+            <li>Vessel names</li>
+            <li>Container status</li>
+            </ul>
+            <p>This feature saves time and ensures accuracy by letting AI do the data entry for you.</p>
+            <h2 id="using-container-tracker-in-hubspot">Using Container Tracker in HubSpot</h2>
+            <h3 id="tracking-your-first-container">Tracking Your First Container</h3>
+            <ol>
+            <li>Navigate to any <strong>Ticket</strong> in HubSpot.</li>
+            <li>Locate and expand the <strong>Container Tracking</strong> card in the right sidebar.</li>
+            <li>Click the <strong>"Submit Container for Tracking"</strong> button.</li>
+            <li>Enter the container number (e.g., <code>MSCU1234567</code>).</li>
+            <li>Select the carrier from the dropdown.</li>
+            <li>Click <strong>Submit</strong>.</li>
+            </ol>
+            <p>The container is now linked to this Ticket and will be monitored automatically.</p>
+            <h3 id="viewing-container-history">Viewing Container History</h3>
+            <p>To see the detailed tracking history:</p>
+            <ol>
+            <li>Open the Ticket where the container is tracked.</li>
+            <li>In the <strong>Container Tracking</strong> card, click <strong>"View Tracked Containers"</strong>.</li>
+            <li>Select the container from your list to view its details.</li>
+            <li>View the complete event timeline, including:<ul>
+            <li>Event descriptions ("Gate In", "Loaded", "Discharged")</li>
+            <li>Dates, times, and locations</li>
+            <li>Vessel information</li>
+            </ul>
+            </li>
+            </ol>
+            <h3 id="understanding-milestones">Understanding Milestones</h3>
+            <p>The <strong>Milestones View</strong> summarizes key stages in the journey:</p>
+            <ul>
+            <li><strong>Gate In</strong></li>
+            <li><strong>Loaded</strong></li>
+            <li><strong>Departed</strong></li>
+            <li><strong>Arrived</strong></li>
+            <li><strong>Discharged</strong></li>
+            <li><strong>Gate Out / Delivered</strong></li>
+            </ul>
+            <p>Switch to this view for a high-level overview of the shipment's progress.</p>
+            <h3 id="ai-summary">AI Summary</h3>
+            <p>Get a natural language summary of the container's status:</p>
+            <ol>
+            <li>Open the container details.</li>
+            <li>Click <strong>"View Summary"</strong>.</li>
+            <li>Read an AI-generated update on current status, location, and expected next steps.</li>
+            </ol>
+            <h2 id="need-help">Need Help?</h2>
+            <ul>
+            <li><strong>Permissions</strong>: Ensure you have access to view and edit Tickets.</li>
+            <li><strong>Support</strong>: For questions or issues, email us at <a href="mailto:ctms.developer@gmail.com">ctms.developer@gmail.com</a>.</li>
+            </ul>
+            <p>Start tracking your containers today and bring automated ocean freight visibility to your HubSpot CRM!</p>
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2025 Container Tracker. All rights reserved.</p>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
         <p>
             <a href="privacy-hs.html">Privacy Policy (HubSpot)</a>
             <a href="terms-hs.html">Terms of Service (HubSpot)</a>

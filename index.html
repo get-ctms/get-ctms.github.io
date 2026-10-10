@@ -4,16 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container Tracker</title>
+    <title>Container Tracker - Shipping Container Tracking in Google Sheets and HubSpot</title>
+    <meta name="description"
+        content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right inside Google Sheets or HubSpot. Milestones, AI summaries and screenshot import for any other carrier.">
     <link rel="canonical" href="https://get-ctms.com/">
 
-    <!-- Favicons: using existing logo/ctms-logo.png as the favicon.
-         For best support create a 16x16 and 32x32 PNG and a favicon.ico in the same folder. -->
-    <link rel="icon" type="image/png" href="logo/ctms-logo.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="logo/ctms-logo.png" sizes="16x16">
-    <link rel="shortcut icon" href="logo/favicon.ico">
-    <link rel="apple-touch-icon" href="logo/ctms-logo.png">
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Container Tracker">
+    <meta property="og:title" content="Container Tracker - Shipping Container Tracking in Google Sheets and HubSpot">
+    <meta property="og:description"
+        content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets and HubSpot.">
+    <meta property="og:url" content="https://get-ctms.com/">
+    <meta property="og:image" content="https://get-ctms.com/logo/ctms-logo.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="logo/CTMS%20128x128.png">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- Structured data: tells search engines what the product is -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://get-ctms.com/#org",
+                "name": "Container Tracker",
+                "url": "https://get-ctms.com/",
+                "logo": "https://get-ctms.com/logo/ctms-logo.png",
+                "email": "ctms.developer@gmail.com"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Container Tracker",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web, Google Sheets, HubSpot",
+                "url": "https://get-ctms.com/",
+                "publisher": { "@id": "https://get-ctms.com/#org" },
+                "description": "Automatic ocean container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets and HubSpot, with milestones, AI summaries and screenshot import for any other carrier.",
+                "sameAs": [
+                    "https://workspace.google.com/marketplace/app/container_tracker/410438104534",
+                    "https://ecosystem.hubspot.com/marketplace/listing/containertracker"
+                ]
+            }
+        ]
+    }
+    </script>
 
     <style>
         body {
@@ -117,6 +155,34 @@
             color: #666;
             margin-right: 15px;
         }
+
+        .carrier-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .carrier-list li {
+            background: #eef5ff;
+            border: 1px solid #cfe2ff;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
     <meta name="google-site-verification" content="fjybpP265pZ-EYDu-OV7N4jY9yurtJ3Etv2k8urqlW4" />
 </head>
@@ -125,8 +191,8 @@
 
     <header>
         <!-- Discreet logo placed left of the site name. Using the provided path logo/ctms-logo.png -->
-        <a href="#" class="logo" aria-label="Container Tracker home">
-            <img src="logo/ctms-logo.png" alt="Container Tracker logo" class="logo-img">
+        <a href="/" class="logo" aria-label="Container Tracker home">
+            <img src="logo/CTMS%20128x128.png" alt="Container Tracker logo" class="logo-img" width="36" height="36">
             <span>Container Tracker</span>
         </a>
         <nav>
@@ -136,9 +202,9 @@
     </header>
 
     <main>
-        <h1>Container Tracking for Global Trade</h1>
-        <p class="subtitle">A SaaS platform to track international shipping containers across multiple carriers.
-            Accessible via Google Workspace and HubSpot.</p>
+        <h1>Shipping Container Tracking in Google Sheets and HubSpot</h1>
+        <p class="subtitle">Track ocean containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and
+            Evergreen automatically, without leaving the tools your team already uses.</p>
 
         <div class="cta-container">
             <a href="getting-started.html" class="cta-button">Get Started with Google Workspace</a>
@@ -172,6 +238,62 @@
             </div>
         </div>
 
+        <section id="carriers">
+            <h2>Supported Carriers</h2>
+            <p>Container Tracker checks these shipping lines automatically and adds new tracking events to your
+                container's history as they happen:</p>
+            <ul class="carrier-list">
+                <li>MSC</li>
+                <li>Maersk</li>
+                <li>Hapag-Lloyd</li>
+                <li>CMA CGM</li>
+                <li>ONE (Ocean Network Express)</li>
+                <li>Yang Ming</li>
+                <li>Evergreen</li>
+            </ul>
+            <p>Shipping with another carrier? Track the container manually: add events yourself, or paste a
+                screenshot of the carrier's tracking page and AI extracts the events for you.</p>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <ol>
+                <li><strong>Install</strong> the <a
+                        href="https://workspace.google.com/marketplace/app/container_tracker/410438104534">Google
+                        Sheets add-on</a> or the <a
+                        href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">HubSpot app</a>.</li>
+                <li><strong>Submit a container</strong>: enter the container number (e.g. MSCU1234567) and pick the
+                    carrier.</li>
+                <li><strong>Follow its journey</strong>: see the full event history, key milestones (Gate In,
+                    Loaded, Departed, Arrived, Discharged, Delivered) and an AI summary of where the container is now.
+                </li>
+                <li><strong>Export</strong> container lists, histories and milestones to Google Sheets for reporting.
+                </li>
+            </ol>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>Which shipping lines can I track automatically?</h3>
+            <p>MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. Containers
+                from any other carrier can be tracked manually or imported from a screenshot.</p>
+
+            <h3>Where do I find Container Tracker in Google Sheets?</h3>
+            <p>Container Tracker is a Google Workspace add-on, so it is not in the Extensions menu. Open any
+                spreadsheet and click the Container Tracker icon in the right-hand side panel. If the side panel is
+                hidden, click the small arrow at the bottom right of the window. See the <a
+                    href="getting-started.html">Google Sheets guide</a>.</p>
+
+            <h3>Does it work in HubSpot?</h3>
+            <p>Yes. The HubSpot app adds a Container Tracking card to your Tickets, so each shipment is tracked on
+                the ticket it belongs to. See the <a href="getting-started-hs.html">HubSpot guide</a>.</p>
+
+            <h3>How do I keep stakeholders updated?</h3>
+            <p>Open a container and use the AI summary for a plain-language status update, or export milestones to
+                a sheet to compare many containers side by side.</p>
+        </section>
+
         <section id="contact" style="margin-top: 40px;">
             <h2>Contact Us</h2>
             <p>For support or feature requests, please contact us:</p>
@@ -180,7 +302,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Container Tracker. All rights reserved.</p>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
         <p>
 
             <strong>Google Workspace:</strong>

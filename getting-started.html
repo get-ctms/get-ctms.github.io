@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting Started - Container Tracker</title>
+    <title>Container Tracker for Google Sheets - Getting Started</title>
+    <meta name="description" content="How to install and use the Container Tracker Google Sheets add-on: automatic tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen, milestones, AI summaries, screenshot import and export to Sheets.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Container Tracker">
+    <meta property="og:title" content="Container Tracker for Google Sheets - Getting Started">
+    <meta property="og:description" content="How to install and use the Container Tracker Google Sheets add-on: automatic tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen, milestones, AI summaries, screenshot import and export to Sheets.">
+    <meta property="og:url" content="https://get-ctms.com/getting-started.html">
+    <meta property="og:image" content="https://get-ctms.com/logo/ctms-logo.png">
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
     <link rel="canonical" href="https://get-ctms.com/getting-started.html">
 
-    <!-- This small script converts Markdown to HTML automatically -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
 
     <style>
         body {
@@ -65,6 +71,50 @@
             color: #666;
             margin: 0 10px;
         }
+
+        /* Guide content */
+        main h1,
+        main h2,
+        main h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        main a {
+            color: #007bff;
+        }
+
+        main code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        main pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        main blockquote {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            border-left: 4px solid #cfe2ff;
+            background: #f8f9fa;
+            color: #555;
+        }
     </style>
 </head>
 
@@ -76,54 +126,220 @@
     </header>
 
     <main>
-        <!-- 
-           Points to your markdown file in the docs folder 
-        -->
-        <zero-md src="docs/getting-started.md">
-            <template>
-                <!-- This styles the Markdown content specifically -->
-                <style>
-                    h1,
-                    h2,
-                    h3 {
-                        color: #2c3e50;
-                        margin-top: 1.5em;
-                        border-bottom: 1px solid #eee;
-                        padding-bottom: 0.3em;
-                    }
-
-                    a {
-                        color: #007bff;
-                    }
-
-                    code {
-                        background: #f4f4f4;
-                        padding: 2px 5px;
-                        border-radius: 3px;
-                        font-family: monospace;
-                    }
-
-                    pre {
-                        background: #f4f4f4;
-                        padding: 15px;
-                        border-radius: 5px;
-                        overflow-x: auto;
-                    }
-
-                    p {
-                        margin-bottom: 1em;
-                    }
-
-                    li {
-                        margin-bottom: 0.5em;
-                    }
-                </style>
-            </template>
-        </zero-md>
+        <article>
+            <h1 id="getting-started-with-container-tracker">Getting Started with Container Tracker</h1>
+            <p>Welcome to Container Tracker! This guide will help you quickly understand how to track containers, view their history, and manage your tracking data effectively.</p>
+            <h2 id="installation">🚀 Installation</h2>
+            <p>Before you begin, make sure to install the <strong>Container Tracker</strong> Google Sheets add-on from the Google Workspace Marketplace:</p>
+            <p><strong><a href="https://workspace.google.com/marketplace/app/container_tracker/410438104534">👉 Install Container Tracker from Google Workspace Marketplace</a></strong></p>
+            <h2 id="what-is-container-tracker">What is Container Tracker?</h2>
+            <p>Container Tracker is a Google Sheets add-on that automatically tracks ocean containers across multiple carriers including MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. It provides real-time updates on container location, status, and key milestones throughout the shipping journey.</p>
+            <h2 id="how-container-tracking-works">How Container Tracking Works</h2>
+            <h3 id="automatic-tracking">Automatic Tracking</h3>
+            <p>These carriers are tracked automatically:</p>
+            <ul>
+            <li>MSC</li>
+            <li>Maersk</li>
+            <li>Hapag-Lloyd</li>
+            <li>CMA CGM</li>
+            <li>ONE (Ocean Network Express)</li>
+            <li>Yang Ming</li>
+            <li>Evergreen</li>
+            </ul>
+            <p>For these carriers, Container Tracker automatically checks the carrier's tracking data for you.</p>
+            <ol>
+            <li><strong>Submit a Container</strong>: Enter the container number and select the carrier</li>
+            <li><strong>Automatic Updates</strong>: The system periodically checks the carrier's tracking data for updates</li>
+            <li><strong>Real-time Events</strong>: New tracking events are automatically added to your container's history</li>
+            <li><strong>Lifecycle Tracking</strong>: The system continues monitoring until the container is delivered</li>
+            </ol>
+            <p><strong>Benefits</strong>:</p>
+            <ul>
+            <li>Hands-free tracking with automatic updates</li>
+            <li>No manual data entry required</li>
+            <li>Comprehensive event history captured automatically</li>
+            </ul>
+            <h3 id="manual-tracking">Manual Tracking</h3>
+            <p>For any other carrier, or as a backup method:</p>
+            <ol>
+            <li><strong>Manual Entry</strong>: Add containers and manually input tracking events</li>
+            <li><strong>Screenshot Import</strong>: Paste a screenshot of the carrier's tracking page and let AI extract the events for you (see below)</li>
+            <li><strong>Flexible Updates</strong>: Add individual events as they occur</li>
+            </ol>
+            <p><strong>Benefits</strong>:</p>
+            <ul>
+            <li>Track containers from any carrier</li>
+            <li>Control over what events are recorded</li>
+            <li>Quick screenshot-based data capture</li>
+            </ul>
+            <h2 id="tracking-your-first-container">Tracking Your First Container</h2>
+            <ol>
+            <li>Open any spreadsheet and click the <strong>Container Tracker icon in the right-hand side panel</strong> (it's not in the Extensions menu). If the side panel is hidden, click the arrow at the bottom right of the window</li>
+            <li>Click <strong>"Submit container for tracking"</strong></li>
+            <li>Enter the container number (e.g., MSCU1234567)</li>
+            <li>Select the carrier from the dropdown</li>
+            <li>Click <strong>Submit</strong></li>
+            </ol>
+            <p>The container will now appear in your <strong>"View tracked containers"</strong> list and will be monitored automatically.</p>
+            <h2 id="viewing-container-history">Viewing Container History</h2>
+            <p>To see the detailed tracking history of a container:</p>
+            <ol>
+            <li>Navigate to <strong>"View tracked containers"</strong></li>
+            <li>Click on any container in the list</li>
+            <li>View the complete event timeline with:<ul>
+            <li>Event descriptions (e.g., "Gate In", "Loaded on Vessel", "Discharged")</li>
+            <li>Dates and times</li>
+            <li>Locations and vessel information</li>
+            <li>Additional details for each event</li>
+            </ul>
+            </li>
+            </ol>
+            <h3 id="export-to-google-sheets">Export to Google Sheets</h3>
+            <p>You can export any container's history directly to your spreadsheet:</p>
+            <ol>
+            <li>Open the container's history view</li>
+            <li>Click <strong>"Export to Sheet"</strong> in the top actions</li>
+            <li>A new sheet will be created with all event data in a tabular format</li>
+            <li>Use this for reporting, analysis, or sharing with stakeholders</li>
+            </ol>
+            <h2 id="understanding-milestones">Understanding Milestones</h2>
+            <p>Milestones represent key stages in your container's journey. Instead of viewing dozens of individual events, the <strong>Milestones View</strong> shows only the most important checkpoints:</p>
+            <h3 id="key-milestones">Key Milestones:</h3>
+            <ul>
+            <li><strong>Gate In</strong> - Container accepted at origin terminal</li>
+            <li><strong>Loaded</strong> - Container loaded onto vessel</li>
+            <li><strong>Departed</strong> - Vessel departed from port</li>
+            <li><strong>Arrived</strong> - Vessel arrived at destination port</li>
+            <li><strong>Discharged</strong> - Container unloaded from vessel</li>
+            <li><strong>Gate Out / Delivered</strong> - Container picked up or delivered</li>
+            </ul>
+            <h3 id="how-to-view-milestones">How to View Milestones:</h3>
+            <ol>
+            <li>Open a container's history</li>
+            <li>Click <strong>"View as milestones"</strong></li>
+            <li>See a clean, summarized timeline of major events</li>
+            <li>Export milestones to a sheet for easy tracking of multiple containers</li>
+            </ol>
+            <p>Milestones make it easy to quickly understand "where is my container?" without wading through technical details.</p>
+            <h2 id="ai-summary">AI Summary</h2>
+            <p>The AI Summary feature provides a natural language summary of your container's journey:</p>
+            <ol>
+            <li>Open any container's history</li>
+            <li>Click <strong>"🤖 View Summary"</strong></li>
+            <li>Read an AI-generated summary that includes:<ul>
+            <li>Current container status and location</li>
+            <li>Key journey milestones</li>
+            <li>Estimated or actual arrival dates</li>
+            <li>Notable delays or issues</li>
+            <li>Next expected steps</li>
+            </ul>
+            </li>
+            </ol>
+            <p><strong>Example Summary</strong>:</p>
+            <blockquote>
+            <p>"Your container MSCU1234567 is currently at the Port of Los Angeles, where it was discharged from the vessel MSC MAYA on December 1st. The container is now awaiting pickup at the terminal. Based on the tracking history, it departed from Shanghai on November 20th and had a smooth transit. The container should be ready for collection within the next 2-3 business days."</p>
+            </blockquote>
+            <p>This is perfect for quickly briefing stakeholders or understanding status at a glance.</p>
+            <h2 id="importing-from-screenshots">Importing from Screenshots</h2>
+            <p>For manually tracked containers, you can quickly import events using carrier tracking page screenshots:</p>
+            <h3 id="how-to-use-screenshot-import">How to Use Screenshot Import:</h3>
+            <ol>
+            <li>Open a manually tracked container's history</li>
+            <li>Click <strong>"📷 Import from screenshot"</strong></li>
+            <li>Take a screenshot of the carrier's tracking page on their website</li>
+            <li>Paste the screenshot into the import window (Ctrl+V or Cmd+V)</li>
+            <li>Click <strong>"Import Events"</strong></li>
+            <li>AI analyzes the image and extracts all tracking events automatically</li>
+            </ol>
+            <p><strong>What Gets Extracted</strong>:</p>
+            <ul>
+            <li>Event descriptions</li>
+            <li>Dates and times</li>
+            <li>Locations</li>
+            <li>Vessel names</li>
+            <li>Container status</li>
+            </ul>
+            <p>This feature saves hours of manual data entry while ensuring accuracy.</p>
+            <h2 id="managing-archived-containers">Managing Archived Containers</h2>
+            <p>Once a container is delivered or no longer needs active monitoring, you can archive it:</p>
+            <h3 id="archive-a-container">Archive a Container:</h3>
+            <ol>
+            <li>Go to <strong>"View tracked containers"</strong></li>
+            <li>Click the <strong>"⋮" (more options)</strong> button next to the container</li>
+            <li>Select <strong>"Archive"</strong></li>
+            <li>The container moves to your archived list</li>
+            </ol>
+            <h3 id="view-archived-containers">View Archived Containers:</h3>
+            <ol>
+            <li>In <strong>"View tracked containers"</strong></li>
+            <li>Click <strong>"View Archived"</strong> toggle</li>
+            <li>Browse all previously archived containers</li>
+            <li>Unarchive any container by clicking <strong>"⋮"</strong> → <strong>"Unarchive"</strong></li>
+            </ol>
+            <p><strong>Why Archive?</strong></p>
+            <ul>
+            <li>Keep your active tracking list clean and focused</li>
+            <li>Maintain historical records without cluttering current operations</li>
+            <li>Easily retrieve past shipment information when needed</li>
+            </ul>
+            <h2 id="exporting-data-to-sheets">Exporting Data to Sheets</h2>
+            <p>Container Tracker makes it easy to work with your data in Google Sheets:</p>
+            <h3 id="export-tracked-containers-list">Export Tracked Containers List:</h3>
+            <ol>
+            <li>Navigate to <strong>"View tracked containers"</strong></li>
+            <li>Click <strong>"Export to Sheet"</strong> in the header</li>
+            <li>A sheet named "Tracked Containers" is created with all active containers</li>
+            </ol>
+            <h3 id="export-container-history">Export Container History:</h3>
+            <ol>
+            <li>Open any container's history view</li>
+            <li>Click <strong>"Export to Sheet"</strong></li>
+            <li>A sheet named "History - [Container Number]" is created with:<ul>
+            <li>Container information (carrier, type, ETA)</li>
+            <li>Complete event timeline with all details</li>
+            </ul>
+            </li>
+            </ol>
+            <h3 id="export-milestones">Export Milestones:</h3>
+            <ol>
+            <li>View container milestones</li>
+            <li>Click <strong>"Export to Sheet"</strong></li>
+            <li>Get a clean summary of major milestones in spreadsheet format</li>
+            <li>Perfect for tracking multiple containers side-by-side</li>
+            </ol>
+            <p>All exported data is formatted and ready for analysis, reporting, or integration with your existing workflows.</p>
+            <h2 id="best-practices">Best Practices</h2>
+            <h3 id="for-automatic-tracking">For Automatic Tracking:</h3>
+            <ul>
+            <li>Submit containers as early in their journey as possible to capture complete history</li>
+            <li>Check your tracked list regularly to monitor progress</li>
+            <li>Use milestones view for quick daily check-ins</li>
+            </ul>
+            <h3 id="for-manual-tracking">For Manual Tracking:</h3>
+            <ul>
+            <li>Use screenshot import whenever possible to save time</li>
+            <li>Add events promptly to maintain accurate timelines</li>
+            <li>Archive completed shipments to keep your workspace organized</li>
+            </ul>
+            <h3 id="for-reporting">For Reporting:</h3>
+            <ul>
+            <li>Export milestones for executive summaries</li>
+            <li>Export full history for detailed analysis or compliance</li>
+            <li>Use AI summaries for quick status updates to customers</li>
+            </ul>
+            <h2 id="need-help">Need Help?</h2>
+            <ul>
+            <li><strong>Profile Setup</strong>: Make sure your customer profile is active before tracking containers</li>
+            <li><strong>Carrier Support</strong>: Automatic tracking covers MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. Use manual tracking or screenshot import for any other carrier</li>
+            <li><strong>Credits</strong>: Screenshot imports and AI summaries may consume LLM credits depending on your subscription</li>
+            <li><strong>Contact Us</strong>: For support or questions, email us at <a href="mailto:ctms.developer@gmail.com">ctms.developer@gmail.com</a></li>
+            </ul>
+            <p>Start tracking your first container today and experience automated ocean freight visibility!</p>
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2025 Container Tracker. All rights reserved.</p>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
         <p>
             <a href="privacy.html">Privacy Policy (Google Workspace)</a>
             <a href="terms.html">Terms of Service (Google Workspace)</a>
