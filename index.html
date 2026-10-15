@@ -44,6 +44,12 @@
                 "url": "https://get-ctms.com/",
                 "publisher": { "@id": "https://get-ctms.com/#org" },
                 "description": "Automatic ocean container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets and HubSpot, with milestones, AI summaries and screenshot import for any other carrier.",
+                "offers": [
+                    { "@type": "Offer", "name": "Free trial (first 10 containers)", "price": "0", "priceCurrency": "USD" },
+                    { "@type": "Offer", "name": "Pro, monthly", "price": "15", "priceCurrency": "USD" },
+                    { "@type": "Offer", "name": "Pro, 6 months", "price": "75", "priceCurrency": "USD" },
+                    { "@type": "Offer", "name": "Pro, yearly", "price": "149", "priceCurrency": "USD" }
+                ],
                 "sameAs": [
                     "https://workspace.google.com/marketplace/app/container_tracker/410438104534",
                     "https://ecosystem.hubspot.com/marketplace/listing/containertracker"
@@ -174,8 +180,73 @@
             color: #2c3e50;
         }
 
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .price-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .price-card.featured {
+            border: 2px solid #007bff;
+            background: #fff;
+        }
+
+        .price-card h3 {
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .price-card ul {
+            padding-left: 20px;
+        }
+
+        .billing-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .billing-table th,
+        .billing-table td {
+            text-align: left;
+            padding: 6px 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .save-tag {
+            color: #1e7e34;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .pricing-note {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
         @media (max-width: 600px) {
-            .features {
+            .features,
+            .pricing-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -196,7 +267,7 @@
             <span>Container Tracker</span>
         </a>
         <nav>
-
+            <a href="#pricing" style="color:#007bff; text-decoration:none; margin-right:15px;">Pricing</a>
             <a href="mailto:ctms.developer@gmail.com" style="color:#007bff; text-decoration:none;">Contact Support</a>
         </nav>
     </header>
@@ -233,8 +304,9 @@
                 <p>Manage all your shipments in a single dashboard with automated status updates.</p>
             </div>
             <div class="feature-card">
-                <h3>Flexible Pricing</h3>
-                <p>Simple subscription plans for businesses of all sizes. Cancel anytime.</p>
+                <h3>Simple Pricing</h3>
+                <p>Track your first 10 containers free, then $15/month for Pro. No credit card to start, cancel
+                    anytime. <a href="#pricing">See pricing</a>.</p>
             </div>
         </div>
 
@@ -272,6 +344,59 @@
             </ol>
         </section>
 
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Free trial</h3>
+                    <p class="price">$0</p>
+                    <p>Track your first 10 containers at no cost. No credit card needed.</p>
+                    <p>Try automatic tracking on 10 real containers before you choose a plan.</p>
+                </div>
+                <div class="price-card featured">
+                    <h3>Pro</h3>
+                    <p class="price">$15 <span>/ month</span></p>
+                    <ul>
+                        <li>Automatic tracking for up to 20 containers per month</li>
+                        <li>400 AI credits every month</li>
+                        <li>Plain-English status and delay summaries (AI-assisted)</li>
+                        <li>Screenshot-to-Data event detection (AI-assisted)</li>
+                        <li>Unlimited manual container event entry</li>
+                    </ul>
+                    <p><strong>Save with longer billing:</strong></p>
+                    <table class="billing-table">
+                        <tr>
+                            <th>Billing</th>
+                            <th>Price</th>
+                            <th>Per month</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Monthly</td>
+                            <td>$15</td>
+                            <td>$15.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6 months</td>
+                            <td>$75</td>
+                            <td>$12.50</td>
+                            <td class="save-tag">Save 17%</td>
+                        </tr>
+                        <tr>
+                            <td>Yearly</td>
+                            <td>$149</td>
+                            <td>$12.42</td>
+                            <td class="save-tag">2 months free</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p><strong>Tracking more than 20 containers a month?</strong> <a href="mailto:ctms.developer@gmail.com">Contact us</a> and we'll put together a plan
+                that fits your volume.</p>
+            <p class="pricing-note">Prices in USD. Cancel anytime.</p>
+        </section>
+
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
 
@@ -289,6 +414,11 @@
             <p>Yes. The HubSpot app adds a Container Tracking card to your Tickets, so each shipment is tracked on
                 the ticket it belongs to. See the <a href="getting-started-hs.html">HubSpot guide</a>.</p>
 
+            <h3>How much does it cost?</h3>
+            <p>Your first 10 containers are free, with no credit card needed. After that, Pro is $15/month (or $75
+                for 6 months, $149 per year) and covers up to 20 containers a month plus 400 AI credits. See <a
+                    href="#pricing">Pricing</a>.</p>
+
             <h3>How do I keep stakeholders updated?</h3>
             <p>Open a container and use the AI summary for a plain-language status update, or export milestones to
                 a sheet to compare many containers side by side.</p>
@@ -296,8 +426,7 @@
 
         <section id="contact" style="margin-top: 40px;">
             <h2>Contact Us</h2>
-            <p>For support or feature requests, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:ctms.developer@gmail.com">ctms.developer@gmail.com</a></p>
+            <p>For support or feature requests, please <a href="mailto:ctms.developer@gmail.com">contact us</a>.</p>
         </section>
     </main>
 
