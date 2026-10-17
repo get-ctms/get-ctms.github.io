@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container Tracker - Shipping Container Tracking in Google Sheets and HubSpot</title>
+    <title>Container Tracking in Google Sheets, Automatic | Container Tracker</title>
     <meta name="description"
         content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right inside Google Sheets or HubSpot. Milestones, AI summaries and screenshot import for any other carrier.">
     <link rel="canonical" href="https://get-ctms.com/">
@@ -12,7 +12,7 @@
     <!-- Open Graph / social previews -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Container Tracker">
-    <meta property="og:title" content="Container Tracker - Shipping Container Tracking in Google Sheets and HubSpot">
+    <meta property="og:title" content="Track every ocean container in Google Sheets, automatically">
     <meta property="og:description"
         content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets and HubSpot.">
     <meta property="og:url" content="https://get-ctms.com/">
@@ -242,6 +242,76 @@
             color: #666;
         }
 
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #007bff;
+            margin: 0 0 8px;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            padding: 10px 22px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin: -18px 0 6px;
+        }
+
+        .cta-alt {
+            font-size: 0.95rem;
+            margin: 0 0 30px;
+        }
+
+        .cta-alt a {
+            color: #ff7a59;
+        }
+
+        .trust-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+            list-style: none;
+            padding: 14px 0;
+            margin: 0 0 10px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .trust-strip li::before {
+            content: "\2713  ";
+            color: #1e7e34;
+            font-weight: bold;
+        }
+
+        .pain-list {
+            padding-left: 20px;
+        }
+
+        .final-cta {
+            margin: 50px 0 10px;
+            padding: 28px;
+            border-radius: 8px;
+            background: #eef5ff;
+            border: 1px solid #cfe2ff;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            margin-top: 0;
+        }
+
         @media (max-width: 600px) {
             .features,
             .pricing-grid {
@@ -355,45 +425,68 @@
             <span>Container Tracker</span>
         </a>
         <nav>
+            <a href="#how-it-works" style="color:#007bff; text-decoration:none; margin-right:15px;">How it works</a>
             <a href="#pricing" style="color:#007bff; text-decoration:none; margin-right:15px;">Pricing</a>
-            <a href="mailto:support@get-ctms.com" style="color:#007bff; text-decoration:none;">Contact Support</a>
+            <a href="getting-started.html" style="color:#007bff; text-decoration:none; margin-right:15px;">Guide</a>
+            <a href="mailto:support@get-ctms.com" style="color:#007bff; text-decoration:none;">Support</a>
         </nav>
     </header>
 
     <main>
-        <h1>Shipping Container Tracking in Google Sheets and HubSpot</h1>
-        <p class="subtitle">Track ocean containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and
-            Evergreen automatically, without leaving the tools your team already uses.</p>
+        <p class="eyebrow">Google Sheets&trade; add-on for importers &amp; freight forwarders</p>
+        <h1>Track every ocean container in Google Sheets, automatically.</h1>
+        <p class="subtitle">Enter a container number. Container Tracker checks MSC, Maersk, Hapag-Lloyd, CMA CGM,
+            ONE, Yang Ming and Evergreen for you and shows status, location, vessel and ETA right next to your
+            spreadsheet. No more logging into seven carrier websites.</p>
 
         <div class="cta-container">
-            <a href="getting-started.html" class="cta-button">Get Started with Google Workspace</a>
-            <a href="getting-started-hs.html" class="cta-button" style="background-color: #ff7a59;">Get Started with
-                HubSpot</a>
+            <a href="install.html?from=hero" class="cta-button">Install free for Google Sheets</a>
+            <a href="#how-it-works" class="cta-secondary">See how it works</a>
         </div>
+        <p class="cta-note">Free for your first 10 containers &middot; No credit card &middot; Works with any Google
+            account</p>
+        <p class="cta-alt">Using HubSpot? <a href="getting-started-hs.html">Track containers on HubSpot tickets
+                &rarr;</a></p>
 
-        <!-- If you have a screenshot of your add-on, put it in your repo and uncomment this line: -->
-        <!-- <img src="screenshot.png" alt="App Screenshot" style="width:100%; border-radius:8px; border:1px solid #ddd; margin-bottom:30px;"> -->
+        <ul class="trust-strip">
+            <li>Installed 250+ times from the Google Workspace Marketplace</li>
+            <li>Data from the carriers' own tracking systems</li>
+            <li>Hosted on Microsoft Azure in the EU</li>
+            <li>Built and supported by an independent developer: you email the person who wrote it</li>
+        </ul>
 
+        <section id="problem">
+            <h2>Still checking carrier websites one container at a time?</h2>
+            <ul class="pain-list">
+                <li>Seven carriers, seven websites, seven different layouts.</li>
+                <li>Copying ETAs into a spreadsheet by hand, and finding out about a delay after your customer
+                    does.</li>
+                <li>Writing the same "where is my container?" update email every week.</li>
+            </ul>
+            <p><strong>Container Tracker does the checking for you.</strong> Your first update usually arrives about a
+                minute after you add a container, and new events keep coming in until it's delivered.</p>
+        </section>
 
         <div class="features">
             <div class="feature-card">
-                <h3>Global Coverage</h3>
-                <p>Real-time tracking for major international shipping lines, manual events entry, AI assisted events
-                    extraction and summaries.</p>
+                <h3>7 carriers, checked automatically</h3>
+                <p>MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen. Any other carrier: add events by
+                    hand, or paste a screenshot of the tracking page and AI fills them in.</p>
             </div>
             <div class="feature-card">
-                <h3>Workflow Integration</h3>
-                <p>Track shipments in Google Sheets and HubSpot using our Google Workspace Add-on and HubSpot
-                    Extension.
-                </p>
+                <h3>Milestones, not noise</h3>
+                <p>Gate in, loaded, departed, arrived, discharged, delivered: the milestones that matter, exported side
+                    by side for all your containers.</p>
             </div>
             <div class="feature-card">
-                <h3>Centralized Data</h3>
-                <p>Manage all your shipments in a single dashboard with automated status updates.</p>
+                <h3>Customer updates in one click</h3>
+                <p>An AI summary explains where the container is, what changed and what comes next, in plain English,
+                    ready to paste into an email.</p>
             </div>
             <div class="feature-card">
-                <h3>Simple Pricing</h3>
-                <p>Track your first 10 containers free, no credit card needed. <a href="#pricing">See pricing</a>.</p>
+                <h3>Lives in your spreadsheet</h3>
+                <p>No new platform and no logins to share. Container Tracker opens in the Google Sheets side panel and
+                    writes straight into your sheet.</p>
             </div>
         </div>
 
@@ -421,8 +514,9 @@
                         href="install.html?from=how-it-works">Google
                         Sheets add-on</a> or the <a
                         href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">HubSpot app</a>.</li>
-                <li><strong>Submit a container</strong>: enter the container number (e.g. MSCU1234567) and pick the
-                    carrier.</li>
+                <li><strong>Add a container</strong>: open the Container Tracker icon in the Sheets side panel (it's
+                    not in the Extensions menu) and enter the container number, e.g. MSCU1234567. The carrier is
+                    detected from the number.</li>
                 <li><strong>Follow its journey</strong>: see the full event history, key milestones (Gate In,
                     Loaded, Departed, Arrived, Discharged, Delivered) and an AI summary of where the container is now.
                 </li>
@@ -521,6 +615,11 @@
         <section id="contact" style="margin-top: 40px;">
             <h2>Contact Us</h2>
             <p>For support or feature requests, please <a href="mailto:support@get-ctms.com">contact us</a>.</p>
+        </section>
+        <section class="final-cta">
+            <h2>Stop checking carrier websites.</h2>
+            <p>Your first 10 containers are free. Setup takes two minutes.</p>
+            <a href="install.html?from=final" class="cta-button">Install free for Google Sheets</a>
         </section>
     </main>
 
