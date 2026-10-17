@@ -16,8 +16,11 @@
     <meta property="og:description"
         content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets and HubSpot.">
     <meta property="og:url" content="https://get-ctms.com/">
-    <meta property="og:image" content="https://get-ctms.com/logo/ctms-logo.png">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://get-ctms.com/img/og-container-tracker.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Container Tracker in Google Sheets: a milestones table for every container plus the side panel">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
     <link rel="apple-touch-icon" href="logo/CTMS%20128x128.png">
@@ -267,6 +270,24 @@
             margin: -18px 0 6px;
         }
 
+        .faq-shot {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 8px 0 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .hero-shot {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 24px 0 8px;
+            border-radius: 8px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+        }
+
         .cta-alt {
             font-size: 0.95rem;
             margin: 0 0 30px;
@@ -445,6 +466,8 @@
         </div>
         <p class="cta-note">Free for your first 10 containers &middot; No credit card &middot; Works with any Google
             account</p>
+        <img src="img/hero.webp" class="hero-shot" width="1054" height="660" loading="eager" fetchpriority="high"
+            alt="Google Sheets with a milestones table for 13 containers and the Container Tracker side panel showing a container's ETA and events">
         <p class="cta-alt">Using HubSpot? <a href="getting-started-hs.html">Track containers on HubSpot tickets
                 &rarr;</a></p>
 
@@ -572,7 +595,9 @@
             <p>Container Tracker is a Google Workspace add-on, so it is not in the Extensions menu. Open any
                 spreadsheet and click the Container Tracker icon in the right-hand side panel. If the side panel is
                 hidden, click the small arrow at the bottom right of the window. See the <a
-                    href="getting-started.html">Google Sheets guide</a>.</p>
+                    href="getting-started.html#open-in-10-seconds">Google Sheets guide</a>.</p>
+            <img src="img/side-panel-where.webp" class="faq-shot" width="1280" height="800" loading="lazy"
+                alt="The Container Tracker icon in the right-hand side panel of Google Sheets, circled, with the label Click here">
 
             <h3>Does it work in HubSpot?</h3>
             <p>Yes. The HubSpot app adds a Container Tracking card to your Tickets, so each shipment is tracked on
