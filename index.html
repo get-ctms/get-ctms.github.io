@@ -254,6 +254,96 @@
         }
     </style>
     <meta name="google-site-verification" content="fjybpP265pZ-EYDu-OV7N4jY9yurtJ3Etv2k8urqlW4" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Which shipping lines can I track automatically?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. Containers from any other carrier can be tracked manually or imported from a screenshot."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where do I find Container Tracker in Google Sheets?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Container Tracker is a Google Workspace add-on, so it is not in the Extensions menu. Open any spreadsheet and click the Container Tracker icon in the right-hand side panel. If the side panel is hidden, click the small arrow at the bottom right of the window. See the Google Sheets guide."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it work in HubSpot?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The HubSpot app adds a Container Tracking card to your Tickets, so each shipment is tracked on the ticket it belongs to. See the HubSpot guide."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does it cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your first 10 containers are free, with no credit card needed. After that, Pro is $15/month and covers up to 20 containers a month plus 400 AI credits. Save with a 6-month or yearly subscription. Tracking more containers? Contact us for a plan that fits your volume. See Pricing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often is a container checked?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The first check runs right after you add a container, and your first update usually arrives in about a minute. After that, Container Tracker checks about every 6 hours while the container is moving, less often during quiet periods, until it is delivered."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens when I reach my 10 free containers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nothing is deleted. Your containers and their history stay available. You can keep tracking manually for free, or upgrade to keep new containers updating automatically."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does \"20 containers a month\" mean 20 at a time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It means 20 new automatically tracked containers per billing month. Containers you are already tracking keep updating."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data safe?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We store only your email, your name and the container numbers you submit, on Microsoft Azure in the EU. The add-on only writes to the spreadsheet you are working in, and only when you click an export. See the Privacy Policy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I cancel anytime?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Open the add-on, go to My Profile and click Manage Subscription. You keep access until the end of the period you paid for."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I keep stakeholders updated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Open a container and use the AI summary for a plain-language status update, or export milestones to a sheet to compare many containers side by side."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- Cloudflare Web Analytics (cookie-free) -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0eae3dca722441dba1fba4c4c82d1ffe"}'></script>
 </head>
 
 <body>
@@ -328,7 +418,7 @@
             <h2>How It Works</h2>
             <ol>
                 <li><strong>Install</strong> the <a
-                        href="https://workspace.google.com/marketplace/app/container_tracker/410438104534">Google
+                        href="install.html?from=how-it-works">Google
                         Sheets add-on</a> or the <a
                         href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">HubSpot app</a>.</li>
                 <li><strong>Submit a container</strong>: enter the container number (e.g. MSCU1234567) and pick the
@@ -347,22 +437,31 @@
                 <div class="price-card">
                     <h3>Free trial</h3>
                     <p class="price">$0</p>
-                    <p>Track your first 10 containers at no cost. No credit card needed.</p>
-                    <p>Try automatic tracking on 10 real containers before you choose a plan.</p>
+                    <ul>
+                        <li><strong>10 automatically tracked containers</strong> included, no time limit</li>
+                        <li>Unlimited manual tracking for any carrier</li>
+                        <li>Container history, milestones and export to Sheets</li>
+                        <li>AI summaries and screenshot import</li>
+                    </ul>
+                    <p>No credit card needed.</p>
+                    <p><a href="install.html?from=pricing" class="cta-button">Install free</a></p>
                 </div>
                 <div class="price-card featured">
                     <h3>Pro</h3>
                     <p class="price">$15 <span>/ month</span></p>
                     <ul>
-                        <li>Automatic tracking for up to 20 containers per month</li>
-                        <li>400 AI credits every month</li>
-                        <li>Plain-English status and delay summaries (AI-assisted)</li>
-                        <li>Screenshot-to-Data event detection (AI-assisted)</li>
-                        <li>Unlimited manual container event entry</li>
+                        <li><strong>20 new automatically tracked containers every month</strong></li>
+                        <li>Containers you already track keep updating</li>
+                        <li>400 AI credits a month for summaries and screenshot import</li>
+                        <li>Everything in the free trial</li>
                     </ul>
                     <p>Billed monthly. Save with a 6-month or yearly subscription.</p>
+                    <p>Start free, then upgrade from <strong>My Profile</strong> in the add-on.</p>
                 </div>
             </div>
+            <p><strong>What happens after 10 containers?</strong> Nothing is deleted. Your containers and their
+                history stay available, and you can keep tracking manually for free, or upgrade to keep new containers
+                updating automatically.</p>
             <p><strong>Tracking more than 20 containers a month?</strong> <a href="mailto:support@get-ctms.com">Contact us</a> and we'll put together a plan
                 that fits your volume.</p>
             <p class="pricing-note">Prices in USD. Cancel anytime.</p>
@@ -391,6 +490,28 @@
                 more containers? Contact us for a plan that
                 fits your volume. See <a
                     href="#pricing">Pricing</a>.</p>
+
+            <h3>How often is a container checked?</h3>
+            <p>The first check runs right after you add a container, and your first update usually arrives in about a
+                minute. After that, Container Tracker checks about every 6 hours while the container is moving, less
+                often during quiet periods, until it is delivered.</p>
+
+            <h3>What happens when I reach my 10 free containers?</h3>
+            <p>Nothing is deleted. Your containers and their history stay available. You can keep tracking manually
+                for free, or upgrade to keep new containers updating automatically.</p>
+
+            <h3>Does "20 containers a month" mean 20 at a time?</h3>
+            <p>It means 20 <em>new</em> automatically tracked containers per billing month. Containers you are already
+                tracking keep updating.</p>
+
+            <h3>Is my data safe?</h3>
+            <p>We store only your email, your name and the container numbers you submit, on Microsoft Azure in the EU.
+                The add-on only writes to the spreadsheet you are working in, and only when you click an export. See
+                the <a href="privacy.html">Privacy Policy</a>.</p>
+
+            <h3>Can I cancel anytime?</h3>
+            <p>Yes. Open the add-on, go to My Profile and click Manage Subscription. You keep access until the end
+                of the period you paid for.</p>
 
             <h3>How do I keep stakeholders updated?</h3>
             <p>Open a container and use the AI summary for a plain-language status update, or export milestones to

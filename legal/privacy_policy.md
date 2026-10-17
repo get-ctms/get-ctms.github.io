@@ -1,6 +1,6 @@
 # Privacy Policy for Container Tracker
 
-**Last Updated:** January 05, 2026
+**Last Updated:** October 17, 2026
 
 Container Tracker has created this Privacy Policy to explain how we collect, use, and share information when you use the Container Tracker Google Workspace Add-on. By using this Add-on, you agree to the collection and use of information in accordance with this policy.
 
@@ -15,6 +15,9 @@ When you install and authenticate the Add-on, we access the following personal i
 To perform the service of tracking containers, the Add-on interacts with the **currently active Google Sheet**. 
 *   **One-Way Export:** We only write tracking status updates back into your spreadsheet. 
 *   **Note:** We do not read, retrieve, or store content from your existing spreadsheet cells, nor do we access other files in your Google Drive.
+
+### C. Website Analytics
+Our website (get-ctms.com) uses Cloudflare Web Analytics to count page visits. It does not use cookies, does not track you across sites and does not collect personal information such as your name or email address. It records aggregated data such as the page visited, the referring website, the country and the browser type.
 
 ## 2. How We Use Your Information
 

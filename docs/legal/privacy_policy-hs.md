@@ -1,6 +1,6 @@
 # Privacy Policy for Container Tracker (HubSpot Extension)
 
-**Last Updated:** February 10, 2026
+**Last Updated:** October 17, 2026
 
 Container Tracker has created this Privacy Policy to explain how we collect, use, and share information when you use the Container Tracker HubSpot Extension. By using this Extension, you agree to the collection and use of information in accordance with this policy.
 
@@ -14,6 +14,9 @@ When you install and use the Extension in your HubSpot account, we access specif
 ### B. User Account Information
 *   **Email Address:** Used to identify your account and authenticate you with our backend system.
 *   **Profile Name:** Used to personalize the user interface.
+
+### C. Website Analytics
+Our website (get-ctms.com) uses Cloudflare Web Analytics to count page visits. It does not use cookies, does not track you across sites and does not collect personal information such as your name or email address. It records aggregated data such as the page visited, the referring website, the country and the browser type.
 
 ## 2. How We Use Your Information
 
