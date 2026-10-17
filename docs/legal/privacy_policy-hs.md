@@ -44,7 +44,7 @@ We are committed to managing your data responsibly.
 *   **HubSpot Data (Transient):** We do not permanently store HubSpot record data on our servers. Any interaction with the Ticket ID is performed to facilitate the immediate user session and context.
 *   **Container History:** Container tracking events are stored in our secure database (Azure) for as long as your account is active to provide the tracking history service.
 *   **AI Processing Data:** Data sent to our AI service (summaries or screenshots) is not retained by the AI provider for model training and is not stored by us after the session is complete.
-*   **Account Deletion:** You have the right to request the deletion of your account and all associated data at any time. To do so, please contact us at **ctms.developer@gmail.com**. We will process data deletion requests within 3 business days.
+*   **Account Deletion:** You have the right to request the deletion of your account and all associated data at any time. To do so, please contact us at **support@get-ctms.com**. We will process data deletion requests within 3 business days.
 
 ## 6. Changes to This Privacy Policy
 
@@ -54,4 +54,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.
 
-**Email:** ctms.developer@gmail.com
+**Email:** support@get-ctms.com
