@@ -316,6 +316,24 @@
             font-weight: bold;
         }
 
+        .byok {
+            margin: 28px 0 10px;
+            padding: 20px 24px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            border-left: 4px solid #007bff;
+        }
+
+        .byok h3 {
+            margin-top: 0;
+        }
+
+        .byok ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
         .pain-list {
             padding-left: 20px;
         }
@@ -356,6 +374,14 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. Containers from any other carrier can be tracked manually or imported from a screenshot."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use my own carrier API key?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. If your shipping line has given you an API key (some include one with your account, others charge for it), tell us which carrier at support@get-ctms.com and we'll set up Container Tracker to track your containers with it. There's no need to send the key by email; we'll agree a safe way to connect it. The key is used only for your own containers, and your carrier's API portal shows how it is used, so you can check this at any time. Carrier APIs often give more detail than the public tracking websites. This also works for carriers we don't track automatically yet."
                 }
             },
             {
@@ -528,6 +554,27 @@
             </ul>
             <p>Shipping with another carrier? Track the container manually: add events yourself, or paste a
                 screenshot of the carrier's tracking page and AI extracts the events for you.</p>
+
+            <div class="byok" id="own-api-key">
+                <p class="eyebrow">Bring your own key</p>
+                <h3>Already have an API key from your carrier?</h3>
+                <p>Many ocean carriers give their customers access to their tracking API, either included with the
+                    account or as a paid service. If you have a key, Container Tracker can track your containers
+                    through it. Carrier APIs often return more detail than the public tracking websites. This also
+                    works for carriers we don't track automatically yet.</p>
+                <ul>
+                    <li><strong>Used only for your containers.</strong> Your key tracks your own shipments and nothing
+                        else.</li>
+                    <li><strong>Check it yourself.</strong> Your carrier's API portal shows how your key is used, so
+                        you can confirm this at any time.</li>
+                    <li><strong>You stay in control.</strong> Revoke or replace the key on the carrier's portal
+                        whenever you like.</li>
+                </ul>
+                <a href="mailto:support@get-ctms.com?subject=Tracking%20through%20my%20carrier%27s%20API"
+                    class="cta-secondary">Ask about API tracking</a>
+                <p class="pricing-note">Just tell us which carrier you use. Please don't send the key by email; we'll
+                    agree a safe way to connect it.</p>
+            </div>
         </section>
 
         <section id="how-it-works">
@@ -590,6 +637,15 @@
             <h3>Which shipping lines can I track automatically?</h3>
             <p>MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. Containers
                 from any other carrier can be tracked manually or imported from a screenshot.</p>
+
+            <h3>Can I use my own carrier API key?</h3>
+            <p>Yes. If your shipping line has given you an API key (some include one with your account, others charge
+                for it), <a href="mailto:support@get-ctms.com?subject=Tracking%20through%20my%20carrier%27s%20API">tell
+                    us which carrier</a> and we'll set up Container Tracker to track your containers with it. There's
+                no need to send the key by email; we'll agree a safe way to connect it. The key is used only
+                for your own containers, and your carrier's API portal shows how it is used, so you can check this at
+                any time. Carrier APIs often give more detail than the public tracking websites. This also works for
+                carriers we don't track automatically yet.</p>
 
             <h3>Where do I find Container Tracker in Google Sheets?</h3>
             <p>Container Tracker is a Google Workspace add-on, so it is not in the Extensions menu. Open any
