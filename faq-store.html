@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Tracker for Shopify - FAQ</title>
+    <meta name="description" content="Frequently asked questions about Container Tracker in the Shopify admin: setup, supported carriers, updates, statuses, manual tracking, screenshot import, plans, billing and data.">
+    <!-- Not public yet: remove noindex and add to sitemap.xml when the app is live on the App Store. -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Reusing the Header Style */
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        /* The Container for the Guide Text */
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Footer Style */
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #666;
+            margin: 0 10px;
+        }
+
+        /* Guide content */
+        main h1,
+        main h2,
+        main h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        main a {
+            color: #007bff;
+        }
+
+        main code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        main blockquote {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            border-left: 4px solid #cfe2ff;
+            background: #f8f9fa;
+            color: #555;
+        }
+
+        main figure {
+            margin: 1.5em 0;
+        }
+
+        main figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #e3e3e3;
+            border-radius: 6px;
+        }
+
+        main figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.4em;
+        }
+
+        main nav.toc {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 0.5em 1.5em;
+        }
+
+        main table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+            font-size: 0.95rem;
+        }
+
+        main th,
+        main td {
+            border: 1px solid #e3e3e3;
+            padding: 6px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        main th {
+            background: #f8f9fa;
+        }
+    </style>
+    <!-- Cloudflare Web Analytics (cookie-free) -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0eae3dca722441dba1fba4c4c82d1ffe"}'></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Container Tracker</a>
+        <a href="index.html" style="text-decoration:none; color:#007bff;">&larr; Back to Home</a>
+    </header>
+
+    <main>
+        <article>
+            <h1 id="faq">Container Tracker for Shopify: FAQ</h1>
+            <p>Answers to common questions about Container Tracker in the Shopify admin. For a step-by-step setup, see the <a href="getting-started-store.html">Getting Started guide</a>.</p>
+
+            <nav class="toc">
+                <ul>
+                    <li><a href="#basics">Basics</a></li>
+                    <li><a href="#tracking">Tracking and updates</a></li>
+                    <li><a href="#manual">Manual carriers and screenshot import</a></li>
+                    <li><a href="#plans">Plans, usage and billing</a></li>
+                    <li><a href="#data">Data, privacy and uninstalling</a></li>
+                </ul>
+            </nav>
+
+            <h2 id="basics">Basics</h2>
+
+            <h3 id="what-does-it-do">What does Container Tracker do?</h3>
+            <p>It follows ocean containers for the orders they belong to. You enter a container number on an order or draft order, and the app checks the carrier for events, milestones and the arrival date (ETA). The Containers page lists all your containers with their status, so you can see what arrives this week and what needs attention.</p>
+
+            <h3 id="who-is-it-for">Who is it for?</h3>
+            <p>Stores that import goods by sea, for example to plan stock for incoming shipments, or to answer customers who wait for a pre-order or a large order to arrive.</p>
+
+            <h3 id="setup">Do I need a carrier account, an API key or any setup?</h3>
+            <p>No. Install the app, add the Container Tracker block to your order page once, and start entering container numbers. There are no carrier logins or settings to configure.</p>
+
+            <h3 id="add-block">How do I add Container Tracker to the order page?</h3>
+            <p>Open any order, scroll to <strong>Blocks</strong>, click <strong>+ Block</strong> and choose <strong>Container Tracker</strong>. Then click the pin icon so the block shows on every order for all staff. Draft orders have their own block; add and pin it the same way on a draft order. Without the block, you can use <strong>More actions &rarr; Track container</strong> on any order or draft order. See <a href="getting-started-store.html#add-block">Add the block to the order page</a>.</p>
+
+            <h3 id="draft-orders">Does it work with draft orders?</h3>
+            <p>Yes. The block and the Track container action work on draft orders the same way as on orders.</p>
+
+            <h3 id="several-orders">Can one container belong to several orders?</h3>
+            <p>Yes. Enter the same container number on each order. The container is linked to all of them and counts only once toward your plan. The container page and the Containers list link back to the order.</p>
+
+            <h3 id="without-order">Can I track a container without an order?</h3>
+            <p>Yes. On the app's <strong>Containers</strong> page, click <strong>Track container</strong>. To link it to an order later, enter the same number in that order's block.</p>
+
+            <h3 id="staff">Do all staff see the same containers?</h3>
+            <p>Yes. Containers and the plan belong to the store, so everyone with access to the app sees the same list.</p>
+
+            <h3 id="customers">Does the app contact my customers?</h3>
+            <p>No. The app doesn't send emails or notifications to your customers and doesn't read customer data. To update a customer, use the AI summary on the container page: it writes a short, plain-language status that you can paste into your own email.</p>
+
+            <h2 id="tracking">Tracking and updates</h2>
+
+            <h3 id="carriers">Which carriers are tracked automatically?</h3>
+            <p>MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. Other carriers, such as COSCO, HMM and ZIM, are available with manual tracking (see <a href="#manual">below</a>). The Help page in the app always shows the current list.</p>
+
+            <h3 id="carrier-detection">How does the app know the carrier?</h3>
+            <p>The first four letters of a container number (the owner code) usually tell the carrier, so the form selects it for you. Leased containers can sail with any line; if yours does, pick the carrier from your booking or bill of lading.</p>
+
+            <h3 id="how-often">How often are containers updated?</h3>
+            <p>We check the carrier automatically on a schedule. New events, ETA changes and milestones show up in the order block, on the container page and on the Containers page. The first update after you add a container usually takes a few minutes. <strong>Refresh</strong> on the container page reloads the latest data we have.</p>
+
+            <h3 id="what-you-see">What information do I see for a container?</h3>
+            <p>Status, ETA at the port of discharge, the route, the last and next event, a timeline of all carrier events with dates, locations and vessels, a milestone checklist, and an AI summary on request. Expected events, such as the estimated arrival, are marked as estimated and can be hidden with <strong>Show estimated</strong>.</p>
+
+            <h3 id="no-carrier-data">Why does a container say "No carrier data"?</h3>
+            <p>The carrier has returned no events for that number two days after you added it. Check the number and the carrier. If both are right, the carrier may not have published the booking yet. You can also import the events from a screenshot of the carrier's page.</p>
+
+            <h3 id="needs-attention">What does "Needs attention" mean?</h3>
+            <p>It collects containers that may need a look: <strong>Past ETA</strong> (the ETA has passed with no newer event from the carrier) and <strong>No carrier data</strong>. You find it as a filter on the Containers page and as a count on the Home page.</p>
+
+            <h3 id="statuses">What do the other statuses mean?</h3>
+            <p><strong>Waiting for first update</strong>: just added. <strong>In transit</strong>: on its way, ETA more than 7 days away. <strong>Arriving soon</strong>: ETA within 7 days. <strong>Arrived</strong>: the ETA has passed and the carrier reported later events. <strong>Completed</strong>: the journey is finished and the carrier is no longer checked. <strong>No events yet</strong>: a manually tracked container without events. The full table is in the <a href="getting-started-store.html#statuses">Getting Started guide</a>.</p>
+
+            <h3 id="archive">What does Archive do?</h3>
+            <p>It moves a container you no longer need, for example after delivery, to the <strong>Archived</strong> filter on the Containers page, so your active list stays short. Its history stays, and you can unarchive it at any time. Archive one container from its page, or several at once from the Containers list.</p>
+
+            <h3 id="wrong-number">I entered a wrong number or carrier. What now?</h3>
+            <p>Archive the wrong container and track the right number with the right carrier.</p>
+
+            <h2 id="manual">Manual carriers and screenshot import</h2>
+
+            <h3 id="manual-tracking">What does "manual tracking" mean?</h3>
+            <p>Some carriers have no automatic tracking yet. For their containers you add the events yourself, or import them from a screenshot of the carrier's tracking page. Manually tracked containers are free and don't count toward your plan's container limit.</p>
+
+            <h3 id="add-event">How do I add an event?</h3>
+            <p>Open the container page and click <strong>Add event</strong>. Pick the event, enter the location and date (the time, container type, shipment details and remarks are optional), and click <strong>Save</strong>. You can edit or delete events you added.</p>
+
+            <h3 id="screenshot">How does the screenshot import work?</h3>
+            <p>Open the container on the carrier's website and take a screenshot that shows the container number and the event list. On the container page, paste it (Ctrl+V or Cmd+V) or drop the image (PNG, JPG or WebP), then click <strong>Import events</strong>. AI reads the events, dates, locations and vessels and adds them to the timeline; this takes 10 to 30 seconds and uses 1 AI credit. The import is also offered for automatically tracked containers that have no carrier data yet.</p>
+
+            <h2 id="plans">Plans, usage and billing</h2>
+
+            <h3 id="plans-list">What plans are there?</h3>
+            <p><strong>Free</strong>: 10 automatically tracked containers (a one-time allowance) and 300 AI credits. <strong>Pro</strong>: $15 per month or $150 per year, with 20 new automatically tracked containers and 400 AI credits per month. Manually tracked containers are free on every plan.</p>
+
+            <h3 id="what-counts">What counts toward my container limit?</h3>
+            <p>Each automatically tracked container counts once, when you first add it. Linking it to more orders doesn't count again, and neither do manually tracked containers. Containers the carrier can't track don't count. The Home and Plan pages show your usage.</p>
+
+            <h3 id="ai-credits">What are AI credits?</h3>
+            <p>An AI summary and a screenshot import use 1 credit each. The Home and Plan pages show how many you have left.</p>
+
+            <h3 id="limit">What happens when I reach my limit?</h3>
+            <p>Containers you already track keep updating. To add more automatically tracked containers, pick a bigger plan; the tracking form links to the plans. You can still track containers from carriers with manual tracking for free.</p>
+
+            <h3 id="billing">How am I billed, and how do I change my plan?</h3>
+            <p>Plans are billed by Shopify on your Shopify invoice. Open <strong>Plan</strong> in the app and click <strong>See plans</strong> to upgrade, downgrade or cancel at any time. Your containers and their history stay when you change plans. If the app doesn't show your new plan right away, click <strong>Check my plan again</strong>.</p>
+
+            <h2 id="data">Data, privacy and uninstalling</h2>
+
+            <h3 id="what-data">What data does the app access?</h3>
+            <p>Your store's domain, name and contact email, the container numbers and carriers you track, the IDs of the orders you link them to, and the tracking events. The app doesn't read your customers' data, order contents or payment data. Data is stored in Microsoft Azure (North Europe). Details are in our <a href="privacy-store.html">Privacy Policy</a>.</p>
+
+            <h3 id="contact-email">Which email do you use to contact me?</h3>
+            <p>Your store email, until you change it under <strong>Settings &rarr; Contact email</strong> in the app.</p>
+
+            <h3 id="uninstall">What happens when I uninstall the app?</h3>
+            <p>Tracking stops. If you reinstall within 48 hours, the containers that were being tracked continue. After 48 hours Shopify asks us to delete your store's data, and we do.</p>
+
+            <h3 id="export">Can I export or delete my data?</h3>
+            <p>Yes. Email <a href="mailto:support@get-ctms.com">support@get-ctms.com</a> from your store's contact email and tell us what you need.</p>
+
+            <h2 id="contact">Still have a question?</h2>
+            <p>Email us at <a href="mailto:support@get-ctms.com">support@get-ctms.com</a>. If it's about a specific container, please include the container number and carrier.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
+        <p>
+            <a href="getting-started-store.html">Getting Started</a>
+            <a href="privacy-store.html">Privacy Policy (Shopify)</a>
+            <a href="mailto:support@get-ctms.com">Support</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
