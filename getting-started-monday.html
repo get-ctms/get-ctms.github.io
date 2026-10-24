@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTMS Container Tracker for monday.com - Getting Started</title>
+    <meta name="description" content="How to set up CTMS Container Tracker on monday.com: start from the Container tracking template or add two automations to your board, and keep container status and ETA up to date on its own.">
+    <!-- Not public yet: remove noindex and add to sitemap.xml when the app is live on the monday marketplace. -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Reusing the Header Style */
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        /* The Container for the Guide Text */
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Footer Style */
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #666;
+            margin: 0 10px;
+        }
+
+        /* Guide content */
+        main h1,
+        main h2,
+        main h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        main a {
+            color: #007bff;
+        }
+
+        main code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        main blockquote {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            border-left: 4px solid #cfe2ff;
+            background: #f8f9fa;
+            color: #555;
+        }
+
+        main figure {
+            margin: 1.5em 0;
+        }
+
+        main figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #e3e3e3;
+            border-radius: 6px;
+        }
+
+        main figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.4em;
+        }
+
+        main nav.toc {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 0.5em 1.5em;
+        }
+
+        main table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+            font-size: 0.95rem;
+        }
+
+        main th,
+        main td {
+            border: 1px solid #e3e3e3;
+            padding: 6px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        main th {
+            background: #f8f9fa;
+        }
+    </style>
+    <!-- Cloudflare Web Analytics (cookie-free) -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0eae3dca722441dba1fba4c4c82d1ffe"}'></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Container Tracker</a>
+        <a href="index.html" style="text-decoration:none; color:#007bff;">&larr; Back to Home</a>
+    </header>
+
+    <main>
+        <article>
+            <h1 id="getting-started">Getting Started with CTMS Container Tracker for monday.com</h1>
+            <p>CTMS Container Tracker follows your ocean containers on your monday.com boards. Type a container number in an item, and CTMS checks the shipping line for events and keeps the item's status and arrival date (ETA) up to date. You don't need carrier accounts or any refreshing.</p>
+
+            <nav class="toc">
+                <ol>
+                    <li><a href="#install">Install the app</a></li>
+                    <li><a href="#template">Start from the template (fastest)</a></li>
+                    <li><a href="#own-board">Use your own board</a></li>
+                    <li><a href="#columns">What CTMS writes to your board</a></li>
+                    <li><a href="#item-tab">The item's Container tracking tab</a></li>
+                    <li><a href="#containers-view">The Containers view</a></li>
+                    <li><a href="#manual">Carriers without automatic tracking</a></li>
+                    <li><a href="#messages">Messages from the automation</a></li>
+                    <li><a href="#plans">Plans and usage</a></li>
+                    <li><a href="#uninstall">Uninstalling and your data</a></li>
+                </ol>
+            </nav>
+
+            <h2 id="install">1. Install the app</h2>
+            <ol>
+                <li>Open <strong>CTMS Container Tracker</strong> in the monday marketplace and click <strong>Install</strong>. An account admin may need to approve it.</li>
+                <li>Confirm the access screen. CTMS reads and writes the items of the boards where you use it; it doesn't need your users, files or other boards.</li>
+                <li>You start on the <strong>Free</strong> plan. No settings are needed.</li>
+            </ol>
+
+            <h2 id="template">2. Start from the template (fastest)</h2>
+            <p>The <strong>Container tracking</strong> template creates a workspace with a ready board: the columns, both automations, the Containers view, the item tab and a short "How to use" doc.</p>
+            <ol>
+                <li>Add the <strong>Container tracking</strong> template from the template center (or from the app's marketplace page).</li>
+                <li>Open the <strong>Container tracking</strong> board and type a container number in <strong>Container #</strong>: 4 letters and 7 digits, as printed on the container door. Spaces and dashes are fine.</li>
+                <li>Within a minute <strong>Tracking status</strong> shows <em>Waiting for first update</em> (or the current status if CTMS already knows the container), then <em>In transit</em> once the carrier reports events. <strong>ETA</strong> fills in as soon as the carrier publishes one.</li>
+            </ol>
+            <p>That's all. CTMS checks the carrier again on its own and updates the item when something changes.</p>
+
+            <h2 id="own-board">3. Use your own board</h2>
+            <ol>
+                <li>Add three columns if the board doesn't have them: a <strong>text</strong> column for the container number (e.g. "Container #"), a <strong>status</strong> column (e.g. "Tracking status") and a <strong>date</strong> column (e.g. "ETA"). A text column for the carrier is optional (see <a href="#carrier">Which carrier?</a>).</li>
+                <li>Open <strong>Automate</strong> (top right of the board), search for <strong>CTMS</strong> and add <strong>Track the container when its number changes</strong>. Pick your container number column twice: once as the column that changes, once as the column CTMS reads.</li>
+                <li>Add <strong>Update status and ETA when CTMS finds a new event</strong> and pick your status and ETA columns. Without this one, CTMS tracks the containers but your columns stay empty.</li>
+                <li>Optionally add the views: on the board, <strong>+ (Add view) &rarr; Explore more views &rarr; Installed Apps &rarr; Containers</strong>; on an item, <strong>+ &rarr; Explore more views &rarr; Installed Apps &rarr; Container tracking</strong>.</li>
+            </ol>
+
+            <h2 id="columns">4. What CTMS writes to your board</h2>
+            <table>
+                <thead>
+                    <tr><th>Column</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Tracking status</td><td><em>Waiting for first update</em>: just added, no events from the carrier yet. <em>Booked</em>: only planned events so far. <em>In transit</em>: the carrier reports events. <em>Journey complete</em>: the journey is finished and the carrier is no longer checked. Missing labels are added to your status column the first time they are needed.</td></tr>
+                    <tr><td>ETA</td><td>The estimated arrival at the port of discharge, as the carrier publishes it.</td></tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>CTMS only writes when something visible changes. Each update uses one of your monday <strong>automation actions</strong>.</li>
+                <li>CTMS never clears a column. If the carrier withdraws an ETA, the last one stays.</li>
+                <li>Changing the number in an item starts tracking the new number for that item. Clearing the number, or deleting the item, stops the updates for that item.</li>
+                <li>Renaming the columns is fine. If you delete or replace one, open the automation and pick the new column.</li>
+            </ul>
+
+            <h2 id="item-tab">5. The item's Container tracking tab</h2>
+            <p>Open an item and choose the <strong>Container tracking</strong> tab (add it once per board, see step 3). It shows:</p>
+            <ul>
+                <li><strong>Status</strong>: last and next event, ETA at the port of discharge and the route.</li>
+                <li><strong>Timeline</strong>: every event from the carrier with date, location and vessel. Planned events are marked as estimated; <strong>Show estimated</strong> hides or shows them.</li>
+                <li><strong>Milestones</strong>: the main stages of the journey, ticked as the carrier reports them.</li>
+                <li><strong>Summary</strong>: a short plain-language status you can paste into an email. Each summary uses 1 credit.</li>
+                <li><strong>Track a container</strong>: track a number by hand and link it to the item, for example when the board has no number column.</li>
+            </ul>
+
+            <h2 id="containers-view">6. The Containers view</h2>
+            <p>The <strong>Containers</strong> board view lists the containers tracked from this board (switch on <strong>All boards</strong> for the whole account), with status, last event, ETA and a link to the item. Filters: <strong>All active</strong>, <strong>Arriving in 7 days</strong>, <strong>Needs attention</strong> and <strong>Archived</strong>. It also shows your plan and how many automatically tracked containers you have used.</p>
+            <p>The view uses more detailed statuses than the board column:</p>
+            <table>
+                <thead>
+                    <tr><th>Status</th><th>Meaning</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Waiting for first update</td><td>Just added; the carrier hasn't returned events yet.</td></tr>
+                    <tr><td>In transit</td><td>On its way; the ETA is more than 7 days away or not known yet.</td></tr>
+                    <tr><td>Arriving soon</td><td>The ETA is within the next 7 days.</td></tr>
+                    <tr><td>Arrived</td><td>The ETA has passed and the carrier reported events after it.</td></tr>
+                    <tr><td>Past ETA</td><td>The ETA has passed with no newer event. Shown under Needs attention.</td></tr>
+                    <tr><td>No carrier data</td><td>Two days after adding, the carrier still has no events for this number. Check the number and the carrier. Shown under Needs attention.</td></tr>
+                    <tr><td>No events yet</td><td>A carrier without automatic tracking, and no events added yet.</td></tr>
+                    <tr><td>Completed</td><td>The journey is finished and the carrier is no longer checked (Journey complete on the board).</td></tr>
+                </tbody>
+            </table>
+
+            <h2 id="manual">7. Carriers without automatic tracking</h2>
+            <p>Containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen are tracked automatically. For other carriers, such as COSCO, HMM and ZIM, track the container from the item's <strong>Container tracking</strong> tab and pick the carrier under <strong>Manual tracking</strong>. These are free and don't count toward your plan. Add events by hand with <strong>Add event</strong>, or import them from a screenshot of the carrier's tracking page (paste it or drop the image file; each import uses 1 credit).</p>
+
+            <h2 id="messages">8. Messages from the automation</h2>
+            <p>When CTMS can't track a number, monday shows a notification from the automation:</p>
+            <ul>
+                <li id="carrier"><strong>Which carrier?</strong>: the number belongs to a leasing company (for example TGHU, TCLU or TRHU), so CTMS can't tell the shipping line. Type it in your carrier column (for example "MSC", "Maersk" or "Hapag-Lloyd"), then type the container number again. Or track it from the item's tab and pick the carrier there.</li>
+                <li><strong>Not a valid container number</strong>: the last digit (the check digit) doesn't match the rest of the number. Usually a typo; check the number on your booking.</li>
+                <li><strong>More than one container number</strong>: put one container per item.</li>
+                <li><strong>Plan limit reached</strong>: you have used the automatically tracked containers of your plan; see <a href="#plans">Plans</a>.</li>
+                <li><strong>CTMS isn't installed</strong>: the app was uninstalled; the board's automations stay until you remove them. Install the app again to continue.</li>
+            </ul>
+
+            <h2 id="plans">9. Plans and usage</h2>
+            <p>The <strong>Free</strong> plan includes 10 automatically tracked containers in total (a one-time allowance, it doesn't reset) and credits for summaries and screenshot imports. Check numbers before you type them: a wrong number that looks valid still uses one. Containers from carriers with manual tracking are free on every plan, and a container counts once however many items it is linked to.</p>
+            <p>Paid plans add automatically tracked containers every month. They are billed by monday; to change your plan, click <strong>Upgrade</strong> in the Containers view. Your containers and their history stay when you change plans.</p>
+
+            <h2 id="uninstall">10. Uninstalling and your data</h2>
+            <p>When you uninstall the app, CTMS stops tracking your containers. If you install it again within 7 days, everything continues where it stopped. After 7 days, your account's tracking data is deleted. The board's automations remain in monday until you delete them. Details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+            <h2 id="need-help">Need help?</h2>
+            <p>Email us at <a href="mailto:support@get-ctms.com">support@get-ctms.com</a>. Please include the container number and carrier if your question is about a specific container.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="mailto:support@get-ctms.com">Support</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
