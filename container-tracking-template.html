@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Container Tracking Spreadsheet Template (Google Sheets) - Container Tracker</title>
+    <meta name="description" content="A free container tracking spreadsheet for Google Sheets: one row per container, 10 shipping milestones, ETAs and a dashboard with arrivals per week and containers that need attention. Make a copy in one click.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Container Tracker">
+    <meta property="og:title" content="Free Container Tracking Spreadsheet Template (Google Sheets)">
+    <meta property="og:description" content="One row per container, 10 shipping milestones, ETAs and a dashboard that shows what arrives next and what needs a follow-up. Free to copy.">
+    <meta property="og:url" content="https://get-ctms.com/container-tracking-template.html">
+    <meta property="og:image" content="https://get-ctms.com/img/template-dashboard.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
+    <link rel="canonical" href="https://get-ctms.com/container-tracking-template.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is the container tracking template free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. The spreadsheet is free to copy, use and share. The optional Container Tracker add-on is free for your first 10 containers read from the carrier; more need a paid plan." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the template update container status by itself?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. The Dashboard recalculates from what is in the Milestones sheet, but the milestone dates come from you. You type them, or the Container Tracker add-on writes them when you click Update Milestones sheet." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the template in Excel?",
+                "acceptedAnswer": { "@type": "Answer", "text": "It is built for Google Sheets. You can download it as .xlsx (File, Download), and the Milestones data comes across, but the Dashboard formulas are written for Google Sheets and may not work in Excel." }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #666;
+            margin: 0 10px;
+        }
+
+        main h1,
+        main h2,
+        main h3 {
+            color: #2c3e50;
+        }
+
+        main h1 {
+            font-size: 2.1rem;
+            line-height: 1.25;
+            margin: 0 0 12px;
+        }
+
+        main h2 {
+            margin-top: 2em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        main a {
+            color: #007bff;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: #555;
+            margin: 0 0 24px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            border: 1px solid #007bff;
+            color: #007bff;
+            padding: 11px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .shot {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 24px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .tab {
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .tab h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+        }
+
+        .tab p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .addon-box {
+            background: #eef5ff;
+            border: 1px solid #c9dcff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+
+        .addon-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        table.milestones {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.95rem;
+        }
+
+        table.milestones td {
+            border-bottom: 1px solid #eee;
+            padding: 6px 8px;
+            vertical-align: top;
+        }
+
+        table.milestones td:first-child {
+            font-weight: bold;
+            white-space: nowrap;
+            color: #2c3e50;
+        }
+    </style>
+    <!-- Cloudflare Web Analytics (cookie-free) -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0eae3dca722441dba1fba4c4c82d1ffe"}'></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Container Tracker</a>
+        <a href="index.html" style="text-decoration:none; color:#007bff;">&larr; Back to Home</a>
+    </header>
+
+    <main>
+        <article>
+            <h1>Free container tracking spreadsheet template</h1>
+            <p class="lead">One row per container, the 10 milestones of an ocean shipment, ETAs, and a dashboard that
+                shows what arrives next and which containers need a follow-up. Built for Google Sheets, free to copy.</p>
+            <p><a href="copy-template.html?from=page-top" class="cta-button">Make a copy (free)</a></p>
+            <p class="cta-note">Opens Google Sheets and saves your own copy to your Google Drive. You need a Google
+                account.</p>
+
+            <img src="img/template-dashboard.webp" class="shot" width="2087" height="727" loading="eager"
+                alt="The Dashboard tab of the container tracking template: open shipments, containers on the water, arrivals in the next 14 days, a bar per stage and a chart of arrivals per week">
+
+            <h2>What's inside</h2>
+            <div class="tabs">
+                <div class="tab">
+                    <h3>Milestones</h3>
+                    <p>Your data: carrier, container number, type, ETA, current status, and the place and date of
+                        each milestone. A carrier dropdown, date checks and a green trail across the milestones a
+                        container has reached.</p>
+                </div>
+                <div class="tab">
+                    <h3>Dashboard</h3>
+                    <p>Open shipments, on the water, arriving in 14 days, at the destination port, arrivals per
+                        week, a breakdown by carrier and port, and the lists <em>Arriving next</em> and <em>Needs
+                            attention</em>. It recalculates as you edit.</p>
+                </div>
+                <div class="tab">
+                    <h3>Start here</h3>
+                    <p>A one-page guide: how to fill the sheet, what each milestone means, and which containers the
+                        Dashboard flags.</p>
+                </div>
+            </div>
+
+            <h2>How to use it</h2>
+            <ol>
+                <li><strong>Make a copy.</strong> The copy is yours: nobody else sees your containers.</li>
+                <li><strong>Delete the 4 sample rows</strong> in the Milestones sheet (yellow, containers
+                    SAMPLE-01 to SAMPLE-04). They are there so the Dashboard has something to show.</li>
+                <li><strong>Add your containers</strong>, one row each: carrier, container number, ETA, and the
+                    date and place of each milestone you know. Leave the rest empty.</li>
+                <li><strong>Open the Dashboard.</strong> See what arrives in the coming weeks and what needs a call
+                    today.</li>
+            </ol>
+
+            <img src="img/template-milestones.webp" class="shot" width="2087" height="262" loading="lazy"
+                alt="The Milestones tab of the template with four sample containers: carrier, container number, type, ETA, current status, location and status date">
+
+            <h2>What "Needs attention" flags</h2>
+            <ul>
+                <li><strong>ETA passed, no arrival yet</strong>: the vessel should have arrived but there is no
+                    arrival or discharge date.</li>
+                <li><strong>At the destination port for 4+ days</strong>: check the free time before demurrage
+                    starts.</li>
+                <li><strong>ETA changed</strong>: the carrier moved the arrival date.</li>
+                <li><strong>No new event for 14+ days</strong>: not counted while the vessel is sailing, when long
+                    gaps are normal.</li>
+            </ul>
+
+            <h2>The 10 milestones</h2>
+            <table class="milestones">
+                <tr><td>Empty Container Dispatched</td><td>The empty container leaves the depot for loading at the shipper.</td></tr>
+                <tr><td>Received Full for Export</td><td>The loaded container is back at the terminal, ready for export.</td></tr>
+                <tr><td>Loaded on Vessel</td><td>Loaded onto the first ocean vessel.</td></tr>
+                <tr><td>Vessel Departure</td><td>The vessel leaves the port of loading.</td></tr>
+                <tr><td>Vessel Arrival</td><td>The vessel arrives at the port of discharge.</td></tr>
+                <tr><td>Discharged from Vessel</td><td>The container is unloaded at the port of discharge.</td></tr>
+                <tr><td>Available for Pickup</td><td>Customs and terminal release: it can be collected.</td></tr>
+                <tr><td>Import to Consignee</td><td>The container leaves the port towards the consignee.</td></tr>
+                <tr><td>Delivered to Consignee</td><td>Delivered to the consignee.</td></tr>
+                <tr><td>Empty Returned to Depot</td><td>The empty container is back at the carrier's depot. The trip is complete.</td></tr>
+            </table>
+
+            <div class="addon-box">
+                <h2>Fill it with one click</h2>
+                <p>Copying dates from carrier websites takes time. Container Tracker is a Google Sheets add-on that
+                    can fill this Milestones sheet for you:</p>
+                <ul>
+                    <li>Add a container in the add-on by its number. The carrier is detected from the number.</li>
+                    <li>It reads milestones, ETA and status from the carrier (MSC, Maersk, Hapag-Lloyd, CMA CGM,
+                        ONE, Yang Ming, Evergreen) and checks again every few hours.</li>
+                    <li>Your sheet changes only when you click <strong>Update Milestones sheet</strong> in the
+                        add-on panel. One click refreshes all rows, and ETA changes are highlighted.</li>
+                    <li>Rows you typed yourself are kept. When the add-on tracks the same carrier and container, it
+                        updates that row instead of adding a new one.</li>
+                    <li>Free for your first 10 containers read from the carrier; more need a <a
+                            href="index.html#pricing">paid plan</a>. Manual tracking for any carrier is always free.</li>
+                </ul>
+                <p><a href="install.html?from=template-page" class="cta-secondary">Install Container Tracker</a></p>
+                <p class="cta-note">After installing, open it from the Container Tracker icon in the right-hand side
+                    panel of Google Sheets (not the Extensions menu). <a href="getting-started.html">Getting
+                        started guide</a></p>
+            </div>
+
+            <h2>Questions</h2>
+            <h3>Is it free?</h3>
+            <p>Yes. The spreadsheet is free to copy, use and share. The optional add-on is free for your first 10
+                containers read from the carrier.</p>
+            <h3>Does it update container status by itself?</h3>
+            <p>No. The Dashboard recalculates from what is in the Milestones sheet, but the milestone dates come
+                from you: you type them, or the add-on writes them when you click <strong>Update Milestones
+                    sheet</strong>.</p>
+            <h3>Can I use it in Excel?</h3>
+            <p>It is built for Google Sheets. You can download it as .xlsx (File &rarr; Download), and the Milestones
+                data comes across, but the Dashboard formulas are written for Google Sheets and may not work in
+                Excel.</p>
+            <h3>Can I add my own columns?</h3>
+            <p>Yes, after the Notes and Reference columns. Don't insert, move or rename columns A to AD of the
+                Milestones sheet: the Dashboard and the add-on rely on them.</p>
+
+            <p style="margin-top: 32px;"><a href="copy-template.html?from=page-bottom" class="cta-button">Make a copy
+                    (free)</a></p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy (Google Workspace)</a>
+            <a href="terms.html">Terms of Service (Google Workspace)</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
