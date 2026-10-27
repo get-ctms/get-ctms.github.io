@@ -192,12 +192,21 @@
                 <li>Within a minute <strong>Tracking status</strong> shows <em>Waiting for first update</em> (or the current status if CTMS already knows the container), then <em>In transit</em> once the carrier reports events. <strong>ETA</strong> fills in as soon as the carrier publishes one.</li>
             </ol>
             <p>That's all. CTMS checks the carrier again on its own and updates the item when something changes.</p>
+            <figure>
+                <img src="img/monday-board.webp" width="1200" height="454" alt="Board with container numbers, carriers, the Tracking status In transit, ETA dates and the last event of each container" loading="lazy">
+                <figcaption>Status, ETA and last event are filled in by CTMS.</figcaption>
+            </figure>
 
             <h2 id="own-board">3. Use your own board</h2>
             <ol>
                 <li>Add three columns if the board doesn't have them: a <strong>text</strong> column for the container number (e.g. "Container #"), a <strong>status</strong> column (e.g. "Tracking status") and a <strong>date</strong> column (e.g. "ETA"). A text column for the carrier is optional (see <a href="#carrier">Which carrier?</a>).</li>
                 <li>Open <strong>Automate</strong> (top right of the board), search for <strong>CTMS</strong> and add <strong>Track the container when its number changes</strong>. Pick your container number column twice: once as the column that changes, once as the column CTMS reads.</li>
                 <li>Add <strong>Update status and ETA when CTMS finds a new event</strong> and pick your status and ETA columns. Without this one, CTMS tracks the containers but your columns stay empty.</li>
+                <li>Check the result under <strong>Automate</strong>:
+                    <figure>
+                        <img src="img/monday-automations.webp" width="1200" height="467" alt="Board automations: when CTMS finds a new container event, update status, ETA and last event; when Container # changes, track the container" loading="lazy">
+                    </figure>
+                </li>
                 <li>Optionally add the views: on the board, <strong>+ (Add view) &rarr; Explore more views &rarr; Installed Apps &rarr; Containers</strong>; on an item, <strong>+ &rarr; Explore more views &rarr; Installed Apps &rarr; Container tracking</strong>.</li>
             </ol>
 
@@ -227,9 +236,15 @@
                 <li><strong>Summary</strong>: a short plain-language status you can paste into an email. Each summary uses 1 credit.</li>
                 <li><strong>Track a container</strong>: track a number by hand and link it to the item, for example when the board has no number column.</li>
             </ul>
+            <figure>
+                <img src="img/monday-item-view.webp" width="700" height="900" alt="Container tracking tab of an item: status with last and next event, ETA, route, and the event timeline" loading="lazy" style="max-width:420px">
+            </figure>
 
             <h2 id="containers-view">6. The Containers view</h2>
             <p>The <strong>Containers</strong> board view lists the containers tracked from this board (switch on <strong>All boards</strong> for the whole account), with status, last event, ETA and a link to the item. Filters: <strong>All active</strong>, <strong>Arriving in 7 days</strong>, <strong>Needs attention</strong> and <strong>Archived</strong>. It also shows your plan and how many automatically tracked containers you have used.</p>
+            <figure>
+                <img src="img/monday-board-view.webp" width="1200" height="315" alt="Containers view listing each container with carrier, status, last event, ETA and a link to its item" loading="lazy">
+            </figure>
             <p>The view uses more detailed statuses than the board column:</p>
             <table>
                 <thead>
