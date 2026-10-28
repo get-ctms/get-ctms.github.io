@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container Tracking in Google Sheets, Automatic | Container Tracker</title>
+    <title>Container Tracking in Google Sheets &amp; Gmail, Automatic | Container Tracker</title>
     <meta name="description"
-        content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right inside Google Sheets or HubSpot. Milestones, AI summaries and screenshot import for any other carrier.">
+        content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right inside Google Sheets, Gmail or HubSpot. Milestones, AI summaries and screenshot import for any other carrier.">
     <link rel="canonical" href="https://get-ctms.com/">
 
     <!-- Open Graph / social previews -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Container Tracker">
-    <meta property="og:title" content="Track every ocean container in Google Sheets, automatically">
+    <meta property="og:title" content="Track every ocean container in Google Sheets and Gmail, automatically">
     <meta property="og:description"
-        content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets and HubSpot.">
+        content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail and HubSpot.">
     <meta property="og:url" content="https://get-ctms.com/">
     <meta property="og:image" content="https://get-ctms.com/img/og-container-tracker.png">
     <meta property="og:image:width" content="1200">
@@ -43,10 +43,10 @@
                 "@type": "SoftwareApplication",
                 "name": "Container Tracker",
                 "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web, Google Sheets, HubSpot",
+                "operatingSystem": "Web, Google Sheets, Gmail, HubSpot",
                 "url": "https://get-ctms.com/",
                 "publisher": { "@id": "https://get-ctms.com/#org" },
-                "description": "Automatic ocean container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets and HubSpot, with milestones, AI summaries and screenshot import for any other carrier.",
+                "description": "Automatic ocean container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail and HubSpot, with milestones, AI summaries and screenshot import for any other carrier.",
                 "offers": [
                     { "@type": "Offer", "name": "Free trial (first 10 containers)", "price": "0", "priceCurrency": "USD" },
                     { "@type": "Offer", "name": "Pro, monthly", "price": "15", "priceCurrency": "USD" }
@@ -394,6 +394,14 @@
             },
             {
                 "@type": "Question",
+                "name": "Does it work in Gmail?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Open an email and click the Container Tracker icon in the right-hand side panel. It lists the container numbers in the email and the shipping line, shows the latest status of the ones you already track, and tracks new ones in one click. Container lists in PDF, CSV or text attachments are found with Scan attachments. The email is read inside Google; only the container numbers are sent to us. The same install works in Google Sheets and Gmail. See the Gmail guide."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "Does it work in HubSpot?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -480,14 +488,15 @@
     </header>
 
     <main>
-        <p class="eyebrow">Google Sheets&trade; add-on for importers &amp; freight forwarders</p>
-        <h1>Track every ocean container in Google Sheets, automatically.</h1>
+        <p class="eyebrow">Google Sheets&trade; &amp; Gmail&trade; add-on for importers &amp; freight forwarders</p>
+        <h1>Track every ocean container in Google Sheets and Gmail, automatically.</h1>
         <p class="subtitle">Enter a container number. Container Tracker checks MSC, Maersk, Hapag-Lloyd, CMA CGM,
             ONE, Yang Ming and Evergreen for you and shows status, location, vessel and ETA right next to your
-            spreadsheet. No more logging into seven carrier websites.</p>
+            spreadsheet. In Gmail, it finds the container numbers in the email you open. No more logging into
+            seven carrier websites.</p>
 
         <div class="cta-container">
-            <a href="install.html?from=hero" class="cta-button">Install free for Google Sheets</a>
+            <a href="install.html?from=hero" class="cta-button">Install free for Google Sheets &amp; Gmail</a>
             <a href="#how-it-works" class="cta-secondary">See how it works</a>
         </div>
         <p class="cta-note">Free for your first 10 containers &middot; No credit card &middot; Works with any Google
@@ -581,13 +590,19 @@
             <ol>
                 <li><strong>Install</strong> the <a
                         href="install.html?from=how-it-works">Google
-                        Sheets add-on</a>, the <a
+                        Sheets &amp; Gmail add-on</a>, the <a
                         href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">HubSpot app</a> or the <a
                         href="https://auth.monday.com/oauth2/authorize?client_id=d9494ca880b61912bdb294fa84ffcce8&amp;response_type=install">monday.com
                         app</a> (<a href="getting-started-monday.html">guide</a>).</li>
                 <li><strong>Add a container</strong>: open the Container Tracker icon in the Sheets side panel (it's
                     not in the Extensions menu) and enter the container number, e.g. MSCU1234567. The carrier is
                     detected from the number.</li>
+                <li><strong>Or track from Gmail</strong>: open an email and click the Container Tracker icon in the
+                    right-hand side panel. It lists the container numbers in the email, also from PDF, CSV or text
+                    attachments. Click <strong>Track</strong> next to a new one.</li>
+                <li><strong>Or track from HubSpot</strong>: open a ticket and enter the container number in the
+                    <strong>Container Tracking</strong> card in the right sidebar. The container stays linked to that
+                    ticket. See the <a href="getting-started-hs.html">HubSpot guide</a>.</li>
                 <li><strong>Follow its journey</strong>: see the full event history, key milestones (Gate In,
                     Loaded, Departed, Arrived, Discharged, Delivered) and an AI summary of where the container is now.
                 </li>
@@ -660,6 +675,14 @@
                 It has the same Milestones layout as the add-on plus a dashboard, so you can type containers in by
                 hand and let the add-on fill the rows later.</p>
 
+            <h3>Does it work in Gmail?</h3>
+            <p>Yes. Open an email and click the Container Tracker icon in the right-hand side panel. It lists the
+                container numbers in the email and the shipping line, shows the latest status of the ones you already
+                track, and tracks new ones in one click. Container lists in PDF, CSV or text attachments are found
+                with <strong>Scan attachments</strong>. The email is read inside Google; only the container numbers
+                are sent to us. The same install works in Google Sheets and Gmail. See the <a
+                    href="getting-started.html#use-it-in-gmail">Gmail guide</a>.</p>
+
             <h3>Does it work in HubSpot?</h3>
             <p>Yes. The HubSpot app adds a Container Tracking card to your Tickets, so each shipment is tracked on
                 the ticket it belongs to. See the <a href="getting-started-hs.html">HubSpot guide</a>.</p>
@@ -706,7 +729,7 @@
         <section class="final-cta">
             <h2>Stop checking carrier websites.</h2>
             <p>Your first 10 containers are free. Setup takes two minutes.</p>
-            <a href="install.html?from=final" class="cta-button">Install free for Google Sheets</a>
+            <a href="install.html?from=final" class="cta-button">Install free for Google Sheets &amp; Gmail</a>
         </section>
     </main>
 
