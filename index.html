@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container Tracking in Google Sheets &amp; Gmail, Automatic | Container Tracker</title>
+    <title>Automatic Container Tracking in Google Sheets, Gmail &amp; HubSpot | Container Tracker</title>
     <meta name="description"
-        content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right inside Google Sheets, Gmail or HubSpot. Milestones, AI summaries and screenshot import for any other carrier.">
+        content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right where you work: Google Sheets, Gmail or HubSpot, with Shopify and monday.com apps in review. Milestones, AI summaries and screenshot import for any other carrier.">
     <link rel="canonical" href="https://get-ctms.com/">
 
     <!-- Open Graph / social previews -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Container Tracker">
-    <meta property="og:title" content="Track every ocean container in Google Sheets and Gmail, automatically">
+    <meta property="og:title" content="Track every ocean container in the tools you already use">
     <meta property="og:description"
-        content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail and HubSpot.">
+        content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail and HubSpot. Shopify and monday.com apps in review.">
     <meta property="og:url" content="https://get-ctms.com/">
     <meta property="og:image" content="https://get-ctms.com/img/og-container-tracker.png">
     <meta property="og:image:width" content="1200">
@@ -75,8 +75,20 @@
             padding-bottom: 20px;
             margin-bottom: 40px;
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             align-items: center;
             justify-content: space-between;
+        }
+
+        header nav a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        header nav a:last-child {
+            margin-right: 0;
         }
 
         /* make logo container align image + text */
@@ -109,6 +121,7 @@
 
         h1 {
             font-size: 2.5rem;
+            line-height: 1.2;
             margin-bottom: 10px;
             color: #2c3e50;
         }
@@ -117,6 +130,10 @@
             font-size: 1.25rem;
             color: #666;
             margin-bottom: 30px;
+        }
+
+        .subtitle a {
+            color: inherit;
         }
 
         .features {
@@ -221,25 +238,6 @@
             padding-left: 20px;
         }
 
-        .billing-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.95rem;
-        }
-
-        .billing-table th,
-        .billing-table td {
-            text-align: left;
-            padding: 6px 8px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .save-tag {
-            color: #1e7e34;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
         .pricing-note {
             font-size: 0.9rem;
             color: #666;
@@ -264,12 +262,6 @@
             font-weight: bold;
         }
 
-        .cta-note {
-            font-size: 0.9rem;
-            color: #666;
-            margin: -18px 0 6px;
-        }
-
         .faq-shot {
             display: block;
             width: 100%;
@@ -279,31 +271,13 @@
             border: 1px solid #ddd;
         }
 
-        .hero-shot {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 24px 0 8px;
-            border-radius: 8px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
-        }
-
-        .cta-alt {
-            font-size: 0.95rem;
-            margin: 0 0 30px;
-        }
-
-        .cta-alt a {
-            color: #ff7a59;
-        }
-
         .trust-strip {
             display: flex;
             flex-wrap: wrap;
             gap: 8px 24px;
             list-style: none;
             padding: 14px 0;
-            margin: 0 0 10px;
+            margin: 30px 0 10px;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
             font-size: 0.9rem;
@@ -351,6 +325,196 @@
             margin-top: 0;
         }
 
+        .final-cta .cta-container {
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        /* Platform carousel: tabs on top, slides scroll sideways (swipe on phones).
+           Works without JavaScript as a plain horizontal scroller. */
+        .platforms {
+            margin: 10px 0 0;
+        }
+
+        .platform-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 12px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .platform-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            color: #2c3e50;
+            font: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .platform-tab[aria-current="true"] {
+            border-color: #007bff;
+            background: #eef5ff;
+        }
+
+        .platform-tab.pending {
+            color: #777;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #28a745;
+            flex: none;
+        }
+
+        .pending .dot {
+            background: none;
+            border: 2px solid #d39e00;
+            width: 6px;
+            height: 6px;
+        }
+
+        .platform-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            align-items: flex-start;
+            transition: height 0.25s;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+
+        .platform-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            scroll-snap-align: start;
+            padding: 24px;
+        }
+
+        .slide h2 {
+            margin: 0 0 6px;
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .status {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1e7e34;
+            margin: 0 0 6px;
+        }
+
+        .slide.pending .status {
+            color: #8a6d00;
+        }
+
+        .slide ul {
+            padding-left: 20px;
+            margin: 10px 0 18px;
+        }
+
+        .slide-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px 20px;
+            margin-bottom: 18px;
+        }
+
+        .slide-actions a:not(.cta-button):not(.cta-secondary) {
+            color: #007bff;
+        }
+
+        .slide-shot {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fff;
+        }
+
+        /* Not live yet: dim the screenshot, keep the text readable */
+        .slide.pending .slide-shot {
+            opacity: 0.5;
+            filter: grayscale(0.7);
+        }
+
+        .slide.pending h2,
+        .slide.pending .slide-lead {
+            color: #666;
+        }
+
+        .slide-lead {
+            margin: 0;
+        }
+
+        /* Text beside a tall, narrow screenshot (the HubSpot sidebar card) */
+        .slide.split {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 24px;
+            align-items: start;
+        }
+
+        @media (max-width: 600px) {
+            .slide.split {
+                grid-template-columns: 1fr;
+            }
+
+            /* Show the top of the tall card only, so this slide doesn't set the carousel height */
+            .slide.split .slide-shot {
+                max-width: 280px;
+                max-height: 300px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .carousel-nav button {
+            font: inherit;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 5px;
+            padding: 4px 12px;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+
+        .no-js .carousel-nav {
+            display: none;
+        }
+
         @media (max-width: 600px) {
             .features,
             .pricing-grid {
@@ -360,6 +524,14 @@
             h1 {
                 font-size: 2rem;
             }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .slide {
+                padding: 18px 16px;
+            }
         }
     </style>
     <meta name="google-site-verification" content="fjybpP265pZ-EYDu-OV7N4jY9yurtJ3Etv2k8urqlW4" />
@@ -368,6 +540,14 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Which platforms does Container Tracker work in?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Google Sheets and Gmail (one add-on for both) and HubSpot today. Apps for Shopify and monday.com are in review on their marketplaces. Every version tracks the same carriers and has the same plans."
+                }
+            },
             {
                 "@type": "Question",
                 "name": "Which shipping lines can I track automatically?",
@@ -413,7 +593,7 @@
                 "name": "How much does it cost?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Your first 10 containers are free, with no credit card needed. After that, Pro is $15/month and covers up to 20 containers a month plus 400 AI credits. Save with a 6-month or yearly subscription. Tracking more containers? Contact us for a plan that fits your volume. See Pricing."
+                    "text": "Your first 10 containers are free, with no credit card needed. After that, Pro is $15/month and covers up to 20 containers a month plus 400 AI credits. Save with a longer subscription. Tracking more containers? Contact us for a plan that fits your volume. See Pricing."
                 }
             },
             {
@@ -445,7 +625,7 @@
                 "name": "Is my data safe?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We store only your email, your name and the container numbers you submit, on Microsoft Azure in the EU. The add-on only writes to the spreadsheet you are working in, and only when you click an export. See the Privacy Policy."
+                    "text": "We store only your email, your name and the container numbers you submit, on Microsoft Azure in the EU. In Google Sheets, the add-on only writes to the spreadsheet you are working in, and only when you click an export. See the Privacy Policy."
                 }
             },
             {
@@ -453,7 +633,7 @@
                 "name": "Can I cancel anytime?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Open the add-on, go to My Profile and click Manage Subscription. You keep access until the end of the period you paid for."
+                    "text": "Yes. In Google Sheets, Gmail or HubSpot, open My Profile and click Manage Subscription. You keep access until the end of the period you paid for."
                 }
             },
             {
@@ -471,7 +651,7 @@
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0eae3dca722441dba1fba4c4c82d1ffe"}'></script>
 </head>
 
-<body>
+<body class="no-js">
 
     <header>
         <!-- Discreet logo placed left of the site name. Using the provided path logo/ctms-logo.png -->
@@ -480,31 +660,124 @@
             <span>Container Tracker</span>
         </a>
         <nav>
-            <a href="#how-it-works" style="color:#007bff; text-decoration:none; margin-right:15px;">How it works</a>
-            <a href="#pricing" style="color:#007bff; text-decoration:none; margin-right:15px;">Pricing</a>
-            <a href="getting-started.html" style="color:#007bff; text-decoration:none; margin-right:15px;">Guide</a>
-            <a href="mailto:support@get-ctms.com" style="color:#007bff; text-decoration:none;">Support</a>
+            <a href="#platforms">Platforms</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="mailto:support@get-ctms.com">Support</a>
         </nav>
     </header>
 
     <main>
-        <p class="eyebrow">Google Sheets&trade; &amp; Gmail&trade; add-on for importers &amp; freight forwarders</p>
-        <h1>Track every ocean container in Google Sheets and Gmail, automatically.</h1>
-        <p class="subtitle">Enter a container number. Container Tracker checks MSC, Maersk, Hapag-Lloyd, CMA CGM,
-            ONE, Yang Ming and Evergreen for you and shows status, location, vessel and ETA right next to your
-            spreadsheet. In Gmail, it finds the container numbers in the email you open. No more logging into
-            seven carrier websites.</p>
+        <p class="eyebrow">Container tracking for importers &amp; freight forwarders</p>
+        <h1>Track every ocean container in the tools you already use.</h1>
+        <p class="subtitle">Enter a container number. Container Tracker checks <a href="#carriers">7 shipping
+                lines</a> for you and shows status, location, vessel and ETA right where you work. No more logging
+            into seven carrier websites.</p>
 
-        <div class="cta-container">
-            <a href="install.html?from=hero" class="cta-button">Install free for Google Sheets &amp; Gmail</a>
-            <a href="#how-it-works" class="cta-secondary">See how it works</a>
-        </div>
-        <p class="cta-note">Free for your first 10 containers &middot; No credit card &middot; Works with any Google
-            account</p>
-        <img src="img/hero.webp" class="hero-shot" width="1054" height="660" loading="eager" fetchpriority="high"
-            alt="Google Sheets with a milestones table for 13 containers and the Container Tracker side panel showing a container's ETA and events">
-        <p class="cta-alt">Using HubSpot? <a href="getting-started-hs.html">Track containers on HubSpot tickets
-                &rarr;</a></p>
+        <section id="platforms" class="platforms" aria-roledescription="carousel" aria-label="Platforms">
+            <ul class="platform-tabs">
+                <li><a class="platform-tab" href="#p-google" data-slide="0" aria-current="true"><span
+                            class="dot"></span>Google Sheets &amp; Gmail</a></li>
+                <li><a class="platform-tab" href="#p-hubspot" data-slide="1"><span class="dot"></span>HubSpot</a>
+                </li>
+                <li><a class="platform-tab pending" href="#p-shopify" data-slide="2"><span
+                            class="dot"></span>Shopify</a></li>
+                <li><a class="platform-tab pending" href="#p-monday" data-slide="3"><span
+                            class="dot"></span>monday.com</a></li>
+            </ul>
+
+            <div class="platform-track" tabindex="0">
+                <article class="slide" id="p-google" aria-roledescription="slide" aria-label="1 of 4">
+                    <p class="status">Live &middot; Google Workspace Marketplace</p>
+                    <h2>Google Sheets &amp; Gmail</h2>
+                    <p class="slide-lead">One add-on for both. Track containers from the side panel next to your
+                        spreadsheet, and track the ones you find in your inbox.</p>
+                    <ul>
+                        <li>Status, location, vessel and ETA right next to your sheet</li>
+                        <li>Milestones for all your containers, exported side by side</li>
+                        <li>In Gmail: container numbers found in the email and its PDF, CSV or text attachments</li>
+                    </ul>
+                    <div class="slide-actions">
+                        <a href="install.html?from=hero" class="cta-button">Install free for Google Sheets &amp;
+                            Gmail</a>
+                        <a href="getting-started.html">Guide</a>
+                        <a href="container-tracking-template.html">Free template</a>
+                    </div>
+                    <img src="img/hero.webp" class="slide-shot" width="1054" height="660" loading="eager"
+                        fetchpriority="high"
+                        alt="Google Sheets with a milestones table for 13 containers and the Container Tracker side panel showing a container's ETA and events">
+                </article>
+
+                <article class="slide split" id="p-hubspot" aria-roledescription="slide" aria-label="2 of 4">
+                    <div>
+                    <p class="status">Live &middot; HubSpot App Marketplace</p>
+                    <h2>HubSpot</h2>
+                    <p class="slide-lead">A Container Tracking card on your Tickets, so every shipment is tracked on
+                        the ticket it belongs to.</p>
+                    <ul>
+                        <li>Enter the container number on the ticket; the card keeps it up to date</li>
+                        <li>Full event history, milestones and a plain-language summary for customer updates</li>
+                        <li>Your whole team sees the status without leaving HubSpot</li>
+                    </ul>
+                    <div class="slide-actions">
+                        <a href="https://ecosystem.hubspot.com/marketplace/listing/containertracker"
+                            class="cta-button">Install free from the HubSpot Marketplace</a>
+                        <a href="getting-started-hs.html">Guide</a>
+                    </div>
+                    </div>
+                    <img src="img/hubspot-ticket-card.webp" class="slide-shot" width="372" height="857"
+                        loading="lazy"
+                        alt="The Container Tracking card in the HubSpot ticket sidebar: carrier, ETA and the event history of a container">
+                </article>
+
+                <article class="slide pending" id="p-shopify" aria-roledescription="slide" aria-label="3 of 4">
+                    <p class="status">In review &middot; Shopify App Store</p>
+                    <h2>Shopify</h2>
+                    <p class="slide-lead">Container tracking on your orders. A block on the order page shows each
+                        container's status and ETA, so you see which orders are waiting on which shipment.</p>
+                    <ul>
+                        <li>Containers, carrier, status and ETA right on the order</li>
+                        <li>A Containers page with Arriving in 7 days and Needs attention</li>
+                        <li>Billed through your Shopify invoice</li>
+                    </ul>
+                    <div class="slide-actions">
+                        <a href="mailto:support@get-ctms.com?subject=Tell%20me%20when%20the%20Shopify%20app%20is%20live"
+                            class="cta-secondary">Tell me when it's live</a>
+                    </div>
+                    <img src="img/store-3-order-block.webp" class="slide-shot" width="1200" height="675"
+                        loading="lazy"
+                        alt="A Shopify order page with the Container Tracker block listing three containers with carrier, ETA and status">
+                </article>
+
+                <article class="slide pending" id="p-monday" aria-roledescription="slide" aria-label="4 of 4">
+                    <p class="status">In review &middot; monday.com marketplace</p>
+                    <h2>monday.com</h2>
+                    <p class="slide-lead">Container tracking on your boards. Type a container number in a column;
+                        status, ETA and the last event fill in on their own.</p>
+                    <ul>
+                        <li>Works on your own board or a ready-made template</li>
+                        <li>Automations update your columns when the carrier reports something new</li>
+                        <li>Billed through your monday.com account</li>
+                    </ul>
+                    <div class="slide-actions">
+                        <a href="mailto:support@get-ctms.com?subject=Tell%20me%20when%20the%20monday.com%20app%20is%20live"
+                            class="cta-secondary">Tell me when it's live</a>
+                        <a href="getting-started-monday.html">Guide</a>
+                        <a
+                            href="https://auth.monday.com/oauth2/authorize?client_id=d9494ca880b61912bdb294fa84ffcce8&amp;response_type=install">Install
+                            early with a direct link</a>
+                    </div>
+                    <img src="img/monday-board.webp" class="slide-shot" width="1200" height="454" loading="lazy"
+                        alt="A monday.com board with container numbers, carriers, the Tracking status In transit, ETA dates and the last event of each container">
+                </article>
+            </div>
+
+            <div class="carousel-nav">
+                <button type="button" data-step="-1" aria-label="Previous platform">&larr;</button>
+                <span>First 10 containers free &middot; No credit card</span>
+                <button type="button" data-step="1" aria-label="Next platform">&rarr;</button>
+            </div>
+        </section>
 
         <ul class="trust-strip">
             <li>Installed 350+ times from the Google Workspace Marketplace</li>
@@ -517,7 +790,7 @@
             <h2>Still checking carrier websites one container at a time?</h2>
             <ul class="pain-list">
                 <li>Seven carriers, seven websites, seven different layouts.</li>
-                <li>Copying ETAs into a spreadsheet by hand, and finding out about a delay after your customer
+                <li>Copying ETAs into a spreadsheet or CRM by hand, and finding out about a delay after your customer
                     does.</li>
                 <li>Writing the same "where is my container?" update email every week.</li>
             </ul>
@@ -533,8 +806,8 @@
             </div>
             <div class="feature-card">
                 <h3>Milestones, not noise</h3>
-                <p>Gate in, loaded, departed, arrived, discharged, delivered: the milestones that matter, exported side
-                    by side for all your containers.</p>
+                <p>Gate in, loaded, departed, arrived, discharged, delivered: the milestones that matter, side by side
+                    for all your containers.</p>
             </div>
             <div class="feature-card">
                 <h3>Customer updates in one click</h3>
@@ -542,9 +815,9 @@
                     ready to paste into an email.</p>
             </div>
             <div class="feature-card">
-                <h3>Lives in your spreadsheet</h3>
-                <p>No new platform and no logins to share. Container Tracker opens in the Google Sheets side panel and
-                    writes straight into your sheet.</p>
+                <h3>Lives where you work</h3>
+                <p>No new platform and no logins to share. Container Tracker opens inside the tool your team already
+                    uses: your spreadsheet, your inbox or your CRM.</p>
             </div>
         </div>
 
@@ -588,43 +861,40 @@
         <section id="how-it-works">
             <h2>How It Works</h2>
             <ol>
-                <li><strong>Install</strong> the <a
-                        href="install.html?from=how-it-works">Google
-                        Sheets &amp; Gmail add-on</a>, the <a
-                        href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">HubSpot app</a> or the <a
-                        href="https://auth.monday.com/oauth2/authorize?client_id=d9494ca880b61912bdb294fa84ffcce8&amp;response_type=install">monday.com
-                        app</a> (<a href="getting-started-monday.html">guide</a>).</li>
-                <li><strong>Add a container</strong>: open the Container Tracker icon in the Sheets side panel (it's
-                    not in the Extensions menu) and enter the container number, e.g. MSCU1234567. The carrier is
-                    detected from the number.</li>
-                <li><strong>Or track from Gmail</strong>: open an email and click the Container Tracker icon in the
-                    right-hand side panel. It lists the container numbers in the email, also from PDF, CSV or text
-                    attachments. Click <strong>Track</strong> next to a new one.</li>
-                <li><strong>Or track from HubSpot</strong>: open a ticket and enter the container number in the
-                    <strong>Container Tracking</strong> card in the right sidebar. The container stays linked to that
-                    ticket. See the <a href="getting-started-hs.html">HubSpot guide</a>.</li>
-                <li><strong>Follow its journey</strong>: see the full event history, key milestones (Gate In,
-                    Loaded, Departed, Arrived, Discharged, Delivered) and an AI summary of where the container is now.
+                <li><strong>Install</strong> Container Tracker for your platform: the <a
+                        href="install.html?from=how-it-works">Google Sheets &amp; Gmail add-on</a> or the <a
+                        href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">HubSpot app</a>.
+                    Shopify and monday.com are <a href="#platforms">in review</a>.</li>
+                <li><strong>Add a container number</strong>, e.g. MSCU1234567, where it belongs: in the Sheets side
+                    panel, next to an email in Gmail, on a HubSpot ticket. The carrier is detected from the number.
                 </li>
-                <li><strong>Export</strong> container lists, histories and milestones to Google Sheets for reporting.
-                </li>
+                <li><strong>Follow its journey</strong>: the full event history, key milestones (Gate In, Loaded,
+                    Departed, Arrived, Discharged, Delivered) and an AI summary of where the container is now. New
+                    events keep coming in until it's delivered.</li>
+                <li><strong>Share and report</strong>: paste the summary into a customer email, or export lists,
+                    histories and milestones to Google Sheets.</li>
             </ol>
+            <p>Step-by-step guides: <a href="getting-started.html">Google Sheets</a> &middot; <a
+                    href="getting-started.html#use-it-in-gmail">Gmail</a> &middot; <a
+                    href="getting-started-hs.html">HubSpot</a> &middot; <a
+                    href="getting-started-monday.html">monday.com</a></p>
         </section>
 
         <section id="pricing">
             <h2>Pricing</h2>
+            <p>The same plans on every platform.</p>
             <div class="pricing-grid">
                 <div class="price-card">
-                    <h3>Free trial</h3>
+                    <h3>Free</h3>
                     <p class="price">$0</p>
                     <ul>
                         <li><strong>10 automatically tracked containers</strong> included, no time limit</li>
                         <li>Unlimited manual tracking for any carrier</li>
-                        <li>Container history, milestones and export to Sheets</li>
+                        <li>Container history and milestones</li>
                         <li>AI summaries and screenshot import</li>
                     </ul>
                     <p>No credit card needed.</p>
-                    <p><a href="install.html?from=pricing" class="cta-button">Install free</a></p>
+                    <p><a href="#platforms" class="cta-button">Pick your platform</a></p>
                 </div>
                 <div class="price-card featured">
                     <h3>Pro</h3>
@@ -633,22 +903,28 @@
                         <li><strong>20 new automatically tracked containers every month</strong></li>
                         <li>Containers you already track keep updating</li>
                         <li>400 AI credits a month for summaries and screenshot import</li>
-                        <li>Everything in the free trial</li>
+                        <li>Everything in Free</li>
                     </ul>
-                    <p>Billed monthly. Save with a 6-month or yearly subscription.</p>
-                    <p>Start free, then upgrade from <strong>My Profile</strong> in the add-on.</p>
+                    <p>Billed monthly. Save with a longer subscription.</p>
+                    <p>Start free, then upgrade inside the app. In Google Sheets, Gmail and HubSpot: <strong>My
+                            Profile</strong>. In Shopify and monday.com, the plan is billed by the platform.</p>
                 </div>
             </div>
             <p><strong>What happens after 10 containers?</strong> Nothing is deleted. Your containers and their
                 history stay available, and you can keep tracking manually for free, or upgrade to keep new containers
                 updating automatically.</p>
-            <p><strong>Tracking more than 20 containers a month?</strong> <a href="mailto:support@get-ctms.com">Contact us</a> and we'll put together a plan
-                that fits your volume.</p>
+            <p><strong>Tracking more than 20 containers a month?</strong> <a href="mailto:support@get-ctms.com">Contact
+                    us</a> and we'll put together a plan that fits your volume.</p>
             <p class="pricing-note">Prices in USD. Cancel anytime.</p>
         </section>
 
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
+
+            <h3>Which platforms does Container Tracker work in?</h3>
+            <p>Google Sheets and Gmail (one add-on for both) and HubSpot today. Apps for Shopify and monday.com are in
+                review on their marketplaces; see <a href="#platforms">Platforms</a>. Every version tracks the same
+                carriers and has the same plans.</p>
 
             <h3>Which shipping lines can I track automatically?</h3>
             <p>MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE (Ocean Network Express), Yang Ming and Evergreen. Containers
@@ -689,10 +965,8 @@
 
             <h3>How much does it cost?</h3>
             <p>Your first 10 containers are free, with no credit card needed. After that, Pro is $15/month and covers
-                up to 20 containers a month plus 400 AI credits. Save with a 6-month or yearly subscription. Tracking
-                more containers? Contact us for a plan that
-                fits your volume. See <a
-                    href="#pricing">Pricing</a>.</p>
+                up to 20 containers a month plus 400 AI credits. Save with a longer subscription. Tracking more
+                containers? Contact us for a plan that fits your volume. See <a href="#pricing">Pricing</a>.</p>
 
             <h3>How often is a container checked?</h3>
             <p>The first check runs right after you add a container, and your first update usually arrives in about a
@@ -709,12 +983,12 @@
 
             <h3>Is my data safe?</h3>
             <p>We store only your email, your name and the container numbers you submit, on Microsoft Azure in the EU.
-                The add-on only writes to the spreadsheet you are working in, and only when you click an export. See
-                the <a href="privacy.html">Privacy Policy</a>.</p>
+                In Google Sheets, the add-on only writes to the spreadsheet you are working in, and only when you
+                click an export. See the <a href="privacy.html">Privacy Policy</a>.</p>
 
             <h3>Can I cancel anytime?</h3>
-            <p>Yes. Open the add-on, go to My Profile and click Manage Subscription. You keep access until the end
-                of the period you paid for.</p>
+            <p>Yes. In Google Sheets, Gmail or HubSpot, open My Profile and click Manage Subscription. You keep access
+                until the end of the period you paid for.</p>
 
             <h3>How do I keep stakeholders updated?</h3>
             <p>Open a container and use the AI summary for a plain-language status update, or export milestones to
@@ -729,7 +1003,11 @@
         <section class="final-cta">
             <h2>Stop checking carrier websites.</h2>
             <p>Your first 10 containers are free. Setup takes two minutes.</p>
-            <a href="install.html?from=final" class="cta-button">Install free for Google Sheets &amp; Gmail</a>
+            <div class="cta-container">
+                <a href="install.html?from=final" class="cta-button">Install free for Google Sheets &amp; Gmail</a>
+                <a href="https://ecosystem.hubspot.com/marketplace/listing/containertracker"
+                    class="cta-secondary">Install for HubSpot</a>
+            </div>
         </section>
     </main>
 
@@ -737,7 +1015,6 @@
         <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
         <p><a href="container-tracking-template.html">Free spreadsheet template</a></p>
         <p>
-
             <strong>Google Workspace:</strong>
             <a href="privacy.html">Privacy Policy</a>
             <a href="terms.html">Terms of Service</a>
@@ -745,8 +1022,66 @@
             <strong>HubSpot:</strong>
             <a href="privacy-hs.html">Privacy Policy</a>
             <a href="terms-hs.html">Terms of Service</a>
+            <span style="margin: 0 10px;">|</span>
+            <strong>monday.com:</strong>
+            <a href="privacy-monday.html">Privacy Policy</a>
+            <a href="terms-monday.html">Terms of Service</a>
         </p>
     </footer>
+
+    <script>
+        // Platform carousel: tabs and arrows scroll the track; scrolling (or swiping) updates the active tab.
+        (function () {
+            var track = document.querySelector('.platform-track');
+            var tabs = Array.prototype.slice.call(document.querySelectorAll('.platform-tab'));
+            var slides = Array.prototype.slice.call(track.querySelectorAll('.slide'));
+            var current = 0;
+            document.body.classList.remove('no-js');
+
+            // The track takes the height of the slide on show, so short slides leave no empty space
+            function setActive(i) {
+                current = i;
+                tabs.forEach(function (t, n) { t.setAttribute('aria-current', n === i ? 'true' : 'false'); });
+                track.style.height = slides[i].offsetHeight + 'px';
+            }
+
+            function go(i, instant) {
+                i = (i + slides.length) % slides.length;
+                track.scrollTo({ left: i * track.clientWidth, behavior: instant ? 'instant' : 'smooth' });
+                setActive(i);
+            }
+
+            tabs.forEach(function (t, n) {
+                t.addEventListener('click', function (e) { e.preventDefault(); go(n); });
+            });
+            document.querySelectorAll('.carousel-nav button').forEach(function (b) {
+                b.addEventListener('click', function () { go(current + Number(b.dataset.step)); });
+            });
+            track.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+                if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+            });
+
+            var timer;
+            track.addEventListener('scroll', function () {
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    setActive(Math.round(track.scrollLeft / track.clientWidth));
+                }, 80);
+            });
+
+            window.addEventListener('resize', function () { go(current, true); });
+            window.addEventListener('load', function () { setActive(current); });
+            setActive(0);
+
+            // Deep links like /#p-monday open that slide
+            var start = slides.findIndex(function (s) { return '#' + s.id === location.hash; });
+            if (start > 0) {
+                go(start, true);
+                document.getElementById('platforms').scrollIntoView();
+            }
+        })();
+    </script>
 
 </body>
 
