@@ -1,6 +1,7 @@
 // Ad attribution without cookies: a landing URL like ?src=gads-tpl is kept for this tab
-// (sessionStorage) and appended to the install / copy-template counter links, so
-// Cloudflare shows e.g. /install.html?from=hero-gads-tpl apart from normal clicks.
+// (sessionStorage) and sends the install / copy-template links to the ad counter pages
+// (install-ad.html, copy-template-ad.html). Cloudflare Web Analytics drops query strings,
+// so the separate path is what it counts; ?from= keeps the source for anything else.
 (function () {
     var src = null;
     try {
@@ -18,6 +19,7 @@
     for (var i = 0; i < links.length; i++) {
         var url = new URL(links[i].getAttribute('href'), location.href);
         url.searchParams.set('from', (url.searchParams.get('from') || 'link') + '-' + src);
-        links[i].setAttribute('href', url.pathname.replace(/^\//, '') + url.search + url.hash);
+        var path = url.pathname.replace(/^\//, '').replace(/\.html$/, '-ad.html');
+        links[i].setAttribute('href', path + url.search + url.hash);
     }
 })();
