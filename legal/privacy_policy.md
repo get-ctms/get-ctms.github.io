@@ -8,7 +8,7 @@ Container Tracker has created this Privacy Policy to explain how we collect, use
 
 ### A. Personal Information (Google User Data)
 When you install and authenticate the Add-on, we access the following personal information via your Google Account, based on the permissions you grant:
-*   **Email Address:** Used to identify your account and authenticate you with our backend system.
+*   **Email Address:** Used to identify your account, authenticate you with our backend system, and email you about your account and the service.
 *   **Profile Name:** Used to personalize the user interface.
 
 ### B. Spreadsheet Content
@@ -39,6 +39,7 @@ We use the information we collect for the following purposes:
 *   **AI-Enhanced Features:** To provide optional summarization and OCR capabilities upon your specific request.
 *   **Gmail:** To find container numbers in the email you open and, when you ask for it, in its attachments.
 *   **Slack alerts:** To post a message to the Slack channel you chose when one of your containers reaches a milestone, gets a new ETA or stops updating.
+*   **Service messages:** To email you about your account and the service, including an occasional request for feedback. We don't send advertising by email, and you can opt out at any time by replying to the message.
 
 ## 3. Data Sharing, Transfer, and Disclosure
 
