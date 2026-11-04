@@ -12,7 +12,7 @@ When you install and use the Extension in your HubSpot account, we access specif
 *   **No Sensitive Record Access:** We **do not** access, read, or store your Contacts, Companies, or Deal properties. We are designed to operate independently of your CRM's sensitive customer data.
 
 ### B. User Account Information
-*   **Email Address:** Used to identify your account and authenticate you with our backend system.
+*   **Email Address:** Used to identify your account, authenticate you with our backend system, and email you about your account and the service.
 *   **Profile Name:** Used to personalize the user interface.
 
 ### C. Slack (optional)
@@ -30,6 +30,7 @@ We use the information we collect for the following purposes:
 *   **Improvement:** To monitor the performance of the Extension and fix technical issues.
 *   **AI-Enhanced Features:** To provide optional summarization and OCR capabilities upon your specific request.
 *   **Slack alerts:** To post a message to the Slack channel you chose when one of your containers reaches a milestone, gets a new ETA or stops updating.
+*   **Service messages:** To email you about your account and the service, including a welcome note when you install the Extension. We don't send advertising by email, and you can opt out at any time by replying to the message.
 
 ## 3. Data Sharing, Transfer, and Disclosure
 
@@ -38,6 +39,7 @@ We do not sell, rent, or trade your HubSpot data. We only share, transfer, or di
 *   **Microsoft Azure:** We transfer authentication data (Email) and container numbers to our backend infrastructure hosted on Microsoft Azure to provide the core tracking service.
 *   **Google Vertex AI / Gemini:** We transfer specific data (container history or user-provided screenshots) to Google’s enterprise AI services only when you explicitly trigger an AI feature (e.g., "View Summary" or "Import from Screenshot"). This data is processed to provide the requested output and is not used to train global models.
 *   **Slack (a recipient you choose):** If you connect Slack, we send the container number, shipping line, the event (for example "departed Savannah"), its date and the ETA to the Slack channel you picked. Everyone who can see that channel can read these messages. No HubSpot record data or email address is sent to Slack.
+*   **Resend:** We send service messages through Resend, an email delivery provider, which receives your email address and the message.
 *   **Shipping Carriers:** Container numbers are shared with public shipping line APIs to retrieve current status updates.
 *   **Legal Requirements:** We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).
 

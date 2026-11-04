@@ -1,6 +1,6 @@
 # Privacy Policy for Container Tracker (Shopify App)
 
-**Last Updated:** October 20, 2026
+**Last Updated:** November 4, 2026
 
 Container Tracker has created this Privacy Policy to explain how we collect, use, and share information when you install and use the Container Tracker app on your Shopify store. By using this App, you agree to the collection and use of information in accordance with this policy.
 
@@ -10,7 +10,7 @@ Container Tracker has created this Privacy Policy to explain how we collect, use
 When you install the App, we receive and store the following information about your store:
 *   **Store Domain:** Your store's permanent myshopify.com domain. It identifies your account in our system.
 *   **Store Name:** Used to personalize the user interface.
-*   **Contact Email:** Set from your store email on first use. You can change it at any time on the App's Settings page. We use it only to contact you about your account and tracking problems.
+*   **Contact Email:** Set from your store email on first use. You can change it at any time on the App's Settings page. We use it only to contact you about your account and the service, including tracking problems and a welcome note when you install the App.
 
 ### B. Tracking Data
 To provide the tracking service, we store:
@@ -34,6 +34,7 @@ We use the information we collect for the following purposes:
 *   **Plans and Limits:** To apply the limits of your plan. We read your current plan from Shopify.
 *   **Improvement:** To monitor the performance of the App and fix technical issues.
 *   **AI-Enhanced Features:** To provide optional summarization and screenshot import upon your specific request.
+*   **Service messages:** To email you about your account and the service. We don't send advertising by email, and you can opt out at any time by replying to the message.
 
 ## 3. Data Sharing, Transfer, and Disclosure
 
@@ -41,6 +42,7 @@ We do not sell, rent, or trade your data. We only share, transfer, or disclose y
 
 *   **Microsoft Azure:** Your store information and tracking data are stored on our backend infrastructure hosted on Microsoft Azure (North Europe region) to provide the core tracking service.
 *   **Google Vertex AI / Gemini:** We transfer specific data (container history or user-provided screenshots) to Google’s enterprise AI services only when you explicitly trigger an AI feature (an AI summary or a screenshot import). This data is processed to provide the requested output and is not used to train global models.
+*   **Resend:** We send service messages through Resend, an email delivery provider, which receives your contact email and the message.
 *   **Shipping Carriers:** Container numbers are shared with public shipping line websites and APIs to retrieve current status updates.
 *   **Shopify:** We read your store's plan status from Shopify to apply your plan.
 *   **Legal Requirements:** We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).
