@@ -1094,6 +1094,11 @@
                 current = i;
                 tabs.forEach(function (t, n) { t.setAttribute('aria-current', n === i ? 'true' : 'false'); });
                 track.style.height = slides[i].offsetHeight + 'px';
+                // Keep the slide in the URL (no new history entry), so Back from a guide or install page returns to it
+                var hash = '#' + slides[i].id;
+                if ((i !== 0 || location.hash) && location.hash !== hash && history.replaceState) {
+                    history.replaceState(null, '', location.pathname + location.search + hash);
+                }
             }
 
             function go(i, instant) {
@@ -1123,14 +1128,18 @@
 
             window.addEventListener('resize', function () { go(current, true); });
             window.addEventListener('load', function () { setActive(current); });
-            setActive(0);
-
-            // Deep links like /#p-monday open that slide
+            // Deep links like /#p-monday open that slide (also after Back, where the browser keeps its own scroll position)
             var start = slides.findIndex(function (s) { return '#' + s.id === location.hash; });
+            if (start <= 0) { setActive(0); }
             if (start > 0) {
                 go(start, true);
-                document.getElementById('platforms').scrollIntoView();
+                var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+                if (!nav || nav.type !== 'back_forward') {
+                    document.getElementById('platforms').scrollIntoView();
+                }
             }
+            // Restored from the back/forward cache: the page is as it was, only the height needs a refresh
+            window.addEventListener('pageshow', function (e) { if (e.persisted) { setActive(current); } });
         })();
     </script>
 
