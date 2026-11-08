@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Tracker for Salesforce - Getting Started</title>
+    <meta name="description" content="Track shipping containers on Salesforce accounts and opportunities: install the free Container Tracker package, get an API key and keep status, ETA, vessel and carrier events up to date for MSC, Maersk, CMA CGM, Hapag-Lloyd, ONE, Yang Ming and Evergreen.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Container Tracker">
+    <meta property="og:title" content="Container Tracker for Salesforce - Getting Started">
+    <meta property="og:description" content="Track shipping containers on Salesforce accounts and opportunities: status, ETA, vessel, carrier events, milestones, reports and Slack alerts.">
+    <meta property="og:url" content="https://get-ctms.com/getting-started-salesforce.html">
+    <meta property="og:image" content="https://get-ctms.com/img/salesforce-overview.webp">
+    <meta property="og:image:alt" content="The Container Tracker Overview tab in Salesforce: dashboard and the list of tracked containers">
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
+    <link rel="canonical" href="https://get-ctms.com/getting-started-salesforce.html">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #666;
+            margin: 0 10px;
+        }
+
+        main h1,
+        main h2,
+        main h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        main a {
+            color: #007bff;
+        }
+
+        main code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        main blockquote {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            border-left: 4px solid #cfe2ff;
+            background: #f8f9fa;
+            color: #555;
+        }
+
+        main figure {
+            margin: 1.5em 0;
+        }
+
+        main figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #e3e3e3;
+            border-radius: 6px;
+        }
+
+        main figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.4em;
+        }
+
+        main nav.toc {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 0.5em 1.5em;
+        }
+
+        main table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+            font-size: 0.95rem;
+        }
+
+        main th,
+        main td {
+            border: 1px solid #e3e3e3;
+            padding: 6px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        main th {
+            background: #f8f9fa;
+        }
+
+        .install-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 1em 0 1.5em;
+        }
+
+        .install-buttons a {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #007bff;
+        }
+
+        .install-buttons a.primary {
+            background: #007bff;
+            color: #fff;
+        }
+    </style>
+    <!-- Cloudflare Web Analytics (cookie-free) -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0eae3dca722441dba1fba4c4c82d1ffe"}'></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Container Tracker</a>
+        <a href="index.html" style="text-decoration:none; color:#007bff;">&larr; Back to Home</a>
+    </header>
+
+    <main>
+        <article>
+            <h1 id="getting-started">Container Tracker for Salesforce</h1>
+            <p>Container Tracker follows your ocean containers on Salesforce accounts and opportunities. Paste the container numbers on a record, and the package keeps status, ETA, vessel, ports and the last and next event up to date. Every event from the carrier is stored as a Salesforce record, so your reports, list views and dashboards work with it. You don't need carrier accounts or any refreshing.</p>
+            <p>Carriers tracked automatically: <strong>MSC, Maersk, CMA CGM, Hapag-Lloyd, ONE, Yang Ming and Evergreen</strong>.</p>
+
+            <div class="install-buttons">
+                <a class="primary" href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04taj000000pQ25AAE">Install in Production or Developer Edition</a>
+                <a href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04taj000000pQ25AAE">Install in a Sandbox</a>
+            </div>
+
+            <figure>
+                <img src="img/salesforce-overview.webp" width="1200" height="872" alt="The Overview tab of the Container Tracker app: a dashboard with arrivals this and next week, ETA changes, containers waiting after discharge and sync problems, charts by status, carrier and port of discharge, and the list of all containers" loading="lazy">
+                <figcaption>The Overview tab: the included dashboard above the list of all your containers.</figcaption>
+            </figure>
+
+            <nav class="toc">
+                <ol>
+                    <li><a href="#features">What it does</a></li>
+                    <li><a href="#install">Install the package</a></li>
+                    <li><a href="#permissions">Assign the permission sets</a></li>
+                    <li><a href="#api-key">Get your API key</a></li>
+                    <li><a href="#record-pages">Add containers to your record pages</a></li>
+                    <li><a href="#track">Track containers</a></li>
+                    <li><a href="#container-page">The container page</a></li>
+                    <li><a href="#reports">Reports and the dashboard</a></li>
+                    <li><a href="#slack-alerts">Slack alerts</a></li>
+                    <li><a href="#history-log">Field history and the log</a></li>
+                    <li><a href="#updates">Updates</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a href="#data">Your data</a></li>
+                </ol>
+            </nav>
+
+            <h2 id="features">1. What it does</h2>
+            <ul>
+                <li><strong>Track by pasting numbers</strong> on an account or an opportunity. The carrier is filled in from the owner code (MSCU &rarr; MSC, HLCU &rarr; Hapag-Lloyd, &hellip;); for leased containers you pick it.</li>
+                <li><strong>Imports, Flows and the API</strong>: containers created any other way (Data Import Wizard, Data Loader, a Flow, an integration, the New button) are checked and tracked too.</li>
+                <li><strong>Hourly sync</strong> of status, ETA, vessel, ports of loading and discharge, and the last and next event.</li>
+                <li><strong>Events as records</strong> (Container Events), so they work in reports. <strong>Milestones</strong> (loaded, departed, discharged, available, delivered, empty returned) are date fields on the container.</li>
+                <li><strong>Add events by hand</strong> for something the carrier doesn't show.</li>
+                <li><strong>Reports and a dashboard</strong>: a report folder and the <strong>Overview</strong> tab come with the package.</li>
+                <li><strong>Summary</strong>: a few sentences on where a container is and what happened so far, written when you click <strong>Summarize</strong>.</li>
+                <li><strong>Slack alerts</strong> when a container departs, arrives, gets a new ETA or stops updating.</li>
+                <li><strong>Field history</strong> on containers and events, and an <strong>admin log</strong> of problems.</li>
+            </ul>
+
+            <h2 id="install">2. Install the package</h2>
+            <ol>
+                <li>Click <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04taj000000pQ25AAE">Install in Production or Developer Edition</a>, or <a href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04taj000000pQ25AAE">Install in a Sandbox</a>, and log in as a Salesforce admin.</li>
+                <li>Choose <strong>Install for Admins Only</strong> and click <strong>Install</strong>. You give access to your users with the permission sets in the next step.</li>
+                <li>When the install has finished, open the App Launcher and pick <strong>Container Tracker</strong>.</li>
+            </ol>
+            <p>Installing takes a few minutes.</p>
+
+            <h2 id="permissions">3. Assign the permission sets</h2>
+            <p>In Setup &#9656; Permission Sets, assign:</p>
+            <ul>
+                <li><strong>Container Tracker Admin</strong> to yourself (API key, hourly sync, Slack alerts, the log).</li>
+                <li><strong>Container Tracker User</strong> to the people who track containers.</li>
+            </ul>
+
+            <h2 id="api-key">4. Get your API key</h2>
+            <ol>
+                <li>Open the <strong>Container Tracker</strong> app &#9656; <strong>Container Tracker Setup</strong> tab &#9656; <strong>Get your API key</strong>. The key page already knows your org.</li>
+                <li>Enter your work email. We send you a link.</li>
+                <li>Open the link and copy the key.</li>
+                <li>Paste the key on the Setup tab and click <strong>Save and test</strong>. This also turns on the hourly sync.</li>
+            </ol>
+            <figure>
+                <img src="img/salesforce-setup.webp" width="1200" height="1022" alt="The Container Tracker Setup tab: API key saved, hourly sync on, the Free plan with 1 of 10 containers used, how to show containers on records, and Slack alerts connected to a channel" loading="lazy">
+                <figcaption>The Setup tab: API key, hourly sync, plan, record pages and Slack alerts.</figcaption>
+            </figure>
+
+            <h2 id="record-pages">5. Add containers to your record pages</h2>
+            <ol>
+                <li>Open an account, then <strong>Setup &#9656; Edit Page</strong>.</li>
+                <li>Drag the <strong>Containers</strong> component onto the page and save (activate the page if Salesforce asks).</li>
+                <li>Do the same on an opportunity.</li>
+            </ol>
+            <p>Container records come with their own page, nothing to set up there: see <a href="#container-page">The container page</a>.</p>
+            <figure>
+                <img src="img/salesforce-account.webp" width="1200" height="405" alt="An account page with the Containers component listing a container with carrier, status, ETA, last event and date" loading="lazy">
+                <figcaption>The Containers component on an account.</figcaption>
+            </figure>
+
+            <h2 id="track">6. Track containers</h2>
+            <p>In the Containers component (or on the Overview tab), click <strong>Track containers</strong> and paste one or more container numbers: 4 letters and 7 digits, as printed on the container door. The list shows the carrier for each number. When the owner code doesn't tell the carrier (a leased container, for example TGHU or TCLU), pick it; one pick fills the empty ones below. Click <strong>Track</strong>.</p>
+            <figure>
+                <img src="img/salesforce-track.webp" width="906" height="378" alt="The Track containers form with three pasted numbers: two carriers filled in from the number, one asking to pick the carrier" loading="lazy">
+                <figcaption>The carrier comes from the number; leased containers ask you to pick it.</figcaption>
+            </figure>
+            <p>The first status comes in once the carrier answers; from then on the hourly sync keeps it up to date. <strong>Stop tracking</strong> archives a container (it moves to <strong>Archived</strong>, where <strong>Track again</strong> restarts it). Containers the carrier can't find get the status <strong>Can't be tracked</strong> with the reason.</p>
+
+            <h2 id="container-page">7. The container page</h2>
+            <ul>
+                <li><strong>Events</strong> tab: every event from the carrier with date, location and vessel, planned ones marked. Click an event for all its fields (facility, voyage, IMO, remarks). <strong>Add event</strong> records something the carrier doesn't show; <strong>Refresh</strong> reads the latest events at once.</li>
+                <li><strong>Milestones</strong> card: the journey so far and what comes next.</li>
+                <li><strong>Summary</strong> card: click <strong>Summarize</strong> for a few sentences you can paste into an email. Each click uses one of the month's summaries; the card shows how many are left.</li>
+            </ul>
+            <figure>
+                <img src="img/salesforce-container.webp" width="1200" height="806" alt="A container page: status, carrier, ETA, port of discharge and vessel at the top, the Events timeline, the Milestones card and a Summary card with a short text on where the container is" loading="lazy">
+                <figcaption>Events, Milestones and Summary on a container record.</figcaption>
+            </figure>
+
+            <h2 id="reports">8. Reports and the dashboard</h2>
+            <p>The <strong>Container Tracker</strong> report folder and dashboard come with the package: arrivals this and next week, ETA moved, containers waiting 7+ days after discharge, sync problems, and active containers by status, carrier and port of discharge. The dashboard is on the <strong>Overview</strong> tab. To build your own, use the report types <strong>Containers</strong> and <strong>Containers with Events</strong>.</p>
+
+            <h2 id="slack-alerts">9. Slack alerts</h2>
+            <ol>
+                <li>On the <strong>Container Tracker Setup</strong> tab, under <strong>Slack alerts</strong>, click <strong>Connect Slack</strong> (Container Tracker Admin only).</li>
+                <li>Slack opens in a new tab: pick the channel and click <strong>Allow</strong>. Back in Salesforce, click <strong>Refresh</strong>.</li>
+                <li>Choose what gets posted: milestones, ETA changes of a day or more, and containers that stop updating. <strong>Send test</strong> posts a test message.</li>
+            </ol>
+            <p>Container Tracker checks every 15 minutes and posts only to that channel; it can't read your Slack messages. <strong>Open in CTMS</strong> in a message opens the Container Tracker app in your org.</p>
+
+            <h2 id="history-log">10. Field history and the log</h2>
+            <ul>
+                <li><strong>Field history</strong>: changes to a container (status, ETA, vessel, ports, milestone dates, account, opportunity, &hellip;) and to an event are kept. Open the <strong>Related</strong> tab of a container, or an event record, to see what changed and when.</li>
+                <li><strong>Container Tracker Logs</strong> tab (admins): failed calls, a refused API key, background jobs that stopped, installs and upgrades. The Setup tab shows the number of problems in the last 24 hours. Send the log number when you write to support.</li>
+            </ul>
+            <figure>
+                <img src="img/salesforce-history.webp" width="906" height="783" alt="The Related tab of a container: the list of its events and the Container History list with ETA and status changes" loading="lazy">
+                <figcaption>The Related tab: stored events and the container's field history.</figcaption>
+            </figure>
+
+            <h2 id="updates">11. Updates</h2>
+            <p>When a new version is out, the Setup tab and the Containers component show a banner with the install link. Install it the same way (<strong>Install for Admins Only</strong>). Your data stays, and you can skip versions.</p>
+
+            <h2 id="plans">12. Plans</h2>
+            <ul>
+                <li><strong>10 containers free</strong> per org, with no time limit. One free org per email address.</li>
+                <li>Each Salesforce org is its own Container Tracker account with its own containers and plan. A sandbox counts as its own org and needs its own key.</li>
+                <li>More containers: the <strong>Plan</strong> card on the Setup tab &#9656; <strong>see the plans</strong>. The plans are the same as on every other platform, see <a href="index.html#pricing">Pricing</a>.</li>
+            </ul>
+
+            <h2 id="data">13. Your data</h2>
+            <p>The package sends only container numbers and carriers (to track them) and your API key (to identify your account). When you connect Slack, it also sends your org's address, so the links in Slack messages open your org. No account names, contacts, opportunity data or other org data leave Salesforce. The API key is stored in a Salesforce External Credential, encrypted and never shown again.</p>
+
+            <h2 id="need-help">Need help?</h2>
+            <p>Email us at <a href="mailto:support@get-ctms.com">support@get-ctms.com</a>. Please include the container number and carrier if your question is about a specific container, and the log number if the Setup tab shows a problem.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
+        <p>
+            <a href="mailto:support@get-ctms.com">Support</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
