@@ -15,7 +15,8 @@
     } catch (e) { /* storage blocked: tag only when src is in this URL */ }
     if (!src) return;
 
-    var links = document.querySelectorAll('a[href^="install.html"], a[href^="copy-template.html"], a[href^="/install.html"], a[href^="/copy-template.html"]');
+    var links = document.querySelectorAll('a[href^="install.html"], a[href^="copy-template.html"], a[href^="/install.html"], a[href^="/copy-template.html"], ' +
+        'a[href^="install-salesforce.html"], a[href^="install-salesforce-sandbox.html"]');
     for (var i = 0; i < links.length; i++) {
         var url = new URL(links[i].getAttribute('href'), location.href);
         url.searchParams.set('from', (url.searchParams.get('from') || 'link') + '-' + src);
