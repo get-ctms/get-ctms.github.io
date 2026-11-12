@@ -15,7 +15,7 @@ When you install and authenticate the Add-on, we access the following personal i
 To perform the service of tracking containers, the Add-on interacts with the **currently active Google Sheet**. 
 *   **Sheets the Add-on writes:** The Add-on writes tracking status and free time (demurrage & detention) into its own sheets ("Milestones", "Free time"). To keep your notes next to the right container when it updates them, it reads those sheets' existing rows inside Google's Apps Script environment; your notes are not sent to our servers.
 *   **Contract terms tab (paid plans, only when you click it):** When you click **Save to CTMS**, the Add-on reads the rows of its "Contract terms" tab and sends them to our servers, where they are stored as your contract terms (see section 1.E). **Load from CTMS** writes your saved terms back into that tab.
-*   **Nothing else:** We do not read, retrieve, or store content from any other cells or sheets, nor do we access other files in your Google Drive.
+*   **Nothing else:** We do not read, retrieve, or store content from any other cells or sheets, nor do we access other files in your Google Drive. The only exception: if a sheet already has one of the names above, the Add-on reads its first row to check that it is its own sheet before writing to it (inside Google's Apps Script environment; nothing is sent to our servers).
 
 ### C. Gmail
 If you use the Add-on in Gmail, it asks for two more permissions: to run as a Gmail add-on, and to read the email you have open while the Add-on is running.
@@ -29,7 +29,7 @@ If you use the Add-on in Gmail, it asks for two more permissions: to run as a Gm
 If you connect Slack (Home → **Slack alerts**), Slack asks you to pick one channel and to allow Container Tracker to post to it. We then store the name and ID of your Slack workspace and channel, the address we post to (an "incoming webhook" URL) and the access token Slack issues for the install. Container Tracker can only post to that channel: it cannot read your Slack messages, channels or members.
 
 ### E. Your free time and contract terms (optional)
-If you use **Free time** (demurrage & detention), we store what you enter so we can work out the last free day of your containers: free days per carrier or per container, the day type (calendar or working days), dates you enter for a container (for example gate-out or empty return), notes, closed days, and, on paid plans, your contract terms (contract name, number and section, validity dates, trade lanes, equipment, free days, rates and currency). Contract terms are often confidential between you and your carrier. We treat them as your confidential business information.
+If you use **Free time** (demurrage & detention), we store what you enter so we can work out the last free day of your containers: free days per carrier or per container, the day type (calendar or working days), whether a carrier's or a container's boxes are import or export, the country whose public holidays apply, dates you enter for a container (for example gate-out or empty return), notes, closed days, and, on paid plans, your contract terms (contract name, number and section, validity dates, trade lanes, equipment, free days, rates and currency). Contract terms are often confidential between you and your carrier. We treat them as your confidential business information.
 
 ### F. Website Analytics
 Our website (get-ctms.com) uses Cloudflare Web Analytics to count page visits. It does not use cookies, does not track you across sites and does not collect personal information such as your name or email address. It records aggregated data such as the page visited, the referring website, the country and the browser type.
@@ -76,7 +76,7 @@ We value your trust in providing us your Personal Information, and we store data
 
 We are committed to managing your data responsibly.
 
-*   **Google User Data (Transient):** We do not permanently store Google Workspace data (such as spreadsheet content, email content or attachments) on our servers. Any interaction is performed in-memory to execute the add-on’s functions.
+*   **Google User Data (Transient):** We do not permanently store Google Workspace data (such as spreadsheet content, email content or attachments) on our servers. Any interaction is performed in-memory to execute the add-on’s functions. The one exception is the contract terms you choose to save from the Contract terms tab (**Save to CTMS**): they are stored as described in section 1.E and below.
 *   **Container History:** Container tracking events are stored in our secure database (Azure) for as long as your account is active to provide the tracking history service.
 *   **AI Processing Data:** Data sent to our AI service (summaries or screenshots) is not retained by the AI provider for model training and is not stored by us after the session is complete.
 *   **Free time and contract terms:** Stored while your account is active. You can remove them at any time (Free time → **Remove**, a container's **Clear**, or **Delete** in the Contract terms tab). They are deleted when your account is deleted. Saved contract terms are kept, but not applied, if you move from a paid to the free plan, so they work again when you upgrade.
