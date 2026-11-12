@@ -20,6 +20,13 @@ The Service provides tracking information based on data retrieved from third-par
 *   The Service is provided for informational purposes only.
 *   We are not responsible for any financial loss, missed shipments, or logistical errors resulting from inaccurate data provided by the Service.
 
+### Free time (demurrage & detention)
+The last free days, days left, charged days and costs shown by the Service are **estimates**. They are calculated from the free days or contract terms **you enter** and from the carriers' tracking events, which can be late, missing or wrong.
+*   The charges you owe are set by your carrier, terminal or port and by your contract with them, not by the Service. Always check the billing party's own free time and invoice.
+*   You are responsible for the terms you enter (free days, day types, dates, contract terms) being correct and up to date.
+*   Alerts and warnings may be late or may not be sent. Do not rely on the Service as your only way to avoid demurrage, detention or storage charges.
+*   We are not responsible for demurrage, detention, storage or other charges, or for disputes about them.
+
 ## 4. User Obligations
 
 You agree not to:
