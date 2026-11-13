@@ -1,6 +1,6 @@
 # Terms of Service for Container Tracker
 
-**Effective Date:** 16.Dec.2025
+**Effective Date:** 13.Nov.2026
 
 Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Container Tracker Google Workspace Add-on (the "Service") operated by Container Tracker.
 
