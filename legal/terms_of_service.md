@@ -1,14 +1,14 @@
 # Terms of Service for Container Tracker
 
-**Effective Date:** 13.Nov.2026
+**Effective Date:** 15.Nov.2026
 
-Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Container Tracker Google Workspace Add-on (the "Service") operated by Container Tracker.
+Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Container Tracker Google Workspace Add-on or the Container Tracker package for Salesforce (together, the "Service") operated by Container Tracker.
 
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
 
 ## 1. Description of Service
 
-Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets. The Service connects to a backend system to retrieve data from various shipping lines.
+Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets, and a Salesforce package that does the same on Salesforce accounts and opportunities, including free time (demurrage & detention) estimates. The Service connects to a backend system to retrieve data from various shipping lines.
 
 ## 2. Use of Data
 

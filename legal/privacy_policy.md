@@ -2,7 +2,7 @@
 
 **Last Updated:** November 2026
 
-Container Tracker has created this Privacy Policy to explain how we collect, use, and share information when you use the Container Tracker Google Workspace Add-on in Google Sheets and Gmail. By using this Add-on, you agree to the collection and use of information in accordance with this policy.
+Container Tracker has created this Privacy Policy to explain how we collect, use, and share information when you use the Container Tracker Google Workspace Add-on in Google Sheets and Gmail, and the Container Tracker package for Salesforce (section 1.F). By using this Add-on or the package, you agree to the collection and use of information in accordance with this policy.
 
 ## 1. Information We Collect
 
@@ -33,7 +33,16 @@ If you use **Free time** (demurrage & detention), we store what you enter so we 
 
 **Morning alerts:** If you use Free time, we also store your spreadsheet's time zone, whether the free time email is switched on, and what we already told you per container (the last free day and which warnings went out), so you never get the same warning twice. This morning's counts (boxes in charges, due soon) are kept with your account so the Add-on's Home card can show them.
 
-### F. Website Analytics
+### F. Salesforce package
+If you use the Container Tracker package in Salesforce, it runs inside your Salesforce org and sends only the following to our servers:
+*   **To identify your account:** your API key (stored in a Salesforce External Credential, encrypted), your org ID and the package version.
+*   **To track containers:** the container numbers and carriers you track, and the events you add by hand.
+*   **Slack (optional):** when you connect Slack, your org's address, so the links in Slack messages open your org (see section 1.D).
+*   **Free time (optional):** the free days and box terms you enter (as listed in section 1.E), the direction you set for a box, your org's time zone and address (for the morning alerts and their links), your org's name (only in the email that asks a new address to confirm), and the email addresses an admin adds for the morning email.
+
+Your free days and box terms are stored with your Container Tracker account, not in your org; the package writes only the result (status, last free day, days left) onto your container records. No account names, contacts, opportunity data or other org data leave Salesforce. The morning email goes to the address that requested the API key, or, once each has confirmed by a link, to the addresses an admin adds (up to 5). Every morning email has a link to stop it for that address.
+
+### G. Website Analytics
 Our website (get-ctms.com) uses Cloudflare Web Analytics to count page visits. It does not use cookies, does not track you across sites and does not collect personal information such as your name or email address. It records aggregated data such as the page visited, the referring website, the country and the browser type.
 
 ## 2. How We Use Your Information
@@ -56,7 +65,7 @@ We do not sell, rent, or trade your Google user data. We only share, transfer, o
 *   **Microsoft Azure:** We transfer authentication data (Email), container numbers and, if you use Free time, your free days and contract terms to our backend infrastructure hosted on Microsoft Azure to provide the core tracking service. When you click Scan attachments in Gmail, PDF attachments are also sent there to extract their text (see section 1.C).
 *   **Google Vertex AI / Gemini:** We transfer specific data (container history or user-provided screenshots) to Google’s enterprise AI services only when you explicitly trigger an AI feature. This data is processed to provide the requested output and is not used to train global models. Email content and attachments are never sent to these services.
 *   **Slack (a recipient you choose):** If you connect Slack, we send the container number, shipping line, the event (for example "departed Savannah"), its date and the ETA to the Slack channel you picked. Everyone who can see that channel can read these messages. If Free time is switched on for the channel, the morning note also contains the container's last free day, days left and, on paid plans, the estimated charges. No email content, spreadsheet content or email address is sent to Slack.
-*   **Resend:** We send service messages, including the free time alerts, through Resend, an email delivery provider, which receives your email address and the message.
+*   **Resend:** We send service messages, including the free time alerts and the confirmation emails for new morning email addresses, through Resend, an email delivery provider, which receives your email address and the message.
 *   **Shipping Carriers:** Container numbers are shared with public shipping line APIs to retrieve current status updates.
 *   **Legal Requirements:** We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).
 *   **Service Providers:** We may share data with service providers who perform services on our behalf, provided they comply with strict data protection requirements and only use the data to provide the requested services.
@@ -83,6 +92,7 @@ We are committed to managing your data responsibly.
 *   **Container History:** Container tracking events are stored in our secure database (Azure) for as long as your account is active to provide the tracking history service.
 *   **AI Processing Data:** Data sent to our AI service (summaries or screenshots) is not retained by the AI provider for model training and is not stored by us after the session is complete.
 *   **Free time and contract terms:** Stored while your account is active. You can remove them at any time (Free time → **Remove**, a container's **Clear**, or **Delete** in the D&D tariffs & contracts tab). They are deleted when your account is deleted. Saved contract terms are kept, but not applied, if you move from a paid to the free plan, so they work again when you upgrade. What the morning alerts already told you is kept while the container is active and deleted when it is archived or your account is deleted.
+*   **Morning email addresses (Salesforce):** Stored while they are listed in Morning alerts. An address is deleted when an admin removes it or when its owner uses the stop link in the email; an unconfirmed address's confirmation link expires after 7 days.
 *   **Slack connection:** Stored while Slack is connected. It is deleted when you disconnect Slack (in the Add-on or with the "Alert settings" link under each Slack message) or when your account is deleted. To remove the app from your Slack workspace as well, remove "CTMS Container Alerts" in Slack's app settings.
 *   **Account Deletion:** You have the right to request the deletion of your account and all associated data at any time. To do so, please contact us at **support@get-ctms.com**. We will process data deletion requests within 3 business days.
 
