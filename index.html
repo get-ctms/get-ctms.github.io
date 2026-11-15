@@ -593,7 +593,7 @@
                 "name": "Does it show demurrage and detention free time?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, in Google Sheets. Enter the free days you get per carrier (calendar or working days, demurrage and detention combined or separately, import or export) and click Update Free time sheet: every box gets its last free day, days left and status, worked out from the carrier's own events. On paid plans you can enter your contract terms with rates to see the cost per box. The numbers are an estimate; the carrier's invoice is what you pay. See the Free time guide."
+                    "text": "Yes, in Google Sheets and in Salesforce. Enter the free days you get per carrier (calendar or working days, demurrage and detention combined or separately, import or export): every box gets its last free day, days left and status, worked out from the carrier's own events. In Google Sheets, click Update Free time sheet; in Salesforce, the Free time tab lists the boxes and the hourly sync keeps them current. A morning email (and Slack, when connected) warns before a last free day. On paid plans in Google Sheets you can enter your contract terms with rates to see the cost per box. The numbers are an estimate; the carrier's invoice is what you pay. See the Free time guide for Google Sheets or for Salesforce."
                 }
             },
             {
@@ -697,7 +697,7 @@
         <h1>Track every ocean container in the tools you already use.</h1>
         <p class="subtitle">Enter a container number. Container Tracker checks <a href="#carriers">7 shipping
                 lines</a> for you and shows status, location, vessel and ETA right where you work. No more logging
-            into seven carrier websites. In Google Sheets, it also shows the <a href="getting-started.html#free-time">last
+            into seven carrier websites. In Google Sheets and Salesforce, it also shows the <a href="getting-started.html#free-time">last
                 free day</a> of every box, before demurrage and detention start.</p>
 
         <section id="platforms" class="platforms" aria-roledescription="carousel" aria-label="Platforms">
@@ -770,6 +770,7 @@
                         <li>Hourly sync of status, ETA, vessel, ports and the last and next event</li>
                         <li>Events and milestone dates are records, so reports and the included dashboard just work</li>
                         <li>Containers from imports, Flows and the API are tracked too</li>
+                        <li><strong>New:</strong> <a href="getting-started-salesforce.html#free-time">Free time</a>: last free day and days left for every box, a morning email when one is due soon</li>
                         <li>A plain-language summary per container, field history and <a href="getting-started-salesforce.html#slack-alerts">Slack alerts</a></li>
                     </ul>
                     <div class="slide-actions">
@@ -778,9 +779,9 @@
                         <a href="getting-started-salesforce.html">Guide</a>
                         <a href="install-salesforce-sandbox.html?from=home-carousel">Install in a sandbox</a>
                     </div>
-                    <img src="img/salesforce-overview.webp" class="slide-shot" width="1200" height="872"
+                    <img src="img/salesforce-free-time.webp" class="slide-shot" width="1200" height="721"
                         loading="lazy"
-                        alt="The Container Tracker Overview tab in Salesforce: a dashboard with arrivals, ETA changes, waiting containers and sync problems, above the list of tracked containers">
+                        alt="The Free time tab of Container Tracker in Salesforce: the free time list with a box's status, last free day, days left and the terms used">
                 </article>
 
                 <article class="slide pending" id="p-shopify" aria-roledescription="slide" aria-label="4 of 5">
@@ -947,7 +948,7 @@
                         <li>Container history and milestones</li>
                         <li>AI summaries and screenshot import</li>
                         <li>Slack alerts in your channel (<a href="getting-started.html#slack-alerts">Google Sheets &amp; Gmail</a>, <a href="getting-started-hs.html#slack-alerts">HubSpot</a>, <a href="getting-started-salesforce.html#slack-alerts">Salesforce</a>)</li>
-                        <li>Free time per carrier: last free day and days left (<a href="getting-started.html#free-time">Google Sheets</a>)</li>
+                        <li>Free time per carrier: last free day and days left (<a href="getting-started.html#free-time">Google Sheets</a>, <a href="getting-started-salesforce.html#free-time">Salesforce</a>)</li>
                     </ul>
                     <p>No credit card needed.</p>
                     <p><a href="#platforms" class="cta-button">Pick your platform</a></p>
@@ -1017,11 +1018,15 @@
                     href="getting-started.html#use-it-in-gmail">Gmail guide</a>.</p>
 
             <h3>Does it show demurrage and detention free time?</h3>
-            <p>Yes, in Google Sheets. Enter the free days you get per carrier (calendar or working days, demurrage and detention
-                combined or separately, import or export) and click <strong>Update Free time sheet</strong>: every box gets
-                its last free day, days left and status, worked out from the carrier's own events. On paid plans you can
-                enter your contract terms with rates to see the cost per box. The numbers are an estimate; the carrier's
-                invoice is what you pay. See the <a href="getting-started.html#free-time">Free time guide</a>.</p>
+            <p>Yes, in Google Sheets and in Salesforce. Enter the free days you get per carrier (calendar or working days,
+                demurrage and detention combined or separately, import or export): every box gets its last free day, days
+                left and status, worked out from the carrier's own events. In Google Sheets, click <strong>Update Free time
+                sheet</strong>; in Salesforce, the <strong>Free time</strong> tab lists the boxes and the hourly sync keeps
+                them current. A morning email (and Slack, when connected) warns before a last free day. On paid plans in
+                Google Sheets you can enter your contract terms with rates to see the cost per box. The numbers are an
+                estimate; the carrier's invoice is what you pay. See the free time guide for <a
+                    href="getting-started.html#free-time">Google Sheets</a> or <a
+                    href="getting-started-salesforce.html#free-time">Salesforce</a>.</p>
 
             <h3>Can I get alerts in Slack?</h3>
             <p>Yes, in the Google Sheets &amp; Gmail add-on, in HubSpot and in Salesforce, on every plan. Click <strong>Slack
