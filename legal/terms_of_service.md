@@ -8,7 +8,7 @@ Your access to and use of the Service is conditioned on your acceptance of and c
 
 ## 1. Description of Service
 
-Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets, and a Salesforce package that does the same on Salesforce accounts and opportunities, including free time (demurrage & detention) estimates. The Service connects to a backend system to retrieve data from various shipping lines.
+Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets, and a Salesforce package that does the same on Salesforce accounts and opportunities, including free time (demurrage & detention) estimates. In Google Sheets it also keeps your bookings and shipping instructions. The Service connects to a backend system to retrieve data from various shipping lines.
 
 ## 2. Use of Data
 
@@ -26,6 +26,13 @@ The last free days, days left, charged days and costs shown by the Service are *
 *   You are responsible for the terms you enter (free days, day types, dates, contract terms) being correct and up to date.
 *   Alerts and warnings may be late or may not be sent. Do not rely on the Service as your only way to avoid demurrage, detention or storage charges.
 *   We are not responsible for demurrage, detention, storage or other charges, or for disputes about them.
+
+### Bookings and shipping instructions
+The Service stores the bookings and shipping instructions you enter and gives them back to you. It does not send them to your forwarder or carrier.
+*   You are responsible for the content of your shipping instructions (parties, cargo, weights, marks, bill of lading details) being correct, complete and lawful, and for having the right to enter the shipper's, consignee's and notify party's details.
+*   The print layout is a copy of what you saved, arranged for printing. It is not a bill of lading or any other transport or customs document, and the Service does not check it against your contract, letter of credit or the rules of any country.
+*   The checks on Save (for example required fields, or boxes booked against the boxes listed) catch some typing mistakes only. A shipment saved without a warning can still be wrong.
+*   We are not responsible for losses, charges or delays caused by wrong or missing details in your bookings, shipping instructions or bills of lading.
 
 ## 4. User Obligations
 
