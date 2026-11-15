@@ -30,7 +30,7 @@ The last free days, days left, charged days and costs shown by the Service are *
 ### Bookings and shipping instructions
 The Service stores the bookings and shipping instructions you enter and gives them back to you. It does not send them to your forwarder or carrier.
 *   You are responsible for the content of your shipping instructions (parties, cargo, weights, marks, bill of lading details) being correct, complete and lawful, and for having the right to enter the shipper's, consignee's and notify party's details.
-*   The print layout is a copy of what you saved, arranged for printing. It is not a bill of lading or any other transport or customs document, and the Service does not check it against your contract, letter of credit or the rules of any country.
+*   The print layout is a copy of what you saved (the latest SI version you issued, or your saved draft), arranged for printing. It is not a bill of lading or any other transport or customs document, and the Service does not check it against your contract, letter of credit or the rules of any country.
 *   The checks on Save (for example required fields, or boxes booked against the boxes listed) catch some typing mistakes only. A shipment saved without a warning can still be wrong.
 *   We are not responsible for losses, charges or delays caused by wrong or missing details in your bookings, shipping instructions or bills of lading.
 
