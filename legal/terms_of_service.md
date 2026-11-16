@@ -1,6 +1,6 @@
 # Terms of Service for Container Tracker
 
-**Effective Date:** 15.Nov.2026
+**Effective Date:** 16.Nov.2026
 
 Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Container Tracker Google Workspace Add-on or the Container Tracker package for Salesforce (together, the "Service") operated by Container Tracker.
 
@@ -8,7 +8,7 @@ Your access to and use of the Service is conditioned on your acceptance of and c
 
 ## 1. Description of Service
 
-Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets, and a Salesforce package that does the same on Salesforce accounts and opportunities, including free time (demurrage & detention) estimates. The Service connects to a backend system to retrieve data from various shipping lines.
+Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets, and a Salesforce package that does the same on Salesforce accounts and opportunities, including free time (demurrage & detention) estimates. In Gmail and Google Sheets it also keeps the bookings and shipping instructions you import from your emails. The Service connects to a backend system to retrieve data from various shipping lines.
 
 ## 2. Use of Data
 
@@ -26,6 +26,14 @@ The last free days, days left, charged days and costs shown by the Service are *
 *   You are responsible for the terms you enter (free days, day types, dates, contract terms) being correct and up to date.
 *   Alerts and warnings may be late or may not be sent. Do not rely on the Service as your only way to avoid demurrage, detention or storage charges.
 *   We are not responsible for demurrage, detention, storage or other charges, or for disputes about them.
+
+### Bookings and shipping instructions
+The Service reads the booking and shipping instructions emails you import, stores the values you confirm and shows them back to you. It does not send anything to your forwarder or carrier.
+*   Import reads emails by their layout and labels and can miss or misread values. Check every value on the Import card before you save.
+*   You are responsible for the content of the documents you send (parties, cargo, weights, marks, bill of lading details) being correct, complete and lawful, and for having the right to store the shipper's, consignee's and notify party's details.
+*   **Export to sheet** writes a copy of what was imported (the latest SI version, or the saved booking) into your spreadsheet, for you to check, edit and send. It is not a bill of lading or any other transport or customs document, and the Service does not check it against your contract, letter of credit or the rules of any country.
+*   The checks on Save (for example required fields) catch some mistakes only. A shipment saved without a warning can still be wrong.
+*   We are not responsible for losses, charges or delays caused by wrong or missing details in your bookings, shipping instructions or bills of lading.
 
 ## 4. User Obligations
 
