@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Container Tracking in Google Sheets, Gmail &amp; HubSpot | Container Tracker</title>
     <meta name="description"
-        content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right where you work: Google Sheets, Gmail, HubSpot or Salesforce, with Shopify and monday.com apps in review. Milestones, AI summaries and screenshot import for any other carrier.">
+        content="Track ocean shipping containers from MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen automatically, right where you work: Google Sheets, Gmail, HubSpot, Salesforce or Claude, with Shopify and monday.com apps in review. Milestones, AI summaries and screenshot import for any other carrier.">
     <link rel="canonical" href="https://get-ctms.com/">
 
     <!-- Open Graph / social previews -->
@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="Container Tracker">
     <meta property="og:title" content="Track every ocean container in the tools you already use">
     <meta property="og:description"
-        content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail, HubSpot and Salesforce. Shopify and monday.com apps in review.">
+        content="Automatic container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail, HubSpot and Salesforce, and in Claude. Shopify and monday.com apps in review.">
     <meta property="og:url" content="https://get-ctms.com/">
     <meta property="og:image" content="https://get-ctms.com/img/og-container-tracker.png">
     <meta property="og:image:width" content="1200">
@@ -43,17 +43,18 @@
                 "@type": "SoftwareApplication",
                 "name": "Container Tracker",
                 "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web, Google Sheets, Gmail, HubSpot, Salesforce",
+                "operatingSystem": "Web, Google Sheets, Gmail, HubSpot, Salesforce, Claude",
                 "url": "https://get-ctms.com/",
                 "publisher": { "@id": "https://get-ctms.com/#org" },
-                "description": "Automatic ocean container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail, HubSpot and Salesforce, with milestones, AI summaries and screenshot import for any other carrier.",
+                "description": "Automatic ocean container tracking for MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Yang Ming and Evergreen inside Google Sheets, Gmail, HubSpot and Salesforce and in Claude, with milestones, AI summaries and screenshot import for any other carrier.",
                 "offers": [
                     { "@type": "Offer", "name": "Free trial (first 10 containers)", "price": "0", "priceCurrency": "USD" },
                     { "@type": "Offer", "name": "Pro, monthly", "price": "15", "priceCurrency": "USD" }
                 ],
                 "sameAs": [
                     "https://workspace.google.com/marketplace/app/container_tracker/410438104534",
-                    "https://ecosystem.hubspot.com/marketplace/listing/containertracker"
+                    "https://ecosystem.hubspot.com/marketplace/listing/containertracker",
+                    "https://claude.ai/directory/connectors/ctms-container-tracking"
                 ]
             }
         ]
@@ -545,7 +546,7 @@
                 "name": "Which platforms does Container Tracker work in?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Google Sheets and Gmail (one add-on for both), HubSpot and Salesforce today. Apps for Shopify and monday.com are in review on their marketplaces. Every version tracks the same carriers and has the same plans."
+                    "text": "Google Sheets and Gmail (one add-on for both), HubSpot, Salesforce and Claude (as a connector) today. Apps for Shopify and monday.com are in review on their marketplaces. Every version tracks the same carriers and has the same plans."
                 }
             },
             {
@@ -590,10 +591,18 @@
             },
             {
                 "@type": "Question",
+                "name": "Does it work in Claude?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CTMS is a connector in the Claude directory. Connect it in Claude under Customize, Connectors, sign in with a code sent to your email or with Google, and ask in plain words: where a container is, what arrives this week, which boxes run out of free time. Claude asks before it starts or stops tracking. The Claude account is separate from the add-on and the other apps, with the same Free and Pro plans. See the Claude guide."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "Does it show demurrage and detention free time?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, in Google Sheets and in Salesforce. Enter the free days you get per carrier (calendar or working days, demurrage and detention combined or separately, import or export): every box gets its last free day, days left and status, worked out from the carrier's own events. In Google Sheets, click Update Free time sheet; in Salesforce, the Free time tab lists the boxes and the hourly sync keeps them current. A morning email (and Slack, when connected) warns before a last free day. On paid plans in Google Sheets you can enter your contract terms with rates to see the cost per box. The numbers are an estimate; the carrier's invoice is what you pay. See the Free time guide for Google Sheets or for Salesforce."
+                    "text": "Yes, in Google Sheets, in Salesforce and in Claude. Enter the free days you get per carrier (calendar or working days, demurrage and detention combined or separately, import or export): every box gets its last free day, days left and status, worked out from the carrier's own events. In Google Sheets, click Update Free time sheet; in Salesforce, the Free time tab lists the boxes and the hourly sync keeps them current; in Claude, tell it your free days and ask which boxes are due. In Google Sheets and Salesforce, a morning email (and Slack, when connected) warns before a last free day. On paid plans in Google Sheets you can enter your contract terms with rates to see the cost per box. The numbers are an estimate; the carrier's invoice is what you pay. See the Free time guide for Google Sheets, Salesforce or Claude."
                 }
             },
             {
@@ -697,7 +706,7 @@
         <h1>Track every ocean container in the tools you already use.</h1>
         <p class="subtitle">Enter a container number. Container Tracker checks <a href="#carriers">7 shipping
                 lines</a> for you and shows status, location, vessel and ETA right where you work. No more logging
-            into seven carrier websites. In Google Sheets and Salesforce, it also shows the <a href="getting-started.html#free-time">last
+            into seven carrier websites. In Google Sheets, Salesforce and Claude, it also shows the <a href="getting-started.html#free-time">last
                 free day</a> of every box, before demurrage and detention start.</p>
 
         <section id="platforms" class="platforms" aria-roledescription="carousel" aria-label="Platforms">
@@ -708,14 +717,16 @@
                 </li>
                 <li><a class="platform-tab" href="#p-salesforce" data-slide="2"><span
                             class="dot"></span>Salesforce</a></li>
-                <li><a class="platform-tab pending" href="#p-shopify" data-slide="3"><span
+                <li><a class="platform-tab" href="#p-claude" data-slide="3"><span
+                            class="dot"></span>Claude</a></li>
+                <li><a class="platform-tab pending" href="#p-shopify" data-slide="4"><span
                             class="dot"></span>Shopify</a></li>
-                <li><a class="platform-tab pending" href="#p-monday" data-slide="4"><span
+                <li><a class="platform-tab pending" href="#p-monday" data-slide="5"><span
                             class="dot"></span>monday.com</a></li>
             </ul>
 
             <div class="platform-track" tabindex="0">
-                <article class="slide" id="p-google" aria-roledescription="slide" aria-label="1 of 5">
+                <article class="slide" id="p-google" aria-roledescription="slide" aria-label="1 of 6">
                     <p class="status">Live &middot; Google Workspace Marketplace</p>
                     <h2>Google Sheets &amp; Gmail</h2>
                     <p class="slide-lead">One add-on for both. Track containers from the side panel next to your
@@ -739,7 +750,7 @@
                         alt="Google Sheets with a milestones table for 13 containers and the Container Tracker side panel showing a container's ETA and events">
                 </article>
 
-                <article class="slide split" id="p-hubspot" aria-roledescription="slide" aria-label="2 of 5">
+                <article class="slide split" id="p-hubspot" aria-roledescription="slide" aria-label="2 of 6">
                     <div>
                     <p class="status">Live &middot; HubSpot App Marketplace</p>
                     <h2>HubSpot</h2>
@@ -762,7 +773,7 @@
                         alt="The Container Tracking card in the HubSpot ticket sidebar: carrier, ETA and the event history of a container">
                 </article>
 
-                <article class="slide" id="p-salesforce" aria-roledescription="slide" aria-label="3 of 5">
+                <article class="slide" id="p-salesforce" aria-roledescription="slide" aria-label="3 of 6">
                     <p class="status">Live &middot; Salesforce package</p>
                     <h2>Salesforce</h2>
                     <p class="slide-lead">Container tracking on your accounts and opportunities. Paste the numbers;
@@ -785,7 +796,28 @@
                         alt="The Free time tab of Container Tracker in Salesforce: the free time list with a box's status, last free day, days left and the terms used">
                 </article>
 
-                <article class="slide pending" id="p-shopify" aria-roledescription="slide" aria-label="4 of 5">
+                <article class="slide" id="p-claude" aria-roledescription="slide" aria-label="4 of 6">
+                    <p class="status">New &middot; Claude connectors directory</p>
+                    <h2>Claude</h2>
+                    <p class="slide-lead">Ask Claude where your containers are. CTMS checks the carriers and
+                        answers in your chat, with the date the carrier's data last changed.</p>
+                    <ul>
+                        <li>"Where is my container, and has its ETA slipped?"</li>
+                        <li>"What arrives in Rotterdam this week?"</li>
+                        <li><a href="getting-started-claude.html#free-time">Free time</a>: "Which containers run out of free time before Friday?"</li>
+                        <li>Claude asks before it starts or stops tracking; the carrier is never guessed</li>
+                        <li>Sign in with a code sent to your email or with Google; no carrier accounts</li>
+                    </ul>
+                    <div class="slide-actions">
+                        <a href="https://claude.ai/directory/connectors/ctms-container-tracking"
+                            class="cta-button">Connect in Claude</a>
+                        <a href="getting-started-claude.html">Guide</a>
+                    </div>
+                    <img src="img/claude-chat.webp" class="slide-shot" width="770" height="324" loading="lazy"
+                        alt="A Claude chat: asked where the containers are, Claude lists two containers from CTMS with carrier, vessel, current position and ETA">
+                </article>
+
+                <article class="slide pending" id="p-shopify" aria-roledescription="slide" aria-label="5 of 6">
                     <p class="status">In review &middot; Shopify App Store</p>
                     <h2>Shopify</h2>
                     <p class="slide-lead">Container tracking on your orders. A block on the order page shows each
@@ -804,7 +836,7 @@
                         alt="A Shopify order page with the Container Tracker block listing three containers with carrier, ETA and status">
                 </article>
 
-                <article class="slide pending" id="p-monday" aria-roledescription="slide" aria-label="5 of 5">
+                <article class="slide pending" id="p-monday" aria-roledescription="slide" aria-label="6 of 6">
                     <p class="status">In review &middot; monday.com marketplace</p>
                     <h2>monday.com</h2>
                     <p class="slide-lead">Container tracking on your boards. Type a container number in a column;
@@ -918,10 +950,11 @@
                 <li><strong>Install</strong> Container Tracker for your platform: the <a
                         href="install.html?from=how-it-works">Google Sheets &amp; Gmail add-on</a> or the <a
                         href="https://ecosystem.hubspot.com/marketplace/listing/containertracker">HubSpot app</a> or the
-                    <a href="getting-started-salesforce.html">Salesforce package</a>.
+                    <a href="getting-started-salesforce.html">Salesforce package</a>, or connect
+                    <a href="getting-started-claude.html">CTMS in Claude</a>.
                     Shopify and monday.com are <a href="#platforms">in review</a>.</li>
                 <li><strong>Add a container number</strong>, e.g. MSCU1234567, where it belongs: in the Sheets side
-                    panel, next to an email in Gmail, on a HubSpot ticket, on a Salesforce account or opportunity. The carrier is detected from the number.
+                    panel, next to an email in Gmail, on a HubSpot ticket, on a Salesforce account or opportunity. The carrier is detected from the number (in Claude, you name the carrier).
                 </li>
                 <li><strong>Follow its journey</strong>: the full event history, key milestones (Gate In, Loaded,
                     Departed, Arrived, Discharged, Delivered) and an AI summary of where the container is now. New
@@ -933,6 +966,7 @@
                     href="getting-started.html#use-it-in-gmail">Gmail</a> &middot; <a
                     href="getting-started-hs.html">HubSpot</a> &middot; <a
                     href="getting-started-salesforce.html">Salesforce</a> &middot; <a
+                    href="getting-started-claude.html">Claude</a> &middot; <a
                     href="getting-started-monday.html">monday.com</a></p>
         </section>
 
@@ -982,7 +1016,7 @@
             <h2>Frequently Asked Questions</h2>
 
             <h3>Which platforms does Container Tracker work in?</h3>
-            <p>Google Sheets and Gmail (one add-on for both), HubSpot and <a href="getting-started-salesforce.html">Salesforce</a> today. Apps for Shopify and monday.com are in
+            <p>Google Sheets and Gmail (one add-on for both), HubSpot, <a href="getting-started-salesforce.html">Salesforce</a> and <a href="getting-started-claude.html">Claude</a> (as a connector) today. Apps for Shopify and monday.com are in
                 review on their marketplaces; see <a href="#platforms">Platforms</a>. Every version tracks the same
                 carriers and has the same plans.</p>
 
@@ -1019,16 +1053,26 @@
                 are sent to us. The same install works in Google Sheets and Gmail. See the <a
                     href="getting-started.html#use-it-in-gmail">Gmail guide</a>.</p>
 
+            <h3>Does it work in Claude?</h3>
+            <p>Yes. CTMS is a <a href="https://claude.ai/directory/connectors/ctms-container-tracking">connector in
+                    the Claude directory</a>. Connect it in Claude under <strong>Customize &rarr; Connectors</strong>,
+                sign in with a code sent to your email or with Google, and ask in plain words: where a container is,
+                what arrives this week, which boxes run out of free time. Claude asks before it starts or stops
+                tracking. The Claude account is separate from the add-on and the other apps, with the same Free and
+                Pro plans. See the <a href="getting-started-claude.html">Claude guide</a>.</p>
+
             <h3>Does it show demurrage and detention free time?</h3>
-            <p>Yes, in Google Sheets and in Salesforce. Enter the free days you get per carrier (calendar or working days,
+            <p>Yes, in Google Sheets, in Salesforce and in Claude. Enter the free days you get per carrier (calendar or working days,
                 demurrage and detention combined or separately, import or export): every box gets its last free day, days
                 left and status, worked out from the carrier's own events. In Google Sheets, click <strong>Update Free time
                 sheet</strong>; in Salesforce, the <strong>Free time</strong> tab lists the boxes and the hourly sync keeps
-                them current. A morning email (and Slack, when connected) warns before a last free day. On paid plans in
+                them current; in Claude, tell it your free days and ask which boxes are due. In Google Sheets and
+                Salesforce, a morning email (and Slack, when connected) warns before a last free day. On paid plans in
                 Google Sheets you can enter your contract terms with rates to see the cost per box. The numbers are an
                 estimate; the carrier's invoice is what you pay. See the free time guide for <a
                     href="getting-started.html#free-time">Google Sheets</a> or <a
-                    href="getting-started-salesforce.html#free-time">Salesforce</a>.</p>
+                    href="getting-started-salesforce.html#free-time">Salesforce</a> or <a
+                    href="getting-started-claude.html#free-time">Claude</a>.</p>
 
             <h3>Can I get alerts in Slack?</h3>
             <p>Yes, in the Google Sheets &amp; Gmail add-on, in HubSpot and in Salesforce, on every plan. Click <strong>Slack
