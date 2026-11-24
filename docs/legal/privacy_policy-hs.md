@@ -30,6 +30,7 @@ We use the information we collect for the following purposes:
 *   **Improvement:** To monitor the performance of the Extension and fix technical issues.
 *   **AI-Enhanced Features:** To provide optional summarization and OCR capabilities upon your specific request.
 *   **Slack alerts:** To post a message to the Slack channel you chose when one of your containers reaches a milestone, gets a new ETA or stops updating.
+*   **Weekly summary:** While you track containers, we email you each Monday a short summary of them: new events, ETA changes, containers arriving in the next seven days and containers whose tracking stopped updating. If nothing changed, a short note goes out at most every second week. Every weekly email has a link to stop it; tracking keeps running.
 *   **Service messages:** To email you about your account and the service, including a welcome note when you install the Extension. We don't send advertising by email, and you can opt out at any time by replying to the message.
 
 ## 3. Data Sharing, Transfer, and Disclosure

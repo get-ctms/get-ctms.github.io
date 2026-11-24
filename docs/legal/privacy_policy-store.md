@@ -1,6 +1,6 @@
 # Privacy Policy for Container Tracker (Shopify App)
 
-**Last Updated:** November 4, 2026
+**Last Updated:** November 24, 2026
 
 Container Tracker has created this Privacy Policy to explain how we collect, use, and share information when you install and use the Container Tracker app on your Shopify store. By using this App, you agree to the collection and use of information in accordance with this policy.
 
@@ -34,6 +34,7 @@ We use the information we collect for the following purposes:
 *   **Plans and Limits:** To apply the limits of your plan. We read your current plan from Shopify.
 *   **Improvement:** To monitor the performance of the App and fix technical issues.
 *   **AI-Enhanced Features:** To provide optional summarization and screenshot import upon your specific request.
+*   **Weekly summary:** While you track containers, we email your contact email each Monday a short summary of them: new events, ETA changes, containers arriving in the next seven days and containers whose tracking stopped updating. If nothing changed, a short note goes out at most every second week. Every weekly email has a link to stop it; tracking keeps running.
 *   **Service messages:** To email you about your account and the service. We don't send advertising by email, and you can opt out at any time by replying to the message.
 
 ## 3. Data Sharing, Transfer, and Disclosure
