@@ -1,14 +1,14 @@
 # Terms of Service for Container Tracker
 
-**Effective Date:** 20.Nov.2026
+**Effective Date:** 28.Nov.2026
 
-Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Container Tracker Google Workspace Add-on, the Container Tracker package for Salesforce or the CTMS connector for Claude and other assistant apps (together, the "Service") operated by Container Tracker.
+Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Container Tracker Google Workspace Add-on, the Container Tracker package for Salesforce or the CTMS connector for Claude, ChatGPT and other assistant apps (together, the "Service") operated by Container Tracker.
 
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
 
 ## 1. Description of Service
 
-Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets, and a Salesforce package that does the same on Salesforce accounts and opportunities, including free time (demurrage & detention) estimates. In Gmail and Google Sheets it also keeps the bookings and shipping instructions you import from your emails. The CTMS connector lets an assistant app you connect, such as Claude, track containers and read their status and free time for you, with a CTMS account of its own. The Service connects to a backend system to retrieve data from various shipping lines.
+Container Tracker is a Google Workspace Add-on that allows users to track shipping container statuses directly within Google Sheets, and a Salesforce package that does the same on Salesforce accounts and opportunities, including free time (demurrage & detention) estimates. In Gmail and Google Sheets it also keeps the bookings and shipping instructions you import from your emails. The CTMS connector lets an assistant app you connect, such as Claude or ChatGPT, track containers and read their status and free time for you, with a CTMS account of its own. The Service connects to a backend system to retrieve data from various shipping lines.
 
 ## 2. Use of Data
 
@@ -35,11 +35,11 @@ The Service reads the booking and shipping instructions emails you import, store
 *   The checks on Save (for example required fields) catch some mistakes only. A shipment saved without a warning can still be wrong.
 *   We are not responsible for losses, charges or delays caused by wrong or missing details in your bookings, shipping instructions or bills of lading.
 
-### Answers in Claude and other assistant apps
+### Answers in Claude, ChatGPT and other assistant apps
 When you use the CTMS connector, the assistant app (not Container Tracker) writes the answers you read. CTMS gives it the data described above; the assistant app can misread, leave out or wrongly combine that data.
 *   Check important dates and statuses, for example by asking for the container's milestones and when the carrier's data last changed.
 *   The assistant app should ask you before it starts or stops tracking containers or saves free days. You are responsible for the requests you confirm, including containers of your plan used by a wrong number or carrier.
-*   The assistant app is provided by a third party (for Claude: Anthropic) under its own terms. We don't control it and are not responsible for it.
+*   The assistant app is provided by a third party (for Claude: Anthropic; for ChatGPT: OpenAI) under its own terms. We don't control it and are not responsible for it.
 *   The connector account is separate from your accounts on other surfaces of the Service, and its plan applies only to it.
 
 ## 4. User Obligations
