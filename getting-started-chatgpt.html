@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- DRAFT (plans/mcp-server.md M-8): not linked, noindex until the ChatGPT listing is live -->
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTMS in ChatGPT - Getting Started</title>
+    <meta name="description" content="Connect CTMS to ChatGPT and ask about your shipping containers in plain words: track containers with MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Evergreen and Yang Ming, see status, ETA and milestones, and the last free day before demurrage and detention.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Container Tracker">
+    <meta property="og:title" content="CTMS in ChatGPT - Getting Started">
+    <meta property="og:description" content="Connect CTMS to ChatGPT: track containers, ask where they are, what arrives this week and which boxes run out of free time.">
+    <meta property="og:url" content="https://get-ctms.com/getting-started-chatgpt.html">
+    <meta property="og:image" content="https://get-ctms.com/img/og-container-tracker.png">
+    <link rel="icon" type="image/png" href="logo/CTMS%20128x128.png" sizes="128x128">
+    <link rel="canonical" href="https://get-ctms.com/getting-started-chatgpt.html">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #666;
+            margin: 0 10px;
+        }
+
+        main h1,
+        main h2,
+        main h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        main a {
+            color: #007bff;
+        }
+
+        main code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        main blockquote {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            border-left: 4px solid #cfe2ff;
+            background: #f8f9fa;
+            color: #555;
+        }
+
+        main figure {
+            margin: 1.5em 0;
+        }
+
+        main figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #e3e3e3;
+            border-radius: 6px;
+        }
+
+        main figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.4em;
+        }
+
+        main nav.toc {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 0.5em 1.5em;
+        }
+
+        main table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+            font-size: 0.95rem;
+        }
+
+        main th,
+        main td {
+            border: 1px solid #e3e3e3;
+            padding: 6px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        main th {
+            background: #f8f9fa;
+        }
+    </style>
+    <!-- Cloudflare Web Analytics (cookie-free) -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0eae3dca722441dba1fba4c4c82d1ffe"}'></script>
+</head>
+
+<body>
+<!--email_off-->
+
+    <header>
+        <a href="index.html" class="logo">Container Tracker</a>
+        <a href="index.html" style="text-decoration:none; color:#007bff;">&larr; Back to Home</a>
+    </header>
+
+    <main>
+        <article>
+            <h1 id="getting-started">Getting Started with CTMS in ChatGPT</h1>
+            <p>Connect CTMS to ChatGPT and ask about your ocean containers in your own words. CTMS checks the shipping lines for you and gives ChatGPT the facts: status, ETA at the port of discharge, milestones and the last free day before demurrage and detention. You don't need a carrier account, a spreadsheet or any other app.</p>
+
+            <nav class="toc">
+                <ol>
+                    <li><a href="#ask">What you can ask</a></li>
+                    <li><a href="#connect">Connect CTMS in ChatGPT</a></li>
+                    <li><a href="#sign-in">Sign in</a></li>
+                    <li><a href="#track">Track containers</a></li>
+                    <li><a href="#answers">Status and dates</a></li>
+                    <li><a href="#free-time">Free time (demurrage &amp; detention)</a></li>
+                    <li><a href="#tools">What CTMS can do in ChatGPT</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a href="#disconnect">Disconnecting and your data</a></li>
+                </ol>
+            </nav>
+
+            <h2 id="ask">1. What you can ask</h2>
+            <ul>
+                <li>"Track <em>[container number]</em> with MSC and <em>[container number]</em> with Maersk."</li>
+                <li>"Where is <em>[container number]</em>?"</li>
+                <li>"What arrives in Rotterdam this week?"</li>
+                <li>"Has the ETA of <em>[container number]</em> slipped?"</li>
+                <li>"Which containers run out of free time before Friday?"</li>
+                <li>"Our MSC contract gives 14 free days in Hamburg, calendar days. Save that."</li>
+                <li>"How many containers do I have left on my plan?"</li>
+                <li>"Stop tracking <em>[container number]</em>."</li>
+            </ul>
+            <p>ChatGPT answers from your CTMS account only. It can combine the answers with the rest of your chat, for example to draft an email to a customer about a delay.</p>
+
+            <h2 id="connect">2. Connect CTMS in ChatGPT</h2>
+            <ol>
+                <!-- TODO(M-8): check the menu names in ChatGPT when the listing is live -->
+                <li>In ChatGPT, open <strong>Plugins</strong> and search for <strong>CTMS</strong>.</li>
+                <li>Choose CTMS and then <strong>Connect</strong>.</li>
+                <li>A CTMS sign-in page opens (see <a href="#sign-in">Sign in</a>). After signing in, you're back in ChatGPT and CTMS is connected.</li>
+                <li>In a chat, ask about your containers. ChatGPT uses CTMS when your question needs it, or you can pick CTMS in the chat's tools menu.</li>
+            </ol>
+            <p>On ChatGPT Business and Enterprise plans, an admin may need to allow CTMS for the workspace first.</p>
+
+            <h2 id="sign-in">3. Sign in</h2>
+            <p>The sign-in page is on <code>mcp.get-ctms.com</code>. It shows which app is asking (ChatGPT) and where you return to.</p>
+            <ul>
+                <li><strong>Email code:</strong> enter your work email, and CTMS sends you a 6-digit code. Enter it on the same page within 10 minutes. No password.</li>
+                <li><strong>Continue with Google:</strong> CTMS receives only your verified email address from Google.</li>
+            </ul>
+            <p>The first sign-in creates a free CTMS account for that email address. It's the same account as CTMS in Claude, and <strong>separate</strong> from CTMS in Google Sheets, Gmail, HubSpot, Salesforce, monday.com or Shopify: containers and paid plans there don't show up here, even with the same email address.</p>
+            <p>ChatGPT stays signed in. You sign in again only after about 30 days without using CTMS, or after you disconnect.</p>
+
+            <h2 id="track">4. Track containers</h2>
+            <ul>
+                <li><strong>Name the carrier for every container</strong>, the shipping line on your booking or bill of lading. Containers are leased and shared between lines, so CTMS never guesses the carrier from the number. If you leave it out, ChatGPT asks.</li>
+                <li>CTMS tracks <strong>MSC, Maersk, Hapag-Lloyd, CMA CGM, ONE, Evergreen and Yang Ming</strong> automatically. Containers with other carriers (for example COSCO, HMM or ZIM) can't be tracked here.</li>
+                <li>Up to 20 containers per request. ChatGPT should check with you before it starts or stops tracking.</li>
+                <li>The first carrier data usually arrives within a few minutes. After that, CTMS checks the carrier again on its own; you never need to refresh.</li>
+                <li><strong>Stop tracking</strong> removes a container from your list. It doesn't give back a container of your plan, and tracking the same container with the same carrier again later doesn't use a new one.</li>
+                <li>Check numbers before you track them: a wrong number that looks valid still uses one container of your plan.</li>
+            </ul>
+
+
+            <h2 id="answers">5. Status and dates</h2>
+            <p>Every answer is based on what the carrier reported. CTMS gives ChatGPT the date the carrier's data last changed, so you can see how fresh it is (CTMS checks more often than that).</p>
+            <table>
+                <thead>
+                    <tr><th>Status</th><th>Meaning</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Waiting for first update</td><td>Just added; the carrier hasn't returned events yet.</td></tr>
+                    <tr><td>Booked</td><td>Only planned events so far.</td></tr>
+                    <tr><td>In transit</td><td>The carrier reports events; the container is on its way.</td></tr>
+                    <tr><td>Arrived</td><td>Discharged at the port of discharge; the journey isn't closed yet.</td></tr>
+                    <tr><td>Journey complete</td><td>The journey is finished and the carrier is no longer checked.</td></tr>
+                    <tr><td>Cannot be tracked</td><td>CTMS couldn't find this number at the carrier. Check the number and the carrier.</td></tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>ETA</strong> is the estimated arrival at the port of discharge, as the carrier publishes it.</li>
+                <li><strong>Milestones</strong>: gate in, loaded, departed, transshipment, arrived, discharged, gate out, with dates and places, plus the next expected event.</li>
+                <li><strong>ETA changes</strong>: when the carrier has moved the ETA, CTMS lists the earlier ETAs, so ChatGPT can tell you how many days it slipped. Hapag-Lloyd doesn't publish the data for this.</li>
+            </ul>
+
+            <h2 id="free-time">6. Free time (demurrage &amp; detention)</h2>
+            <p>Tell ChatGPT your free days per carrier, from your contract or the carrier's tariff. CTMS then works out the last free day and the days left for your containers of that carrier, and can tell you which ones run out of free time soon or are already being charged.</p>
+            <ul>
+                <li>Free days can apply to a whole carrier or only to one port or box type, for import or export.</li>
+                <li>Free days can be calendar days or working days (Monday&ndash;Friday, Monday&ndash;Saturday or Sunday&ndash;Thursday).</li>
+                <li>Combined demurrage and detention free days, or separate numbers for each.</li>
+                <li>CTMS never assumes free days: without saved free days for a carrier, there's no last free day for its containers.</li>
+            </ul>
+            <p>The last free day and days left are <strong>estimates</strong> from the free days you saved and the carrier's events. The charges you owe are set by your carrier, terminal or port; always check their free time and invoices. See the <a href="terms.html">Terms</a>.</p>
+
+            <h2 id="tools">7. What CTMS can do in ChatGPT</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>What it does</th><th>Changes your account?</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Account and plan</td><td>Your plan, containers used and the plan's limit</td><td>No</td></tr>
+                    <tr><td>List tracked containers</td><td>Your containers, filtered by status, carrier, port or arrival dates</td><td>No</td></tr>
+                    <tr><td>Container status</td><td>Status, last and next event, ETA and ports of one container</td><td>No</td></tr>
+                    <tr><td>Container milestones</td><td>The milestones one container has reached and its earlier ETAs</td><td>No</td></tr>
+                    <tr><td>Free time running out</td><td>Containers whose free time ends within a number of days, or that are already being charged</td><td>No</td></tr>
+                    <tr><td>Saved free days</td><td>The free days saved for your account</td><td>No</td></tr>
+                    <tr><td>Start tracking containers</td><td>Tracks up to 20 containers, each with its carrier</td><td>Yes: uses containers of your plan</td></tr>
+                    <tr><td>Stop tracking containers</td><td>Removes containers from your list</td><td>Yes</td></tr>
+                    <tr><td>Save free days</td><td>Saves, replaces or removes the free days for a carrier</td><td>Yes</td></tr>
+                </tbody>
+            </table>
+            <p>CTMS sees only the requests ChatGPT sends to these actions, never your chats, files or other apps.</p>
+
+            <h2 id="plans">8. Plans</h2>
+            <p>A new CTMS account starts on the Free plan: 10 automatically tracked containers in total (a one-time allowance, it doesn't reset), with status, milestones and free time. Ask ChatGPT "how many containers do I have left?" to see where you are.</p>
+            <!-- TODO(M-8, owner): how ChatGPT users reach Pro outside ChatGPT (OpenAI rules: no plans or upgrade links in the app) -->
+            <p>Plans can't be changed inside ChatGPT. For more containers, write to <a href="mailto:support@get-ctms.com">support@get-ctms.com</a> from the email address you signed in with. A plan you already have with CTMS in Claude applies here too, because it's the same account.</p>
+
+            <h2 id="disconnect">9. Disconnecting and your data</h2>
+            <ul>
+                <li>To disconnect, open CTMS in ChatGPT's <strong>Plugins</strong> and disconnect or remove it. Your CTMS account and its containers stay, and you can connect again at any time.</li>
+                <li>A connection you no longer use ends on its own about 30 days after its last use.</li>
+                <li>To delete your CTMS account and all its data, write to <a href="mailto:support@get-ctms.com">support@get-ctms.com</a> from the email address you signed in with.</li>
+            </ul>
+            <p>Details are in the <a href="privacy.html">Privacy Policy</a> (section 1.I) and the <a href="terms.html">Terms</a>.</p>
+
+            <h2 id="need-help">Need help?</h2>
+            <p>Email us at <a href="mailto:support@get-ctms.com">support@get-ctms.com</a>. Please include the container number and carrier if your question is about a specific container.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025&ndash;2026 Container Tracker. All rights reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="mailto:support@get-ctms.com">Support</a>
+        </p>
+    </footer>
+
+<!--/email_off-->
+</body>
+
+</html>
